@@ -1,0 +1,367 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel group_product add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN group_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_group_id}  r-vertical-field" 
+	data-fieldname="group_id" 
+	data-signal-error-for="group_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="group_id" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_group_id}">
+		{BEGIN group_id_label}{$label group_product group_id }{END group_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$group_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="group_id">
+		<div class="text-muted" >
+		{$tooltip group_product group_id }		</div>
+	</div>
+</div>
+
+
+{END group_id_fieldblock}
+											
+{BEGIN product_type_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_product_type}  r-vertical-field" 
+	data-fieldname="product_type" 
+	data-signal-error-for="product_type{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="product_type" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_product_type}">
+		{BEGIN product_type_label}{$label group_product product_type }{END product_type_label}
+	</label>
+	<div class="r-edit-field">
+		{$product_type_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="product_type">
+		<div class="text-muted" >
+		{$tooltip group_product product_type }		</div>
+	</div>
+</div>
+
+
+{END product_type_fieldblock}
+											
+{BEGIN product_name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_product_name}  r-vertical-field" 
+	data-fieldname="product_name" 
+	data-signal-error-for="product_name{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="product_name" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_product_name}">
+		{BEGIN product_name_label}{$label group_product product_name }{END product_name_label}
+	</label>
+	<div class="r-edit-field">
+		{$product_name_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="product_name">
+		<div class="text-muted" >
+		{$tooltip group_product product_name }		</div>
+	</div>
+</div>
+
+
+{END product_name_fieldblock}
+											
+{BEGIN stock_type_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_stock_type}  r-vertical-field" 
+	data-fieldname="stock_type" 
+	data-signal-error-for="stock_type{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="stock_type" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_stock_type}">
+		{BEGIN stock_type_label}{$label group_product stock_type }{END stock_type_label}
+	</label>
+	<div class="r-edit-field">
+		{$stock_type_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="stock_type">
+		<div class="text-muted" >
+		{$tooltip group_product stock_type }		</div>
+	</div>
+</div>
+
+
+{END stock_type_fieldblock}
+											
+{BEGIN stock_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_stock}  r-vertical-field" 
+	data-fieldname="stock" 
+	data-signal-error-for="stock{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="stock" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_stock}">
+		{BEGIN stock_label}{$label group_product stock }{END stock_label}
+	</label>
+	<div class="r-edit-field">
+		{$stock_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="stock">
+		<div class="text-muted" >
+		{$tooltip group_product stock }		</div>
+	</div>
+</div>
+
+
+{END stock_fieldblock}
+											
+{BEGIN order_type_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_order_type}  r-vertical-field" 
+	data-fieldname="order_type" 
+	data-signal-error-for="order_type{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="order_type" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_order_type}">
+		{BEGIN order_type_label}{$label group_product order_type }{END order_type_label}
+	</label>
+	<div class="r-edit-field">
+		{$order_type_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="order_type">
+		<div class="text-muted" >
+		{$tooltip group_product order_type }		</div>
+	</div>
+</div>
+
+
+{END order_type_fieldblock}
+											
+{BEGIN price_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_price}  r-vertical-field" 
+	data-fieldname="price" 
+	data-signal-error-for="price{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="price" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_price}">
+		{BEGIN price_label}{$label group_product price }{END price_label}
+	</label>
+	<div class="r-edit-field">
+		{$price_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="price">
+		<div class="text-muted" >
+		{$tooltip group_product price }		</div>
+	</div>
+</div>
+
+
+{END price_fieldblock}
+											
+{BEGIN curency_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_curency}  r-vertical-field" 
+	data-fieldname="curency" 
+	data-signal-error-for="curency{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="curency" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_curency}">
+		{BEGIN curency_label}{$label group_product curency }{END curency_label}
+	</label>
+	<div class="r-edit-field">
+		{$curency_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="curency">
+		<div class="text-muted" >
+		{$tooltip group_product curency }		</div>
+	</div>
+</div>
+
+
+{END curency_fieldblock}
+											
+{BEGIN image_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_image}  r-vertical-field" 
+	data-fieldname="image" 
+	data-signal-error-for="image{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="image" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_image}">
+		{BEGIN image_label}{$label group_product image }{END image_label}
+	</label>
+	<div class="r-edit-field">
+		{$image_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="image">
+		<div class="text-muted" >
+		{$tooltip group_product image }		</div>
+	</div>
+</div>
+
+
+{END image_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

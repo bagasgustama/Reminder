@@ -1,0 +1,11 @@
+[Wed May 19 22:10:40.131643 2021] [core:warn] [pid 7456:tid 520] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/bagas gustama/Documents/PHPRunnerProjects/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::488b:7eed:2e5a:ba55. Set the 'ServerName' directive globally to suppress this message
+[Wed May 19 22:10:40.284236 2021] [mpm_winnt:notice] [pid 7456:tid 520] AH00455: Apache/2.4.10 (Win32) PHP/5.5.18 configured -- resuming normal operations
+[Wed May 19 22:10:40.284236 2021] [mpm_winnt:notice] [pid 7456:tid 520] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Wed May 19 22:10:40.284236 2021] [core:notice] [pid 7456:tid 520] AH00094: Command line: 'C:\\Program Files (x86)\\PHPRunner10.4\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files (x86)/PHPRunner10.4/EmbeddedServer -d C:\\Program Files (x86)\\PHPRunner10.4\\EmbeddedServer -f C:\\Users\\bagas gustama\\Documents\\PHPRunnerProjects\\Reminder\\tmp\\webserver.conf'
+[Wed May 19 22:10:40.287228 2021] [mpm_winnt:notice] [pid 7456:tid 520] AH00418: Parent: Created child process 18512
+[Wed May 19 22:10:41.292537 2021] [core:warn] [pid 18512:tid 580] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/bagas gustama/Documents/PHPRunnerProjects/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::488b:7eed:2e5a:ba55. Set the 'ServerName' directive globally to suppress this message
+[Wed May 19 22:10:42.097765 2021] [core:warn] [pid 18512:tid 580] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/bagas gustama/Documents/PHPRunnerProjects/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::488b:7eed:2e5a:ba55. Set the 'ServerName' directive globally to suppress this message
+[Wed May 19 22:10:42.132708 2021] [mpm_winnt:notice] [pid 18512:tid 580] AH00354: Child: Starting 64 worker threads.

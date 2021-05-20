@@ -1,0 +1,150 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel group_member_checkin export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_export_field}","text":{$group_member_checkin_id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field1}","text":{$group_member_id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field2}","text":{$member_id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field3}","text":{$group_id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field4}","text":{$checkin_date_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field5}","text":{$checkout_date_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field6}","text":{$id_room_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field7}","text":{$valid_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field8}","text":{$review_member_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field9}","text":{$rating_member_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  
