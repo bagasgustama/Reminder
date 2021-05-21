@@ -556,6 +556,41 @@
 					Group Member Checkin				</label>
 			</div>
 			{END print_details_group_member_checkin}
+														{BEGIN print_details_validate_checkin}
+			<div>
+				<label for="printDetailsvalidate_checkin{$id}">
+					<input type="checkbox" value="validate_checkin" id="printDetailsvalidate_checkin{$id}" checked>
+					Validate Checkin				</label>
+			</div>
+			{END print_details_validate_checkin}
+														{BEGIN print_details_validate_order}
+			<div>
+				<label for="printDetailsvalidate_order{$id}">
+					<input type="checkbox" value="validate_order" id="printDetailsvalidate_order{$id}" checked>
+					Validate Order				</label>
+			</div>
+			{END print_details_validate_order}
+														{BEGIN print_details_review_order}
+			<div>
+				<label for="printDetailsreview_order{$id}">
+					<input type="checkbox" value="review_order" id="printDetailsreview_order{$id}" checked>
+					Review Order				</label>
+			</div>
+			{END print_details_review_order}
+														{BEGIN print_details_review_checkin}
+			<div>
+				<label for="printDetailsreview_checkin{$id}">
+					<input type="checkbox" value="review_checkin" id="printDetailsreview_checkin{$id}" checked>
+					Review Checkin				</label>
+			</div>
+			{END print_details_review_checkin}
+														{BEGIN print_details_update_order_progess}
+			<div>
+				<label for="printDetailsupdate_order_progess{$id}">
+					<input type="checkbox" value="update_order_progess" id="printDetailsupdate_order_progess{$id}" checked>
+					Update Order Progess				</label>
+			</div>
+			{END print_details_update_order_progess}
 						</div>
 </div>
 {END print_details}
@@ -1325,9 +1360,9 @@
 	>
 
 	 
-						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="group_member_agenda,group_member_order,group_member_order_detail,group_member_checkin"
-			data-details-group_member_agenda			data-details-group_member_order			data-details-group_member_order_detail			data-details-group_member_checkin	>
+											<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="group_member_agenda,group_member_order,group_member_order_detail,group_member_checkin,validate_checkin,validate_order,review_order,review_checkin,update_order_progess"
+			data-details-group_member_agenda			data-details-group_member_order			data-details-group_member_order_detail			data-details-group_member_checkin			data-details-validate_checkin			data-details-validate_order			data-details-review_order			data-details-review_checkin			data-details-update_order_progess	>
 		<span data-details-inside data-short-table="group_member_agenda">
 			</span>
 		<span data-details-inside data-short-table="group_member_order">
@@ -1336,10 +1371,25 @@
 			</span>
 		<span data-details-inside data-short-table="group_member_checkin">
 			</span>
+		<span data-details-inside data-short-table="validate_checkin">
+			</span>
+		<span data-details-inside data-short-table="validate_order">
+			</span>
+		<span data-details-inside data-short-table="review_order">
+			</span>
+		<span data-details-inside data-short-table="review_checkin">
+			</span>
+		<span data-details-inside data-short-table="update_order_progess">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
+			 
+			 
+			 
+			 
 			 
 			 
 			

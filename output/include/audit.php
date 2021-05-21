@@ -450,6 +450,62 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="validate_checkin")
+		{
+			return false;
+		}
+		if($table=="validate_order")
+		{
+			return false;
+		}
+		if($table=="review_order")
+		{
+			return false;
+		}
+		if($table=="review_checkin")
+		{
+			return false;
+		}
+		if($table=="update_order_progess")
+		{
+			return false;
+		}
+		if($table=="group1")
+		{
+			return false;
+		}
+		if($table=="group2")
+		{
+			return false;
+		}
+		if($table=="group21")
+		{
+			return false;
+		}
+		if($table=="group211")
+		{
+			return false;
+		}
+		if($table=="group212")
+		{
+			return false;
+		}
+		if($table=="group2121")
+		{
+			return false;
+		}
+		if($table=="group_member1")
+		{
+			return false;
+		}
+		if($table=="group_member11")
+		{
+			return false;
+		}
+		if($table=="group3")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -903,6 +959,62 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="project5_ugrights")
+		{
+			return false;
+		}
+		if($table=="validate_checkin")
+		{
+			return false;
+		}
+		if($table=="validate_order")
+		{
+			return false;
+		}
+		if($table=="review_order")
+		{
+			return false;
+		}
+		if($table=="review_checkin")
+		{
+			return false;
+		}
+		if($table=="update_order_progess")
+		{
+			return false;
+		}
+		if($table=="group1")
+		{
+			return false;
+		}
+		if($table=="group2")
+		{
+			return false;
+		}
+		if($table=="group21")
+		{
+			return false;
+		}
+		if($table=="group211")
+		{
+			return false;
+		}
+		if($table=="group212")
+		{
+			return false;
+		}
+		if($table=="group2121")
+		{
+			return false;
+		}
+		if($table=="group_member1")
+		{
+			return false;
+		}
+		if($table=="group_member11")
+		{
+			return false;
+		}
+		if($table=="group3")
 		{
 			return false;
 		}

@@ -160,28 +160,13 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel group_member_order_detail group_member_order_id }","bold":true},{"text":{$group_member_order_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member_order_detail group_member_id }","bold":true},{"text":{$group_member_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel group_member_order_detail member_id }","bold":true},{"text":{$member_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel group_member_order_detail group_id }","bold":true},{"text":{$group_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member_order_detail group_id }","bold":true},{"text":{$group_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel group_member_order_detail group_product_id }","bold":true},{"text":{$group_product_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel group_member_order_detail nominal }","bold":true},{"text":{$nominal_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel group_member_order_detail quantity }","bold":true},{"text":{$quantity_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel group_member_order_detail total }","bold":true},{"text":{$total_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel group_member_order_detail progress }","bold":true},{"text":{$progress_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

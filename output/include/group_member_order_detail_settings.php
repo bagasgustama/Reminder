@@ -6,11 +6,11 @@ $tdatagroup_member_order_detail[".OwnerID"] = "";
 $tdatagroup_member_order_detail[".OriginalTable"] = "group_member_order_detail";
 
 
-$tdatagroup_member_order_detail[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatagroup_member_order_detail[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatagroup_member_order_detail[".originalPagesByType"] = $tdatagroup_member_order_detail[".pagesByType"];
-$tdatagroup_member_order_detail[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatagroup_member_order_detail[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatagroup_member_order_detail[".originalPages"] = $tdatagroup_member_order_detail[".pages"];
-$tdatagroup_member_order_detail[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatagroup_member_order_detail[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatagroup_member_order_detail[".originalDefaultPages"] = $tdatagroup_member_order_detail[".defaultPages"];
 
 //	field labels
@@ -102,16 +102,16 @@ $pages = $tdatagroup_member_order_detail[".defaultPages"];
 
 if( $pages[PAGE_EDIT] ) {
 	$tdatagroup_member_order_detail[".edit"] = true;
-	$tdatagroup_member_order_detail[".afterEditAction"] = 1;
+	$tdatagroup_member_order_detail[".afterEditAction"] = 0;
 	$tdatagroup_member_order_detail[".closePopupAfterEdit"] = 1;
-	$tdatagroup_member_order_detail[".afterEditActionDetTable"] = "";
+	$tdatagroup_member_order_detail[".afterEditActionDetTable"] = "Detail tables not found!";
 }
 
 if( $pages[PAGE_ADD] ) {
 $tdatagroup_member_order_detail[".add"] = true;
-$tdatagroup_member_order_detail[".afterAddAction"] = 1;
+$tdatagroup_member_order_detail[".afterAddAction"] = 0;
 $tdatagroup_member_order_detail[".closePopupAfterAdd"] = 1;
-$tdatagroup_member_order_detail[".afterAddActionDetTable"] = "";
+$tdatagroup_member_order_detail[".afterAddActionDetTable"] = "Detail tables not found!";
 }
 
 if( $pages[PAGE_LIST] ) {
@@ -224,11 +224,30 @@ $tdatagroup_member_order_detail[".strOrderBy"] = $tstrOrderBy;
 $tdatagroup_member_order_detail[".orderindexes"] = array();
 
 
-$tdatagroup_member_order_detail[".sqlHead"] = "SELECT group_member_order_detail_id,  	group_member_order_id,  	group_member_id,  	member_id,  	group_id,  	group_product_id,  	nominal,  	quantity,  	total,  	progress";
+$tdatagroup_member_order_detail[".sqlHead"] = "SELECT group_member_order_detail.group_member_order_detail_id,  group_member_order_detail.group_member_order_id,  group_member_order_detail.group_member_id,  group_member_order_detail.member_id,  group_member_order_detail.group_id,  group_member_order_detail.group_product_id,  group_member_order_detail.nominal,  group_member_order_detail.quantity,  group_member_order_detail.total,  group_member_order_detail.progress";
 $tdatagroup_member_order_detail[".sqlFrom"] = "FROM group_member_order_detail";
 $tdatagroup_member_order_detail[".sqlWhereExpr"] = "";
 $tdatagroup_member_order_detail[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "user",
+	'nameType' => 'Text',
+	'where' => "member_id = ':session.member_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 1,
+);
+$arrGridTabs[] = array(
+	'tabId' => "1",
+	'name' => "admin",
+	'nameType' => 'Text',
+	'where' => "group_id = ':session.group_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 1,
+);
+$tdatagroup_member_order_detail[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -292,7 +311,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "group_member_order_detail_id";
+	$fdata["FullName"] = "group_member_order_detail.group_member_order_detail_id";
 
 	
 	
@@ -431,7 +450,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "group_member_order_id";
+	$fdata["FullName"] = "group_member_order_detail.group_member_order_id";
 
 	
 	
@@ -488,9 +507,10 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "group_member_order";
 	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "currency";
+	$edata["DisplayField"] = "group_member_order";
 
-	
+				$edata["LookupWhere"] = "member_id = ':session.member_id'";
+
 
 	
 	$edata["LookupOrderBy"] = "";
@@ -499,6 +519,9 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "group_id";
 
 	
 	
@@ -593,7 +616,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "group_member_id";
+	$fdata["FullName"] = "group_member_order_detail.group_member_id";
 
 	
 	
@@ -650,7 +673,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "group_member_id";
 	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "token_group";
+	$edata["DisplayField"] = "group_member_id";
 
 	
 
@@ -755,7 +778,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "member_id";
+	$fdata["FullName"] = "group_member_order_detail.member_id";
 
 	
 	
@@ -917,7 +940,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "group_id";
+	$fdata["FullName"] = "group_member_order_detail.group_id";
 
 	
 	
@@ -965,7 +988,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "group";
+	$edata["LookupTable"] = "group3";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -982,9 +1005,15 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "group_member_order_id", "lookup" => "group_member_order" );
+
 	
 	
-	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "group_product_id";
 
 	
 	
@@ -1033,7 +1062,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1079,7 +1108,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "group_product_id";
+	$fdata["FullName"] = "group_member_order_detail.group_product_id";
 
 	
 	
@@ -1144,7 +1173,10 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "group_id", "lookup" => "group_id" );
+
 	
 	
 
@@ -1195,7 +1227,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1241,7 +1273,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "nominal";
+	$fdata["FullName"] = "group_member_order_detail.nominal";
 
 	
 	
@@ -1379,7 +1411,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "quantity";
+	$fdata["FullName"] = "group_member_order_detail.quantity";
 
 	
 	
@@ -1516,7 +1548,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "total";
+	$fdata["FullName"] = "group_member_order_detail.total";
 
 	
 	
@@ -1654,7 +1686,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "progress";
+	$fdata["FullName"] = "group_member_order_detail.progress";
 
 	
 	
@@ -1869,6 +1901,38 @@ $masterTablesData["group_member_order_detail"] = array();
 				$masterTablesData["group_member_order_detail"][4]["detailKeys"] = array();
 	$masterTablesData["group_member_order_detail"][4]["detailKeys"][]="group_member_id";
 		
+	
+				$strOriginalDetailsTable="group_member_order";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="validate_order";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "validate_order";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["group_member_order_detail"][5] = $masterParams;
+				$masterTablesData["group_member_order_detail"][5]["masterKeys"] = array();
+	$masterTablesData["group_member_order_detail"][5]["masterKeys"][]="group_member_order";
+				$masterTablesData["group_member_order_detail"][5]["detailKeys"] = array();
+	$masterTablesData["group_member_order_detail"][5]["detailKeys"][]="group_member_order_id";
+		
+	
+				$strOriginalDetailsTable="group_member_order";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="review_order";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "review_order";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["group_member_order_detail"][6] = $masterParams;
+				$masterTablesData["group_member_order_detail"][6]["masterKeys"] = array();
+	$masterTablesData["group_member_order_detail"][6]["masterKeys"][]="group_member_order";
+				$masterTablesData["group_member_order_detail"][6]["detailKeys"] = array();
+	$masterTablesData["group_member_order_detail"][6]["detailKeys"][]="group_member_order_id";
+		
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -1889,7 +1953,7 @@ function createSqlQuery_group_member_order_detail()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "group_member_order_detail_id,  	group_member_order_id,  	group_member_id,  	member_id,  	group_id,  	group_product_id,  	nominal,  	quantity,  	total,  	progress";
+$proto0["m_strFieldList"] = "group_member_order_detail.group_member_order_detail_id,  group_member_order_detail.group_member_order_id,  group_member_order_detail.group_member_id,  group_member_order_detail.member_id,  group_member_order_detail.group_id,  group_member_order_detail.group_product_id,  group_member_order_detail.nominal,  group_member_order_detail.quantity,  group_member_order_detail.total,  group_member_order_detail.progress";
 $proto0["m_strFrom"] = "FROM group_member_order_detail";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1936,7 +2000,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto6["m_sql"] = "group_member_order_detail_id";
+$proto6["m_sql"] = "group_member_order_detail.group_member_order_detail_id";
 $proto6["m_srcTableName"] = "group_member_order_detail";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -1950,7 +2014,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto8["m_sql"] = "group_member_order_id";
+$proto8["m_sql"] = "group_member_order_detail.group_member_order_id";
 $proto8["m_srcTableName"] = "group_member_order_detail";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -1964,7 +2028,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto10["m_sql"] = "group_member_id";
+$proto10["m_sql"] = "group_member_order_detail.group_member_id";
 $proto10["m_srcTableName"] = "group_member_order_detail";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -1978,7 +2042,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto12["m_sql"] = "member_id";
+$proto12["m_sql"] = "group_member_order_detail.member_id";
 $proto12["m_srcTableName"] = "group_member_order_detail";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1992,7 +2056,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto14["m_sql"] = "group_id";
+$proto14["m_sql"] = "group_member_order_detail.group_id";
 $proto14["m_srcTableName"] = "group_member_order_detail";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -2006,7 +2070,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto16["m_sql"] = "group_product_id";
+$proto16["m_sql"] = "group_member_order_detail.group_product_id";
 $proto16["m_srcTableName"] = "group_member_order_detail";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -2020,7 +2084,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto18["m_sql"] = "nominal";
+$proto18["m_sql"] = "group_member_order_detail.nominal";
 $proto18["m_srcTableName"] = "group_member_order_detail";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -2034,7 +2098,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto20["m_sql"] = "quantity";
+$proto20["m_sql"] = "group_member_order_detail.quantity";
 $proto20["m_srcTableName"] = "group_member_order_detail";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -2048,7 +2112,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto22["m_sql"] = "total";
+$proto22["m_sql"] = "group_member_order_detail.total";
 $proto22["m_srcTableName"] = "group_member_order_detail";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -2062,7 +2126,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "group_member_order_detail"
 ));
 
-$proto24["m_sql"] = "progress";
+$proto24["m_sql"] = "group_member_order_detail.progress";
 $proto24["m_srcTableName"] = "group_member_order_detail";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "";
@@ -2130,7 +2194,8 @@ $tdatagroup_member_order_detail[".sqlquery"] = $queryData_group_member_order_det
 
 
 
-$tableEvents["group_member_order_detail"] = new eventsBase;
-$tdatagroup_member_order_detail[".hasEvents"] = false;
+include_once(getabspath("include/group_member_order_detail_events.php"));
+$tableEvents["group_member_order_detail"] = new eventclass_group_member_order_detail;
+$tdatagroup_member_order_detail[".hasEvents"] = true;
 
 ?>

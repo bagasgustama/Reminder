@@ -6,11 +6,11 @@ $tdatagroup_member_checkin[".OwnerID"] = "";
 $tdatagroup_member_checkin[".OriginalTable"] = "group_member_checkin";
 
 
-$tdatagroup_member_checkin[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatagroup_member_checkin[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatagroup_member_checkin[".originalPagesByType"] = $tdatagroup_member_checkin[".pagesByType"];
-$tdatagroup_member_checkin[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatagroup_member_checkin[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatagroup_member_checkin[".originalPages"] = $tdatagroup_member_checkin[".pages"];
-$tdatagroup_member_checkin[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatagroup_member_checkin[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatagroup_member_checkin[".originalDefaultPages"] = $tdatagroup_member_checkin[".defaultPages"];
 
 //	field labels
@@ -102,16 +102,16 @@ $pages = $tdatagroup_member_checkin[".defaultPages"];
 
 if( $pages[PAGE_EDIT] ) {
 	$tdatagroup_member_checkin[".edit"] = true;
-	$tdatagroup_member_checkin[".afterEditAction"] = 1;
+	$tdatagroup_member_checkin[".afterEditAction"] = 0;
 	$tdatagroup_member_checkin[".closePopupAfterEdit"] = 1;
-	$tdatagroup_member_checkin[".afterEditActionDetTable"] = "";
+	$tdatagroup_member_checkin[".afterEditActionDetTable"] = "Detail tables not found!";
 }
 
 if( $pages[PAGE_ADD] ) {
 $tdatagroup_member_checkin[".add"] = true;
-$tdatagroup_member_checkin[".afterAddAction"] = 1;
+$tdatagroup_member_checkin[".afterAddAction"] = 0;
 $tdatagroup_member_checkin[".closePopupAfterAdd"] = 1;
-$tdatagroup_member_checkin[".afterAddActionDetTable"] = "";
+$tdatagroup_member_checkin[".afterAddActionDetTable"] = "Detail tables not found!";
 }
 
 if( $pages[PAGE_LIST] ) {
@@ -168,7 +168,7 @@ $tdatagroup_member_checkin[".buttonsAdded"] = false;
 $tdatagroup_member_checkin[".addPageEvents"] = false;
 
 // use timepicker for search panel
-$tdatagroup_member_checkin[".isUseTimeForSearch"] = false;
+$tdatagroup_member_checkin[".isUseTimeForSearch"] = true;
 
 
 $tdatagroup_member_checkin[".badgeColor"] = "778899";
@@ -229,6 +229,17 @@ $tdatagroup_member_checkin[".sqlFrom"] = "FROM group_member_checkin";
 $tdatagroup_member_checkin[".sqlWhereExpr"] = "";
 $tdatagroup_member_checkin[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "group_id = ':session.group_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatagroup_member_checkin[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -479,7 +490,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "group_member";
+	$edata["LookupTable"] = "group_member11";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -488,7 +499,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "group_member_id";
 	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "token_group";
+	$edata["DisplayField"] = "group_member_id";
 
 	
 
@@ -496,7 +507,10 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "group_id", "lookup" => "group_id" );
+
 	
 	
 
@@ -582,7 +596,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 	$fdata["GoodName"] = "member_id";
 	$fdata["ownerTable"] = "group_member_checkin";
 	$fdata["Label"] = GetFieldLabel("group_member_checkin","member_id");
-	$fdata["FieldType"] = 20;
+	$fdata["FieldType"] = 3;
 
 	
 	
@@ -814,7 +828,8 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 20;
 	$edata["DisplayField"] = "group_name";
 
-	
+				$edata["LookupWhere"] = "group_id = ':session.group_id'";
+
 
 	
 	$edata["LookupOrderBy"] = "";
@@ -823,6 +838,9 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "group_member_id";
 
 	
 	
@@ -871,7 +889,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -955,8 +973,9 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -976,7 +995,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -1092,8 +1111,9 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1113,7 +1133,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -2048,7 +2068,8 @@ $tdatagroup_member_checkin[".sqlquery"] = $queryData_group_member_checkin;
 
 
 
-$tableEvents["group_member_checkin"] = new eventsBase;
-$tdatagroup_member_checkin[".hasEvents"] = false;
+include_once(getabspath("include/group_member_checkin_events.php"));
+$tableEvents["group_member_checkin"] = new eventclass_group_member_checkin;
+$tdatagroup_member_checkin[".hasEvents"] = true;
 
 ?>

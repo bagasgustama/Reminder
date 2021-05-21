@@ -41,16 +41,23 @@ function AfterAdd(&$values, &$keys, $inline, &$pageObject)
 		
 if($values["message_general"] == 1)
 {
-	$rs = DB::Query("select member_id from group_member
-	where group_id = '$values[group_id]'");
-	
+
 	$data = array();
-	while ($row = mysqli_fetch_array($rs))
+	$data["group_id"] = $values[group_id];
+	$rs = DB::Select("group_member", $data );
+
+	while( $record = $rs->fetchAssoc() )
 	{
-		$data["member_id"] = $row["member_id"];
+		$data = array();
+		$data["member_id"] = $record["member_id"];
 		$data["id_group_agenda"] = $values["group_agenda_id"];
 		$data["date_send"] = $values["loop_value"];
 		DB::Insert("group_agenda_general_logs", $data );
+	}
+
+	while ($row = mysqli_fetch_array($rs))
+	{
+
 	}
 }
 else if ($values["message_general"] == 2)

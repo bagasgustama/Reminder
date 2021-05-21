@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'group_member_order_detail' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'update_order_progess' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'group' => array( 'preview' => false ),
 'order_type' => array( 'preview' => false ),

@@ -2,15 +2,15 @@
 $tdatagroup_member_order = array();
 $tdatagroup_member_order[".searchableFields"] = array();
 $tdatagroup_member_order[".ShortName"] = "group_member_order";
-$tdatagroup_member_order[".OwnerID"] = "";
+$tdatagroup_member_order[".OwnerID"] = "member_id";
 $tdatagroup_member_order[".OriginalTable"] = "group_member_order";
 
 
-$tdatagroup_member_order[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatagroup_member_order[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatagroup_member_order[".originalPagesByType"] = $tdatagroup_member_order[".pagesByType"];
-$tdatagroup_member_order[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatagroup_member_order[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatagroup_member_order[".originalPages"] = $tdatagroup_member_order[".pages"];
-$tdatagroup_member_order[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatagroup_member_order[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatagroup_member_order[".originalDefaultPages"] = $tdatagroup_member_order[".defaultPages"];
 
 //	field labels
@@ -65,9 +65,9 @@ if(mlang_getcurrentlang()=="English")
 
 
 $tdatagroup_member_order[".shortTableName"] = "group_member_order";
-$tdatagroup_member_order[".nSecOptions"] = 0;
+$tdatagroup_member_order[".nSecOptions"] = 2;
 
-$tdatagroup_member_order[".mainTableOwnerID"] = "";
+$tdatagroup_member_order[".mainTableOwnerID"] = "member_id";
 $tdatagroup_member_order[".entityType"] = 0;
 $tdatagroup_member_order[".connId"] = "notif_basic1_at_localhost";
 
@@ -102,16 +102,16 @@ $pages = $tdatagroup_member_order[".defaultPages"];
 
 if( $pages[PAGE_EDIT] ) {
 	$tdatagroup_member_order[".edit"] = true;
-	$tdatagroup_member_order[".afterEditAction"] = 1;
+	$tdatagroup_member_order[".afterEditAction"] = 0;
 	$tdatagroup_member_order[".closePopupAfterEdit"] = 1;
-	$tdatagroup_member_order[".afterEditActionDetTable"] = "";
+	$tdatagroup_member_order[".afterEditActionDetTable"] = "group_member_order_detail";
 }
 
 if( $pages[PAGE_ADD] ) {
 $tdatagroup_member_order[".add"] = true;
-$tdatagroup_member_order[".afterAddAction"] = 1;
+$tdatagroup_member_order[".afterAddAction"] = 0;
 $tdatagroup_member_order[".closePopupAfterAdd"] = 1;
-$tdatagroup_member_order[".afterAddActionDetTable"] = "";
+$tdatagroup_member_order[".afterAddActionDetTable"] = "group_member_order_detail";
 }
 
 if( $pages[PAGE_LIST] ) {
@@ -224,11 +224,30 @@ $tdatagroup_member_order[".strOrderBy"] = $tstrOrderBy;
 $tdatagroup_member_order[".orderindexes"] = array();
 
 
-$tdatagroup_member_order[".sqlHead"] = "SELECT group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member";
+$tdatagroup_member_order[".sqlHead"] = "SELECT group_member_order,  group_member_id,  member_id,  group_id,  order_date,  valid,  total,  currency,  review_member,  rating_member";
 $tdatagroup_member_order[".sqlFrom"] = "FROM group_member_order";
 $tdatagroup_member_order[".sqlWhereExpr"] = "";
 $tdatagroup_member_order[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "user",
+	'nameType' => 'Text',
+	'where' => "group_member_order.member_id = ':session.member_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 1,
+);
+$arrGridTabs[] = array(
+	'tabId' => "1",
+	'name' => "admin",
+	'nameType' => 'Text',
+	'where' => "group_id = ':session.group_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 1,
+);
+$tdatagroup_member_order[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -488,7 +507,7 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "group_member_id";
 	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "token_group";
+	$edata["DisplayField"] = "group_member_id";
 
 	
 
@@ -496,9 +515,15 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "member_id", "lookup" => "member_id" );
+
 	
 	
-	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "group_id";
 
 	
 	
@@ -652,7 +677,8 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 20;
 	$edata["DisplayField"] = "name";
 
-	
+				$edata["LookupWhere"] = "member_id = ':session.member_id'";
+
 
 	
 	$edata["LookupOrderBy"] = "";
@@ -661,6 +687,9 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "group_member_id";
 
 	
 	
@@ -709,7 +738,7 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -803,13 +832,14 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "group";
+	$edata["LookupTable"] = "group1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-		
+			$edata["LookupUnique"] = true;
+
 	$edata["LinkField"] = "group_id";
 	$edata["LinkFieldType"] = 20;
 	$edata["DisplayField"] = "group_name";
@@ -820,7 +850,10 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "group_member_id", "lookup" => "group_member_id" );
+
 	
 	
 
@@ -871,7 +904,7 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -955,8 +988,9 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -976,7 +1010,7 @@ $tdatagroup_member_order[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 2;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -1764,6 +1798,36 @@ $detailsTablesData["group_member_order"] = array();
 				$detailsTablesData["group_member_order"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["group_member_order"][$dIndex]["detailKeys"][]="group_member_order_id";
+//	update_order_progess
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="update_order_progess";
+		$detailsParam["dOriginalTable"] = "group_member_order_detail";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "update_order_progess";
+	$detailsParam["dCaptionTable"] = GetTableCaption("update_order_progess");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["group_member_order"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["group_member_order"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["group_member_order"][$dIndex]["masterKeys"][]="group_member_order";
+
+				$detailsTablesData["group_member_order"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["group_member_order"][$dIndex]["detailKeys"][]="group_member_order_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["group_member_order"] = array();
@@ -1838,7 +1902,7 @@ function createSqlQuery_group_member_order()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member";
+$proto0["m_strFieldList"] = "group_member_order,  group_member_id,  member_id,  group_id,  order_date,  valid,  total,  currency,  review_member,  rating_member";
 $proto0["m_strFrom"] = "FROM group_member_order";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2079,7 +2143,8 @@ $tdatagroup_member_order[".sqlquery"] = $queryData_group_member_order;
 
 
 
-$tableEvents["group_member_order"] = new eventsBase;
-$tdatagroup_member_order[".hasEvents"] = false;
+include_once(getabspath("include/group_member_order_events.php"));
+$tableEvents["group_member_order"] = new eventclass_group_member_order;
+$tdatagroup_member_order[".hasEvents"] = true;
 
 ?>

@@ -548,6 +548,13 @@
 					Group Member Order Detail				</label>
 			</div>
 			{END print_details_group_member_order_detail}
+														{BEGIN print_details_update_order_progess}
+			<div>
+				<label for="printDetailsupdate_order_progess{$id}">
+					<input type="checkbox" value="update_order_progess" id="printDetailsupdate_order_progess{$id}" checked>
+					Update Order Progess				</label>
+			</div>
+			{END print_details_update_order_progess}
 						</div>
 </div>
 {END print_details}
@@ -1332,22 +1339,25 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="group_member_order_detail"
-			data-details-group_member_order_detail	>
+				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="group_member_order_detail,update_order_progess"
+			data-details-group_member_order_detail			data-details-update_order_progess	>
 		<span data-details-inside data-short-table="group_member_order_detail">
+			</span>
+		<span data-details-inside data-short-table="update_order_progess">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	
+	 
+			
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>

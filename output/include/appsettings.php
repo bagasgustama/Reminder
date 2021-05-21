@@ -659,9 +659,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "22_1621440039";
+$projectBuildKey = "190_1621535820";
 $wizardBuildKey = "34702";
-$projectBuildNumber = "22";
+$projectBuildNumber = "190";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -719,6 +719,20 @@ $tableCaptions["English"]["admin_users"] = "Add/Edit users";
 $tableCaptions["English"]["project5_uggroups"] = "Project5 Uggroups";
 $tableCaptions["English"]["project5_ugmembers"] = "Project5 Ugmembers";
 $tableCaptions["English"]["project5_ugrights"] = "Project5 Ugrights";
+$tableCaptions["English"]["validate_checkin"] = "Validate Checkin";
+$tableCaptions["English"]["validate_order"] = "Validate Order";
+$tableCaptions["English"]["review_order"] = "Review Order";
+$tableCaptions["English"]["review_checkin"] = "Review Checkin";
+$tableCaptions["English"]["update_order_progess"] = "Update Order Progess";
+$tableCaptions["English"]["group1"] = "Group1";
+$tableCaptions["English"]["group2"] = "Group2";
+$tableCaptions["English"]["group21"] = "Group21";
+$tableCaptions["English"]["group211"] = "Group211";
+$tableCaptions["English"]["group212"] = "Group212";
+$tableCaptions["English"]["group2121"] = "Group2121";
+$tableCaptions["English"]["group_member1"] = "Group Member1";
+$tableCaptions["English"]["group_member11"] = "Group Member11";
+$tableCaptions["English"]["group3"] = "Group3";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -799,7 +813,7 @@ $scriptname = getFileNameFromURL();
 
 $isGroupSecurity = true;
 
-$isUseRTEBasic = false;
+$isUseRTEBasic = true;
 
 $isUseRTECK = false;
 

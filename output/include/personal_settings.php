@@ -275,7 +275,7 @@ $tdatapersonal[".hideMobileList"] = array();
 	$fdata["GoodName"] = "member_id";
 	$fdata["ownerTable"] = "personal";
 	$fdata["Label"] = GetFieldLabel("personal","member_id");
-	$fdata["FieldType"] = 20;
+	$fdata["FieldType"] = 3;
 
 	
 		$fdata["AutoInc"] = true;
@@ -909,6 +909,9 @@ $tdatapersonal[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "province_id";
 
 	
 	
@@ -1068,7 +1071,10 @@ $tdatapersonal[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "country_id", "lookup" => "country_id" );
+
 	
 	
 
@@ -1119,7 +1125,7 @@ $tdatapersonal[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1442,6 +1448,156 @@ $detailsTablesData["personal"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "group_member_checkin";
 	$detailsParam["dCaptionTable"] = GetTableCaption("group_member_checkin");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["personal"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["personal"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["masterKeys"][]="member_id";
+
+				$detailsTablesData["personal"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["detailKeys"][]="member_id";
+//	validate_checkin
+	
+	
+
+		$dIndex = 10;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="validate_checkin";
+		$detailsParam["dOriginalTable"] = "group_member_checkin";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "validate_checkin";
+	$detailsParam["dCaptionTable"] = GetTableCaption("validate_checkin");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["personal"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["personal"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["masterKeys"][]="member_id";
+
+				$detailsTablesData["personal"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["detailKeys"][]="member_id";
+//	validate_order
+	
+	
+
+		$dIndex = 11;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="validate_order";
+		$detailsParam["dOriginalTable"] = "group_member_order";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "validate_order";
+	$detailsParam["dCaptionTable"] = GetTableCaption("validate_order");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["personal"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["personal"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["masterKeys"][]="member_id";
+
+				$detailsTablesData["personal"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["detailKeys"][]="member_id";
+//	review_order
+	
+	
+
+		$dIndex = 12;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="review_order";
+		$detailsParam["dOriginalTable"] = "group_member_order";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "review_order";
+	$detailsParam["dCaptionTable"] = GetTableCaption("review_order");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["personal"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["personal"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["masterKeys"][]="member_id";
+
+				$detailsTablesData["personal"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["detailKeys"][]="member_id";
+//	review_checkin
+	
+	
+
+		$dIndex = 13;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="review_checkin";
+		$detailsParam["dOriginalTable"] = "group_member_checkin";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "review_checkin";
+	$detailsParam["dCaptionTable"] = GetTableCaption("review_checkin");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["personal"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["personal"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["masterKeys"][]="member_id";
+
+				$detailsTablesData["personal"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["detailKeys"][]="member_id";
+//	update_order_progess
+	
+	
+
+		$dIndex = 14;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="update_order_progess";
+		$detailsParam["dOriginalTable"] = "group_member_order_detail";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "update_order_progess";
+	$detailsParam["dCaptionTable"] = GetTableCaption("update_order_progess");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

@@ -353,6 +353,20 @@ class ConnectionManager
 		$connectionsIds["project5_uggroups"] = "notif_basic1_at_localhost";
 		$connectionsIds["project5_ugmembers"] = "notif_basic1_at_localhost";
 		$connectionsIds["project5_ugrights"] = "notif_basic1_at_localhost";
+		$connectionsIds["validate_checkin"] = "notif_basic1_at_localhost";
+		$connectionsIds["validate_order"] = "notif_basic1_at_localhost";
+		$connectionsIds["review_order"] = "notif_basic1_at_localhost";
+		$connectionsIds["review_checkin"] = "notif_basic1_at_localhost";
+		$connectionsIds["update_order_progess"] = "notif_basic1_at_localhost";
+		$connectionsIds["group1"] = "notif_basic1_at_localhost";
+		$connectionsIds["group2"] = "notif_basic1_at_localhost";
+		$connectionsIds["group21"] = "notif_basic1_at_localhost";
+		$connectionsIds["group211"] = "notif_basic1_at_localhost";
+		$connectionsIds["group212"] = "notif_basic1_at_localhost";
+		$connectionsIds["group2121"] = "notif_basic1_at_localhost";
+		$connectionsIds["group_member1"] = "notif_basic1_at_localhost";
+		$connectionsIds["group_member11"] = "notif_basic1_at_localhost";
+		$connectionsIds["group3"] = "notif_basic1_at_localhost";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 	

@@ -873,6 +873,31 @@ pdfDocument = {
 			{$displayDetailTable_group_agenda_type }
 		{END details_group_agenda_type},
 				
+				
+			 {BEGIN details_validate_checkin}
+			{$displayDetailTable_validate_checkin }
+		{END details_validate_checkin},
+				
+				
+			 {BEGIN details_validate_order}
+			{$displayDetailTable_validate_order }
+		{END details_validate_order},
+				
+				
+			 {BEGIN details_review_order}
+			{$displayDetailTable_review_order }
+		{END details_review_order},
+				
+				
+			 {BEGIN details_review_checkin}
+			{$displayDetailTable_review_checkin }
+		{END details_review_checkin},
+				
+				
+			 {BEGIN details_update_order_progess}
+			{$displayDetailTable_update_order_progess }
+		{END details_update_order_progess},
+				
 		  ],
   "border": [ true, true, true, true ],
           "alignment": 'left',

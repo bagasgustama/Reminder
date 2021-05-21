@@ -264,7 +264,7 @@ $tdataadmin_users[".hideMobileList"] = array();
 	$fdata["GoodName"] = "member_id";
 	$fdata["ownerTable"] = "personal";
 	$fdata["Label"] = GetFieldLabel("admin_users","member_id");
-	$fdata["FieldType"] = 20;
+	$fdata["FieldType"] = 3;
 
 	
 		$fdata["AutoInc"] = true;
