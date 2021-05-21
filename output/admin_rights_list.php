@@ -422,7 +422,6 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 	$mask .= "S";
 if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
 	$mask .= "P";
-$mask .= "M";
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("group_member_agenda", " " . "Group Member Agenda");

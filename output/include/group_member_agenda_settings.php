@@ -2,7 +2,7 @@
 $tdatagroup_member_agenda = array();
 $tdatagroup_member_agenda[".searchableFields"] = array();
 $tdatagroup_member_agenda[".ShortName"] = "group_member_agenda";
-$tdatagroup_member_agenda[".OwnerID"] = "member_id";
+$tdatagroup_member_agenda[".OwnerID"] = "";
 $tdatagroup_member_agenda[".OriginalTable"] = "group_member_agenda";
 
 
@@ -47,9 +47,9 @@ if(mlang_getcurrentlang()=="English")
 
 
 $tdatagroup_member_agenda[".shortTableName"] = "group_member_agenda";
-$tdatagroup_member_agenda[".nSecOptions"] = 1;
+$tdatagroup_member_agenda[".nSecOptions"] = 0;
 
-$tdatagroup_member_agenda[".mainTableOwnerID"] = "member_id";
+$tdatagroup_member_agenda[".mainTableOwnerID"] = "";
 $tdatagroup_member_agenda[".entityType"] = 0;
 $tdatagroup_member_agenda[".connId"] = "notif_basic1_at_localhost";
 

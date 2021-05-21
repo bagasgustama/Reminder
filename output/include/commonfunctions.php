@@ -2155,7 +2155,6 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 		$_SESSION["_group_member_order_OwnerID"] = $data["member_id"];
 		$_SESSION["_review_checkin_OwnerID"] = $data["member_id"];
 		$_SESSION["_update_order_progess_OwnerID"] = $data["member_id"];
-		$_SESSION["_group_member_agenda_OwnerID"] = $data["member_id"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -2245,10 +2244,6 @@ function CheckSecurity($strValue, $strAction, $table = "")
 		{
 
 				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
-		if($table=="group_member_agenda")
-		{
-
-				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
 	}
@@ -2342,9 +2337,6 @@ function SecuritySQL($strAction, $table, $strPerm="")
 		{
 				if($strAction == "Edit" || $strAction == "Delete")
 				$ret=GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
-		if($table=="group_member_agenda")
-		{
-				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
 	}
 
