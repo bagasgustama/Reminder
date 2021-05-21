@@ -166,6 +166,48 @@ pdfDocument = {
 				
 			{"text":"","background":"#008B8B","hidden":"{$item_hide_welcome_item33}"},
 				
+				
+			{"text":"","background":"#6DA5C8","hidden":"{$item_hide_welcome_item34}"},
+				
+				
+			{"text":"","background":"#7B68EE","hidden":"{$item_hide_welcome_item35}"},
+				
+				
+			{"text":"","background":"#D2691E","hidden":"{$item_hide_welcome_item36}"},
+				
+				
+			{"text":"","background":"#008B8B","hidden":"{$item_hide_welcome_item37}"},
+				
+				
+			{"text":"","background":"#D2691E","hidden":"{$item_hide_welcome_item38}"},
+				
+				
+			{"text":"","background":"#4169E1","hidden":"{$item_hide_welcome_item39}"},
+				
+				
+			{"text":"","background":"#00C2C5","hidden":"{$item_hide_welcome_item40}"},
+				
+				
+			{"text":"","background":"#4682B4","hidden":"{$item_hide_welcome_item41}"},
+				
+				
+			{"text":"","background":"#4169E1","hidden":"{$item_hide_welcome_item42}"},
+				
+				
+			{"text":"","background":"#CFAE83","hidden":"{$item_hide_welcome_item43}"},
+				
+				
+			{"text":"","background":"#9ACD32","hidden":"{$item_hide_welcome_item44}"},
+				
+				
+			{"text":"","background":"#DB7093","hidden":"{$item_hide_welcome_item45}"},
+				
+				
+			{"text":"","background":"#CD5C5C","hidden":"{$item_hide_welcome_item46}"},
+				
+				
+			{"text":"","background":"#DAA520","hidden":"{$item_hide_welcome_item47}"},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',

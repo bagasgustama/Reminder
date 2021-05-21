@@ -512,6 +512,34 @@ class Chart
 			return true;
 		if("project5_ugrights" == $this->chrt_array['tables'][0])
 			return true;
+		if("group_member_checkin" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_order" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_order" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_checkin" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_order_detail" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

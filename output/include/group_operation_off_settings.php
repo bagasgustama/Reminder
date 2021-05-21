@@ -205,6 +205,17 @@ $tdatagroup_operation_off[".sqlFrom"] = "FROM group_operation_off";
 $tdatagroup_operation_off[".sqlWhereExpr"] = "";
 $tdatagroup_operation_off[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatagroup_operation_off[".arrGridTabs"] = $arrGridTabs;
 
 
 

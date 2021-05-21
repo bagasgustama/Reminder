@@ -259,6 +259,34 @@ function checkTableName($shortTName )
 		return true;
 	if ("project5_ugrights" == $shortTName )
 		return true;
+	if ("validate_checkin" == $shortTName )
+		return true;
+	if ("validate_order" == $shortTName )
+		return true;
+	if ("review_order" == $shortTName )
+		return true;
+	if ("review_checkin" == $shortTName )
+		return true;
+	if ("update_order_progess" == $shortTName )
+		return true;
+	if ("group1" == $shortTName )
+		return true;
+	if ("group2" == $shortTName )
+		return true;
+	if ("group21" == $shortTName )
+		return true;
+	if ("group211" == $shortTName )
+		return true;
+	if ("group212" == $shortTName )
+		return true;
+	if ("group2121" == $shortTName )
+		return true;
+	if ("group_member1" == $shortTName )
+		return true;
+	if ("group_member11" == $shortTName )
+		return true;
+	if ("group3" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -642,6 +670,132 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="project5_ugrights";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("validate_checkin");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="validate_checkin";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("validate_order");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="validate_order";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("review_order");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="review_order";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("review_checkin");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="review_checkin";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("update_order_progess");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="update_order_progess";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group2";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group21");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group21";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group211");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group211";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group212");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group212";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group2121");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group2121";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group_member1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group_member1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group_member11");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group_member11";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group3");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group3";
+	}
 	return $arr;
 }
 
@@ -688,6 +842,20 @@ function GetTablesListWithoutSecurity()
 	$arr[]="project5_uggroups";
 	$arr[]="project5_ugmembers";
 	$arr[]="project5_ugrights";
+	$arr[]="validate_checkin";
+	$arr[]="validate_order";
+	$arr[]="review_order";
+	$arr[]="review_checkin";
+	$arr[]="update_order_progess";
+	$arr[]="group1";
+	$arr[]="group2";
+	$arr[]="group21";
+	$arr[]="group211";
+	$arr[]="group212";
+	$arr[]="group2121";
+	$arr[]="group_member1";
+	$arr[]="group_member11";
+	$arr[]="group3";
 	return $arr;
 }
 
@@ -1736,6 +1904,132 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
+	if( $table=="validate_checkin" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="validate_order" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="review_order" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="review_checkin" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="update_order_progess" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group1" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group2" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group21" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group211" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group212" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group2121" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group_member1" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group_member11" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group3" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
 	// grant nothing by default
 	return "";
 }
@@ -1858,6 +2152,9 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 	$_SESSION["_personal_channel_OwnerID"] = $data["member_id"];
 		$_SESSION["_personal_agenda_OwnerID"] = $data["member_id"];
 		$_SESSION["_personal_OwnerID"] = $data["member_id"];
+		$_SESSION["_group_member_order_OwnerID"] = $data["member_id"];
+		$_SESSION["_review_checkin_OwnerID"] = $data["member_id"];
+		$_SESSION["_update_order_progess_OwnerID"] = $data["member_id"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -1935,6 +2232,18 @@ function CheckSecurity($strValue, $strAction, $table = "")
 		{
 
 				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="group_member_order")
+		{
+
+				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="review_checkin")
+		{
+
+				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
 	}
@@ -2018,6 +2327,16 @@ function SecuritySQL($strAction, $table, $strPerm="")
 		if($table=="personal")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="group_member_order")
+		{
+				if($strAction == "Edit" || $strAction == "Delete")
+				$ret=GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="review_checkin")
+		{
+				if($strAction == "Edit" || $strAction == "Delete")
+				$ret=GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
 	}
 

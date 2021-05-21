@@ -1787,6 +1787,36 @@ $detailsTablesData["group_product"] = array();
 				$detailsTablesData["group_product"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["group_product"][$dIndex]["detailKeys"][]="group_product_id";
+//	update_order_progess
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="update_order_progess";
+		$detailsParam["dOriginalTable"] = "group_member_order_detail";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "update_order_progess";
+	$detailsParam["dCaptionTable"] = GetTableCaption("update_order_progess");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["group_product"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["group_product"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["group_product"][$dIndex]["masterKeys"][]="group_product_id";
+
+				$detailsTablesData["group_product"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["group_product"][$dIndex]["detailKeys"][]="group_product_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["group_product"] = array();

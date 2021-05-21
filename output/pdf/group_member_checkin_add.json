@@ -157,31 +157,22 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel group_member_checkin group_member_id }","bold":true},{"text":{$group_member_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member_checkin member_id }","bold":true},{"text":{$member_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel group_member_checkin group_id }","bold":true},{"text":{$group_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member_checkin group_member_id }","bold":true},{"text":{$group_member_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel group_member_checkin member_id }","bold":true},{"text":{$member_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel group_member_checkin id_room }","bold":true},{"text":{$id_room_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel group_member_checkin checkin_date }","bold":true},{"text":{$checkin_date_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel group_member_checkin checkout_date }","bold":true},{"text":{$checkout_date_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel group_member_checkin id_room }","bold":true},{"text":{$id_room_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel group_member_checkin valid }","bold":true},{"text":{$valid_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel group_member_checkin review_member }","bold":true},{"text":{$review_member_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel group_member_checkin rating_member }","bold":true},{"text":{$rating_member_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

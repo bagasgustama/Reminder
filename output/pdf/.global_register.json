@@ -162,6 +162,15 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel _global password }","bold":true},{"text":{$password_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel _global name }","bold":true},{"text":{$name_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel _global country_id }","bold":true},{"text":{$country_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel _global province_id }","bold":true},{"text":{$province_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',
