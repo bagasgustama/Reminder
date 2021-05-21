@@ -113,32 +113,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_currency}</span>
 						</div>
 		{END searchCtrlBlock_currency}
-																{BEGIN searchCtrlBlock_member_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_member_id}" {$filterRow_attrs_member_id}>
-			<label>{$label group_member_order member_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_member_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_member_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_member_id}</span>
-						</div>
-		{END searchCtrlBlock_member_id}
-																{BEGIN searchCtrlBlock_group_member_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_group_member_id}" {$filterRow_attrs_group_member_id}>
-			<label>{$label group_member_order group_member_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_group_member_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_group_member_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_group_member_id}</span>
-						</div>
-		{END searchCtrlBlock_group_member_id}
 																{BEGIN searchCtrlBlock_valid}
 
 
@@ -191,6 +165,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_rating_member}</span>
 						</div>
 		{END searchCtrlBlock_rating_member}
+																{BEGIN searchCtrlBlock_order_date}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_order_date}" {$filterRow_attrs_order_date}>
+			<label>{$label group_member_order order_date }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_order_date}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_order_date}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_order_date}</span>
+						</div>
+		{END searchCtrlBlock_order_date}
+																{BEGIN searchCtrlBlock_member_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_member_id}" {$filterRow_attrs_member_id}>
+			<label>{$label group_member_order member_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_member_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_member_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_member_id}</span>
+						</div>
+		{END searchCtrlBlock_member_id}
 																{BEGIN searchCtrlBlock_group_member_order}
 
 
@@ -204,6 +204,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_group_member_order}</span>
 						</div>
 		{END searchCtrlBlock_group_member_order}
+																{BEGIN searchCtrlBlock_group_member_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_group_member_id}" {$filterRow_attrs_group_member_id}>
+			<label>{$label group_member_order group_member_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_group_member_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_group_member_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_group_member_id}</span>
+						</div>
+		{END searchCtrlBlock_group_member_id}
 																{BEGIN searchCtrlBlock_group_id}
 
 
@@ -305,6 +318,14 @@
 		</a>
 	</li>
 {END exportselected_link}
+							{BEGIN deleteselected_link}
+	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
+				
+		Delete selected		
+		</a>
+	</li>
+{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="group_member_order_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
@@ -442,6 +463,14 @@
 							Inline Add			</a>
 </span>
 {END inlineadd_link}
+	 
+		{BEGIN deleteselected_link}
+<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
+							Delete			</a>
+</span>
+{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -519,13 +548,6 @@
 					Group Member Order Detail				</label>
 			</div>
 			{END print_details_group_member_order_detail}
-														{BEGIN print_details_update_order_progess}
-			<div>
-				<label for="printDetailsupdate_order_progess{$id}">
-					<input type="checkbox" value="update_order_progess" id="printDetailsupdate_order_progess{$id}" checked>
-					Update Order Progess				</label>
-			</div>
-			{END print_details_update_order_progess}
 						</div>
 </div>
 {END print_details}
@@ -790,22 +812,22 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$valid_class}
+		 r-ori-vert				{$order_date_class}
 			"
 
-			data-field="valid"
+			data-field="order_date"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN valid_fieldheadercolumn}
-	{BEGIN valid_fieldheader}
-	<SPAN {$valid_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="valid">
-	{$label group_member_order valid }	{$arrow_icon_valid}
+		{BEGIN order_date_fieldheadercolumn}
+	{BEGIN order_date_fieldheader}
+	<SPAN {$order_date_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="order_date">
+	{$label group_member_order order_date }	{$arrow_icon_order_date}
 	</SPAN>
-	{END valid_fieldheader}
-{END valid_fieldheadercolumn}
+	{END order_date_fieldheader}
+{END order_date_fieldheadercolumn}
 
 	
 	</th>
@@ -817,22 +839,22 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$total_class}
+		 r-ori-vert				{$valid_class}
 			"
 
-			data-field="total"
+			data-field="valid"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN total_fieldheadercolumn}
-	{BEGIN total_fieldheader}
-	<SPAN {$total_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="total">
-	{$label group_member_order total }	{$arrow_icon_total}
+		{BEGIN valid_fieldheadercolumn}
+	{BEGIN valid_fieldheader}
+	<SPAN {$valid_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="valid">
+	{$label group_member_order valid }	{$arrow_icon_valid}
 	</SPAN>
-	{END total_fieldheader}
-{END total_fieldheadercolumn}
+	{END valid_fieldheader}
+{END valid_fieldheadercolumn}
 
 	
 	</th>
@@ -844,22 +866,22 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$currency_class}
+		 r-ori-vert				{$total_class}
 			"
 
-			data-field="currency"
+			data-field="total"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN currency_fieldheadercolumn}
-	{BEGIN currency_fieldheader}
-	<SPAN {$currency_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="currency">
-	{$label group_member_order currency }	{$arrow_icon_currency}
+		{BEGIN total_fieldheadercolumn}
+	{BEGIN total_fieldheader}
+	<SPAN {$total_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="total">
+	{$label group_member_order total }	{$arrow_icon_total}
 	</SPAN>
-	{END currency_fieldheader}
-{END currency_fieldheadercolumn}
+	{END total_fieldheader}
+{END total_fieldheadercolumn}
 
 	
 	</th>
@@ -871,22 +893,22 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$order_date_class}
+		 r-ori-vert				{$currency_class}
 			"
 
-			data-field="order_date"
+			data-field="currency"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN order_date_fieldheadercolumn}
-	{BEGIN order_date_fieldheader}
-	<SPAN {$order_date_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="order_date">
-	{$label group_member_order order_date }	{$arrow_icon_order_date}
+		{BEGIN currency_fieldheadercolumn}
+	{BEGIN currency_fieldheader}
+	<SPAN {$currency_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="currency">
+	{$label group_member_order currency }	{$arrow_icon_currency}
 	</SPAN>
-	{END order_date_fieldheader}
-{END order_date_fieldheadercolumn}
+	{END currency_fieldheader}
+{END currency_fieldheadercolumn}
 
 	
 	</th>
@@ -975,6 +997,17 @@
 	
 	>
 
+	 
+		{BEGIN edit_column}
+{BEGIN edit_link}
+<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Edit" class="btn-link   
+	 glyphicon glyphicon-pencil" href="group_member_order_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
+				
+								</a>
+</span>
+{END edit_link}
+{END edit_column}
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
@@ -1156,20 +1189,20 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$valid_class}
+		 r-ori-vert				{$order_date_class}
 			"
 
-			data-field="valid"
+			data-field="order_date"
 	
 	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN valid_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="valid" data-default-width >
-{$valid_value}
+		{BEGIN order_date_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="order_date" data-default-width >
+{$order_date_value}
 </span>
-{END valid_fieldcolumn}	
+{END order_date_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field4}
 				 
@@ -1179,20 +1212,20 @@
 	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$total_class}
+		 r-ori-vert				{$valid_class}
 			"
 
-			data-field="total"
+			data-field="valid"
 	
 	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN total_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="total" data-default-width >
-{$total_value}
+		{BEGIN valid_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="valid" data-default-width >
+{$valid_value}
 </span>
-{END total_fieldcolumn}	
+{END valid_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
 				 
@@ -1202,20 +1235,20 @@
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$currency_class}
+		 r-ori-vert				{$total_class}
 			"
 
-			data-field="currency"
+			data-field="total"
 	
 	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN currency_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="currency" data-default-width >
-{$currency_value}
+		{BEGIN total_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="total" data-default-width >
+{$total_value}
 </span>
-{END currency_fieldcolumn}	
+{END total_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
 				 
@@ -1225,20 +1258,20 @@
 	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$order_date_class}
+		 r-ori-vert				{$currency_class}
 			"
 
-			data-field="order_date"
+			data-field="currency"
 	
 	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN order_date_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="order_date" data-default-width >
-{$order_date_value}
+		{BEGIN currency_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="currency" data-default-width >
+{$currency_value}
 </span>
-{END order_date_fieldcolumn}	
+{END currency_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field7}
 				 
@@ -1299,25 +1332,22 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="group_member_order_detail,update_order_progess"
-			data-details-group_member_order_detail			data-details-update_order_progess	>
+			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="group_member_order_detail"
+			data-details-group_member_order_detail	>
 		<span data-details-inside data-short-table="group_member_order_detail">
-			</span>
-		<span data-details-inside data-short-table="update_order_progess">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	 
-			
+	
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>

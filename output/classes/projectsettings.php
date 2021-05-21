@@ -3284,34 +3284,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "project5_ugmembers" ] = "project5_ugmembers";
 	$projectEntities[ "project5_ugrights" ] = array( "url" => "project5_ugrights", "type" => 1 );
 	$projectEntitiesReverse[ "project5_ugrights" ] = "project5_ugrights";
-	$projectEntities[ "validate_checkin" ] = array( "url" => "validate_checkin", "type" => 1 );
-	$projectEntitiesReverse[ "validate_checkin" ] = "validate_checkin";
-	$projectEntities[ "validate_order" ] = array( "url" => "validate_order", "type" => 1 );
-	$projectEntitiesReverse[ "validate_order" ] = "validate_order";
-	$projectEntities[ "review_order" ] = array( "url" => "review_order", "type" => 1 );
-	$projectEntitiesReverse[ "review_order" ] = "review_order";
-	$projectEntities[ "review_checkin" ] = array( "url" => "review_checkin", "type" => 1 );
-	$projectEntitiesReverse[ "review_checkin" ] = "review_checkin";
-	$projectEntities[ "update_order_progess" ] = array( "url" => "update_order_progess", "type" => 1 );
-	$projectEntitiesReverse[ "update_order_progess" ] = "update_order_progess";
-	$projectEntities[ "group1" ] = array( "url" => "group1", "type" => 1 );
-	$projectEntitiesReverse[ "group1" ] = "group1";
-	$projectEntities[ "group2" ] = array( "url" => "group2", "type" => 1 );
-	$projectEntitiesReverse[ "group2" ] = "group2";
-	$projectEntities[ "group21" ] = array( "url" => "group21", "type" => 1 );
-	$projectEntitiesReverse[ "group21" ] = "group21";
-	$projectEntities[ "group211" ] = array( "url" => "group211", "type" => 1 );
-	$projectEntitiesReverse[ "group211" ] = "group211";
-	$projectEntities[ "group212" ] = array( "url" => "group212", "type" => 1 );
-	$projectEntitiesReverse[ "group212" ] = "group212";
-	$projectEntities[ "group2121" ] = array( "url" => "group2121", "type" => 1 );
-	$projectEntitiesReverse[ "group2121" ] = "group2121";
-	$projectEntities[ "group_member1" ] = array( "url" => "group_member1", "type" => 1 );
-	$projectEntitiesReverse[ "group_member1" ] = "group_member1";
-	$projectEntities[ "group_member11" ] = array( "url" => "group_member11", "type" => 1 );
-	$projectEntitiesReverse[ "group_member11" ] = "group_member11";
-	$projectEntities[ "group3" ] = array( "url" => "group3", "type" => 1 );
-	$projectEntitiesReverse[ "group3" ] = "group3";
 }
 
 function findTable( $table ) {

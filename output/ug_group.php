@@ -49,20 +49,6 @@ $nonAdminTablesArr[] = "group_agenda_type";
 $nonAdminTablesArr[] = "project5_uggroups";
 $nonAdminTablesArr[] = "project5_ugmembers";
 $nonAdminTablesArr[] = "project5_ugrights";
-$nonAdminTablesArr[] = "validate_checkin";
-$nonAdminTablesArr[] = "validate_order";
-$nonAdminTablesArr[] = "review_order";
-$nonAdminTablesArr[] = "review_checkin";
-$nonAdminTablesArr[] = "update_order_progess";
-$nonAdminTablesArr[] = "group1";
-$nonAdminTablesArr[] = "group2";
-$nonAdminTablesArr[] = "group21";
-$nonAdminTablesArr[] = "group211";
-$nonAdminTablesArr[] = "group212";
-$nonAdminTablesArr[] = "group2121";
-$nonAdminTablesArr[] = "group_member1";
-$nonAdminTablesArr[] = "group_member11";
-$nonAdminTablesArr[] = "group3";
 
 $ug_connection = $cman->getForUserGroups();
 

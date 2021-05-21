@@ -1,6 +1,6 @@
 <?php
 $dalTablepersonal = array();
-$dalTablepersonal["member_id"] = array("type"=>3,"varname"=>"member_id", "name" => "member_id");
+$dalTablepersonal["member_id"] = array("type"=>20,"varname"=>"member_id", "name" => "member_id");
 $dalTablepersonal["name"] = array("type"=>200,"varname"=>"name", "name" => "name");
 $dalTablepersonal["mail"] = array("type"=>200,"varname"=>"mail", "name" => "mail");
 $dalTablepersonal["password"] = array("type"=>200,"varname"=>"password", "name" => "password");

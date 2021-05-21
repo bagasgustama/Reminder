@@ -207,6 +207,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_delete}"},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',
@@ -451,11 +454,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field14}","text":"{$jslabel group_member_order valid }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field14}","text":"{$jslabel group_member_order order_date }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$valid_align}',
+          "alignment": '{$order_date_align}',
   },
 
 {END cellblock_grid_headcell_field4}
@@ -477,11 +480,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field15}","text":"{$jslabel group_member_order total }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field15}","text":"{$jslabel group_member_order valid }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$total_align}',
+          "alignment": '{$valid_align}',
   },
 
 {END cellblock_grid_headcell_field5}
@@ -503,11 +506,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field16}","text":"{$jslabel group_member_order currency }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field16}","text":"{$jslabel group_member_order total }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$currency_align}',
+          "alignment": '{$total_align}',
   },
 
 {END cellblock_grid_headcell_field6}
@@ -529,11 +532,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field17}","text":"{$jslabel group_member_order order_date }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field17}","text":"{$jslabel group_member_order currency }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$order_date_align}',
+          "alignment": '{$currency_align}',
   },
 
 {END cellblock_grid_headcell_field7}
@@ -614,6 +617,9 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"","hidden":"{$item_hide_grid_edit}"},
+				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
@@ -803,6 +809,32 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"hidden":"{$item_hide_simple_grid_field4}","text":{$order_date_pdfvalue}},
+				
+		  ],
+  "border": [ true, true, true, true ],
+          "alignment": '{$order_date_align}',
+  },
+
+{END cellblock_grid_cell_field4}
+																			{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
 			{"hidden":"{$item_hide_simple_grid_field5}","text":{$valid_pdfvalue}},
 				
 		  ],
@@ -810,10 +842,10 @@ pdfDocument = {
           "alignment": '{$valid_align}',
   },
 
-{END cellblock_grid_cell_field4}
-																			{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field5}
+																			{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -836,10 +868,10 @@ pdfDocument = {
           "alignment": '{$total_align}',
   },
 
-{END cellblock_grid_cell_field5}
-																			{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field6}
+																			{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -860,32 +892,6 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
           "alignment": '{$currency_align}',
-  },
-
-{END cellblock_grid_cell_field6}
-																			{BEGIN cellblock_grid_cell_field7}
-{
-	cellId: 'cell_field7',
-	col:0,
-	row:0,
-			style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"hidden":"{$item_hide_simple_grid_field4}","text":{$order_date_pdfvalue}},
-				
-		  ],
-  "border": [ true, true, true, true ],
-          "alignment": '{$order_date_align}',
   },
 
 {END cellblock_grid_cell_field7}
@@ -969,11 +975,6 @@ pdfDocument = {
 			 {BEGIN details_group_member_order_detail}
 			{$displayDetailTable_group_member_order_detail }
 		{END details_group_member_order_detail},
-				
-				
-			 {BEGIN details_update_order_progess}
-			{$displayDetailTable_update_order_progess }
-		{END details_update_order_progess},
 				
 		  ],
   "border": [ true, true, true, true ],

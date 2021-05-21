@@ -940,10 +940,6 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
-				if($table=="group_member_checkin" && $field=="group_id")
-	{
-		return $_SESSION["group_id"];
-	}
 	return "";
 }
 

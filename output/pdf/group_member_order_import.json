@@ -108,7 +108,16 @@ pdfDocument = {
 			{"hidden":"{$item_hide_import_field}","text":{$group_member_order_pdfvalue}},
 				
 				
+			{"hidden":"{$item_hide_import_field1}","text":{$group_member_id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field2}","text":{$member_id_pdfvalue}},
+				
+				
 			{"hidden":"{$item_hide_import_field3}","text":{$group_id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field4}","text":{$order_date_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_import_field5}","text":{$valid_pdfvalue}},
@@ -124,12 +133,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_import_field9}","text":{$rating_member_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field1}","text":{$group_member_id_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field2}","text":{$member_id_pdfvalue}},
 				
 		  ],
   "border": [ false, false, false, false ],
