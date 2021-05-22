@@ -540,6 +540,14 @@ class Chart
 			return true;
 		if("group" == $this->chrt_array['tables'][0])
 			return true;
+		if("group_agenda" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_agenda_type" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_agenda_type" == $this->chrt_array['tables'][0])
+			return true;
+		if("personal" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

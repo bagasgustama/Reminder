@@ -225,6 +225,17 @@ $tdatagroup_member[".sqlFrom"] = "FROM group_member";
 $tdatagroup_member[".sqlWhereExpr"] = "";
 $tdatagroup_member[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "member_id = ':session.member_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatagroup_member[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -486,7 +497,8 @@ $tdatagroup_member[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 20;
 	$edata["DisplayField"] = "name";
 
-	
+				$edata["LookupWhere"] = "member_id = ':session.member_id'";
+
 
 	
 	$edata["LookupOrderBy"] = "";
@@ -2201,7 +2213,8 @@ $tdatagroup_member[".sqlquery"] = $queryData_group_member;
 
 
 
-$tableEvents["group_member"] = new eventsBase;
-$tdatagroup_member[".hasEvents"] = false;
+include_once(getabspath("include/group_member_events.php"));
+$tableEvents["group_member"] = new eventclass_group_member;
+$tdatagroup_member[".hasEvents"] = true;
 
 ?>

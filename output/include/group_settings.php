@@ -171,7 +171,7 @@ $tdatagroup[".buttonsAdded"] = false;
 $tdatagroup[".addPageEvents"] = false;
 
 // use timepicker for search panel
-$tdatagroup[".isUseTimeForSearch"] = false;
+$tdatagroup[".isUseTimeForSearch"] = true;
 
 
 $tdatagroup[".badgeColor"] = "BC8F8F";
@@ -1545,7 +1545,7 @@ $tdatagroup[".hideMobileList"] = array();
 	
 			
 				$hours = 24;
-	$edata["FormatTimeAttrs"] = array("useTimePicker" => 0,
+	$edata["FormatTimeAttrs"] = array("useTimePicker" => 1,
 									  "hours" => $hours,
 									  "minutes" => 1,
 									  "showSeconds" => 0);
@@ -1692,7 +1692,7 @@ $tdatagroup[".hideMobileList"] = array();
 	
 			
 				$hours = 24;
-	$edata["FormatTimeAttrs"] = array("useTimePicker" => 0,
+	$edata["FormatTimeAttrs"] = array("useTimePicker" => 1,
 									  "hours" => $hours,
 									  "minutes" => 1,
 									  "showSeconds" => 0);
@@ -2618,7 +2618,8 @@ $tdatagroup[".sqlquery"] = $queryData_group;
 
 
 
-$tableEvents["group"] = new eventsBase;
-$tdatagroup[".hasEvents"] = false;
+include_once(getabspath("include/group_events.php"));
+$tableEvents["group"] = new eventclass_group;
+$tdatagroup[".hasEvents"] = true;
 
 ?>

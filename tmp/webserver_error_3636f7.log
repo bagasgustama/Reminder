@@ -1,0 +1,10 @@
+[Fri May 21 20:26:17.517619 2021] [core:warn] [pid 2852:tid 652] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/github-project/Reminder/tmp/webserver.conf.
+[Fri May 21 20:26:18.709461 2021] [mpm_winnt:notice] [pid 2852:tid 652] AH00455: Apache/2.4.10 (Win32) PHP/5.5.18 configured -- resuming normal operations
+[Fri May 21 20:26:18.709461 2021] [mpm_winnt:notice] [pid 2852:tid 652] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Fri May 21 20:26:18.709461 2021] [core:notice] [pid 2852:tid 652] AH00094: Command line: 'C:\\Program Files (x86)\\PHPRunner10.4\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files (x86)/PHPRunner10.4/EmbeddedServer -d C:\\Program Files (x86)\\PHPRunner10.4\\EmbeddedServer -f C:\\github-project\\Reminder\\tmp\\webserver.conf'
+[Fri May 21 20:26:18.725422 2021] [mpm_winnt:notice] [pid 2852:tid 652] AH00418: Parent: Created child process 4652
+[Fri May 21 20:26:20.223343 2021] [core:warn] [pid 4652:tid 588] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/github-project/Reminder/tmp/webserver.conf.
+[Fri May 21 20:26:20.264234 2021] [core:warn] [pid 4652:tid 588] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/github-project/Reminder/tmp/webserver.conf.
+[Fri May 21 20:26:20.317087 2021] [mpm_winnt:notice] [pid 4652:tid 588] AH00354: Child: Starting 64 worker threads.
+[Fri May 21 21:42:14.979882 2021] [mpm_winnt:notice] [pid 2852:tid 652] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri May 21 21:42:44.984696 2021] [mpm_winnt:notice] [pid 2852:tid 652] AH00431: Parent: Forcing termination of child process 4652

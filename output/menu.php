@@ -28,12 +28,18 @@ if (($_SESSION["MyURL"] == "") || (!isLoggedAsGuest())) {
 require_once('include/xtempl.php');
 require_once(getabspath("classes/cipherer.php"));
 
+include_once(getabspath("include/group_events.php"));
+$tableEvents["group"] = new eventclass_group;
 include_once(getabspath("include/personal_agenda_events.php"));
 $tableEvents["personal_agenda"] = new eventclass_personal_agenda;
 include_once(getabspath("include/group_member_order_detail_events.php"));
 $tableEvents["group_member_order_detail"] = new eventclass_group_member_order_detail;
 include_once(getabspath("include/group_member_order_events.php"));
 $tableEvents["group_member_order"] = new eventclass_group_member_order;
+include_once(getabspath("include/group_member_agenda_subscriber_events.php"));
+$tableEvents["group_member_agenda_subscriber"] = new eventclass_group_member_agenda_subscriber;
+include_once(getabspath("include/group_member_events.php"));
+$tableEvents["group_member"] = new eventclass_group_member;
 include_once(getabspath("include/group_agenda_private_events.php"));
 $tableEvents["group_agenda_private"] = new eventclass_group_agenda_private;
 include_once(getabspath("include/group_agenda_events.php"));
@@ -50,6 +56,8 @@ include_once(getabspath("include/review_checkin_events.php"));
 $tableEvents["review_checkin"] = new eventclass_review_checkin;
 include_once(getabspath("include/update_order_progess_events.php"));
 $tableEvents["update_order_progess"] = new eventclass_update_order_progess;
+include_once(getabspath("include/group_agenda1_events.php"));
+$tableEvents["group_agenda1"] = new eventclass_group_agenda1;
 
 $xt = new Xtempl();
 

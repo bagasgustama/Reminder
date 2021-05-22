@@ -215,13 +215,13 @@ function InitLookupLinks()
 			$lookupTableLinks["personal"]["group_member_agenda_subscriber.member_id"] = array();
 		}
 		$lookupTableLinks["personal"]["group_member_agenda_subscriber.member_id"]["edit"] = array("table" => "group_member_agenda_subscriber", "field" => "member_id", "page" => "edit");
-		if( !isset( $lookupTableLinks["group_agenda"] ) ) {
-			$lookupTableLinks["group_agenda"] = array();
+		if( !isset( $lookupTableLinks["group_agenda_type1"] ) ) {
+			$lookupTableLinks["group_agenda_type1"] = array();
 		}
-		if( !isset( $lookupTableLinks["group_agenda"]["group_member_agenda_subscriber.agenda_type_id"] )) {
-			$lookupTableLinks["group_agenda"]["group_member_agenda_subscriber.agenda_type_id"] = array();
+		if( !isset( $lookupTableLinks["group_agenda_type1"]["group_member_agenda_subscriber.agenda_type_id"] )) {
+			$lookupTableLinks["group_agenda_type1"]["group_member_agenda_subscriber.agenda_type_id"] = array();
 		}
-		$lookupTableLinks["group_agenda"]["group_member_agenda_subscriber.agenda_type_id"]["edit"] = array("table" => "group_member_agenda_subscriber", "field" => "agenda_type_id", "page" => "edit");
+		$lookupTableLinks["group_agenda_type1"]["group_member_agenda_subscriber.agenda_type_id"]["edit"] = array("table" => "group_member_agenda_subscriber", "field" => "agenda_type_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["group_member"] ) ) {
 			$lookupTableLinks["group_member"] = array();
 		}
@@ -334,13 +334,13 @@ function InitLookupLinks()
 			$lookupTableLinks["group_member11"]["group_member_checkin.group_member_id"] = array();
 		}
 		$lookupTableLinks["group_member11"]["group_member_checkin.group_member_id"]["edit"] = array("table" => "group_member_checkin", "field" => "group_member_id", "page" => "edit");
-		if( !isset( $lookupTableLinks["personal"] ) ) {
-			$lookupTableLinks["personal"] = array();
+		if( !isset( $lookupTableLinks["personal1"] ) ) {
+			$lookupTableLinks["personal1"] = array();
 		}
-		if( !isset( $lookupTableLinks["personal"]["group_member_checkin.member_id"] )) {
-			$lookupTableLinks["personal"]["group_member_checkin.member_id"] = array();
+		if( !isset( $lookupTableLinks["personal1"]["group_member_checkin.member_id"] )) {
+			$lookupTableLinks["personal1"]["group_member_checkin.member_id"] = array();
 		}
-		$lookupTableLinks["personal"]["group_member_checkin.member_id"]["edit"] = array("table" => "group_member_checkin", "field" => "member_id", "page" => "edit");
+		$lookupTableLinks["personal1"]["group_member_checkin.member_id"]["edit"] = array("table" => "group_member_checkin", "field" => "member_id", "page" => "edit");
 		if( !isset( $lookupTableLinks["group"] ) ) {
 			$lookupTableLinks["group"] = array();
 		}
@@ -628,6 +628,55 @@ function InitLookupLinks()
 			$lookupTableLinks["business_type"]["group3.business_type"] = array();
 		}
 		$lookupTableLinks["business_type"]["group3.business_type"]["edit"] = array("table" => "group3", "field" => "business_type", "page" => "edit");
+		if( !isset( $lookupTableLinks["group"] ) ) {
+			$lookupTableLinks["group"] = array();
+		}
+		if( !isset( $lookupTableLinks["group"]["group_agenda1.group_id"] )) {
+			$lookupTableLinks["group"]["group_agenda1.group_id"] = array();
+		}
+		$lookupTableLinks["group"]["group_agenda1.group_id"]["edit"] = array("table" => "group_agenda1", "field" => "group_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["group_agenda_type"] ) ) {
+			$lookupTableLinks["group_agenda_type"] = array();
+		}
+		if( !isset( $lookupTableLinks["group_agenda_type"]["group_agenda1.agenda_type_id"] )) {
+			$lookupTableLinks["group_agenda_type"]["group_agenda1.agenda_type_id"] = array();
+		}
+		$lookupTableLinks["group_agenda_type"]["group_agenda1.agenda_type_id"]["edit"] = array("table" => "group_agenda1", "field" => "agenda_type_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["loop_type"] ) ) {
+			$lookupTableLinks["loop_type"] = array();
+		}
+		if( !isset( $lookupTableLinks["loop_type"]["group_agenda1.loop_id"] )) {
+			$lookupTableLinks["loop_type"]["group_agenda1.loop_id"] = array();
+		}
+		$lookupTableLinks["loop_type"]["group_agenda1.loop_id"]["edit"] = array("table" => "group_agenda1", "field" => "loop_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["group"] ) ) {
+			$lookupTableLinks["group"] = array();
+		}
+		if( !isset( $lookupTableLinks["group"]["group_agenda_type1.group_id"] )) {
+			$lookupTableLinks["group"]["group_agenda_type1.group_id"] = array();
+		}
+		$lookupTableLinks["group"]["group_agenda_type1.group_id"]["edit"] = array("table" => "group_agenda_type1", "field" => "group_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["group"] ) ) {
+			$lookupTableLinks["group"] = array();
+		}
+		if( !isset( $lookupTableLinks["group"]["group_agenda_type11.group_id"] )) {
+			$lookupTableLinks["group"]["group_agenda_type11.group_id"] = array();
+		}
+		$lookupTableLinks["group"]["group_agenda_type11.group_id"]["edit"] = array("table" => "group_agenda_type11", "field" => "group_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["country"] ) ) {
+			$lookupTableLinks["country"] = array();
+		}
+		if( !isset( $lookupTableLinks["country"]["personal1.country_id"] )) {
+			$lookupTableLinks["country"]["personal1.country_id"] = array();
+		}
+		$lookupTableLinks["country"]["personal1.country_id"]["edit"] = array("table" => "personal1", "field" => "country_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["province"] ) ) {
+			$lookupTableLinks["province"] = array();
+		}
+		if( !isset( $lookupTableLinks["province"]["personal1.province_id"] )) {
+			$lookupTableLinks["province"]["personal1.province_id"] = array();
+		}
+		$lookupTableLinks["province"]["personal1.province_id"]["edit"] = array("table" => "personal1", "field" => "province_id", "page" => "edit");
 }
 
 ?>

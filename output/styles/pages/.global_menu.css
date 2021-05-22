@@ -142,5 +142,17 @@
 [data-page=".global_menu"][data-itemid="welcome_item47"] > .bs-welcome-header {
   background-color: #DAA520;
 }
+[data-page=".global_menu"][data-itemid="welcome_item48"] > .bs-welcome-header {
+  background-color: #6DA5C8;
+}
+[data-page=".global_menu"][data-itemid="welcome_item49"] > .bs-welcome-header {
+  background-color: #6493EA;
+}
+[data-page=".global_menu"][data-itemid="welcome_item50"] > .bs-welcome-header {
+  background-color: #E07878;
+}
+[data-page=".global_menu"][data-itemid="welcome_item51"] > .bs-welcome-header {
+  background-color: #CD853F;
+}
 
 

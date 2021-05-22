@@ -39,7 +39,6 @@ function AfterAdd(&$values, &$keys, $inline, &$pageObject)
 {
 
 		
-
 //**********  Insert a record into another table  ************
 
 

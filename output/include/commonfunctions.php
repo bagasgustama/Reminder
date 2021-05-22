@@ -287,6 +287,14 @@ function checkTableName($shortTName )
 		return true;
 	if ("group3" == $shortTName )
 		return true;
+	if ("group_agenda1" == $shortTName )
+		return true;
+	if ("group_agenda_type1" == $shortTName )
+		return true;
+	if ("group_agenda_type11" == $shortTName )
+		return true;
+	if ("personal1" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -796,6 +804,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="group3";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group_agenda1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group_agenda1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group_agenda_type1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group_agenda_type1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group_agenda_type11");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group_agenda_type11";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("personal1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="personal1";
+	}
 	return $arr;
 }
 
@@ -856,6 +900,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="group_member1";
 	$arr[]="group_member11";
 	$arr[]="group3";
+	$arr[]="group_agenda1";
+	$arr[]="group_agenda_type1";
+	$arr[]="group_agenda_type11";
+	$arr[]="personal1";
 	return $arr;
 }
 
@@ -2030,6 +2078,42 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
+	if( $table=="group_agenda1" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group_agenda_type1" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group_agenda_type11" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="personal1" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
 	// grant nothing by default
 	return "";
 }
@@ -2155,6 +2239,7 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 		$_SESSION["_group_member_order_OwnerID"] = $data["member_id"];
 		$_SESSION["_review_checkin_OwnerID"] = $data["member_id"];
 		$_SESSION["_update_order_progess_OwnerID"] = $data["member_id"];
+		$_SESSION["_personal1_OwnerID"] = $data["member_id"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -2244,6 +2329,12 @@ function CheckSecurity($strValue, $strAction, $table = "")
 		{
 
 				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="personal1")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
 	}
@@ -2337,6 +2428,10 @@ function SecuritySQL($strAction, $table, $strPerm="")
 		{
 				if($strAction == "Edit" || $strAction == "Delete")
 				$ret=GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="personal1")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
 	}
 

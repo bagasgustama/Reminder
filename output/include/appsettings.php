@@ -659,9 +659,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "190_1621535820";
+$projectBuildKey = "209_1621599055";
 $wizardBuildKey = "34702";
-$projectBuildNumber = "190";
+$projectBuildNumber = "209";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -733,6 +733,10 @@ $tableCaptions["English"]["group2121"] = "Group2121";
 $tableCaptions["English"]["group_member1"] = "Group Member1";
 $tableCaptions["English"]["group_member11"] = "Group Member11";
 $tableCaptions["English"]["group3"] = "Group3";
+$tableCaptions["English"]["group_agenda1"] = "Group Agenda1";
+$tableCaptions["English"]["group_agenda_type1"] = "Group Agenda Type1";
+$tableCaptions["English"]["group_agenda_type11"] = "Group Agenda Type11";
+$tableCaptions["English"]["personal1"] = "Personal1";
 
 
 $globalEvents = new class_GlobalEvents;

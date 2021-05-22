@@ -224,7 +224,7 @@ $tdatagroup_member_order[".strOrderBy"] = $tstrOrderBy;
 $tdatagroup_member_order[".orderindexes"] = array();
 
 
-$tdatagroup_member_order[".sqlHead"] = "SELECT group_member_order,  group_member_id,  member_id,  group_id,  order_date,  valid,  total,  currency,  review_member,  rating_member";
+$tdatagroup_member_order[".sqlHead"] = "SELECT group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member";
 $tdatagroup_member_order[".sqlFrom"] = "FROM group_member_order";
 $tdatagroup_member_order[".sqlWhereExpr"] = "";
 $tdatagroup_member_order[".sqlTail"] = "";
@@ -1902,7 +1902,7 @@ function createSqlQuery_group_member_order()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "group_member_order,  group_member_id,  member_id,  group_id,  order_date,  valid,  total,  currency,  review_member,  rating_member";
+$proto0["m_strFieldList"] = "group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member";
 $proto0["m_strFrom"] = "FROM group_member_order";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";

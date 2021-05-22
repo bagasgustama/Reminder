@@ -201,6 +201,17 @@ $tdatagroup_member_agenda_subscriber[".sqlFrom"] = "FROM group_member_agenda_sub
 $tdatagroup_member_agenda_subscriber[".sqlWhereExpr"] = "";
 $tdatagroup_member_agenda_subscriber[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "member_id = ':session.member_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatagroup_member_agenda_subscriber[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -462,7 +473,8 @@ $tdatagroup_member_agenda_subscriber[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 20;
 	$edata["DisplayField"] = "name";
 
-	
+				$edata["LookupWhere"] = "member_id = ':session.member_id'";
+
 
 	
 	$edata["LookupOrderBy"] = "";
@@ -471,6 +483,9 @@ $tdatagroup_member_agenda_subscriber[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "agenda_type_id";
 
 	
 	
@@ -519,7 +534,7 @@ $tdatagroup_member_agenda_subscriber[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -613,16 +628,16 @@ $tdatagroup_member_agenda_subscriber[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "group_agenda";
+	$edata["LookupTable"] = "group_agenda_type1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
 		
-	$edata["LinkField"] = "group_agenda_id";
+	$edata["LinkField"] = "agenda_type_id";
 	$edata["LinkFieldType"] = 20;
-	$edata["DisplayField"] = "agenda_name";
+	$edata["DisplayField"] = "agenda_type";
 
 	
 
@@ -630,7 +645,10 @@ $tdatagroup_member_agenda_subscriber[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "member_id", "lookup" => "member_id" );
+
 	
 	
 
@@ -681,7 +699,7 @@ $tdatagroup_member_agenda_subscriber[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -913,7 +931,8 @@ $tdatagroup_member_agenda_subscriber[".sqlquery"] = $queryData_group_member_agen
 
 
 
-$tableEvents["group_member_agenda_subscriber"] = new eventsBase;
-$tdatagroup_member_agenda_subscriber[".hasEvents"] = false;
+include_once(getabspath("include/group_member_agenda_subscriber_events.php"));
+$tableEvents["group_member_agenda_subscriber"] = new eventclass_group_member_agenda_subscriber;
+$tdatagroup_member_agenda_subscriber[".hasEvents"] = true;
 
 ?>

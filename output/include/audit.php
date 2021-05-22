@@ -506,6 +506,22 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="group_agenda1")
+		{
+			return false;
+		}
+		if($table=="group_agenda_type1")
+		{
+			return false;
+		}
+		if($table=="group_agenda_type11")
+		{
+			return false;
+		}
+		if($table=="personal1")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1015,6 +1031,22 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="group3")
+		{
+			return false;
+		}
+		if($table=="group_agenda1")
+		{
+			return false;
+		}
+		if($table=="group_agenda_type1")
+		{
+			return false;
+		}
+		if($table=="group_agenda_type11")
+		{
+			return false;
+		}
+		if($table=="personal1")
 		{
 			return false;
 		}

@@ -163,9 +163,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member group_id }","bold":true},{"text":{$group_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel group_member user_type }","bold":true},{"text":{$user_type_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel group_member token_group }","bold":true},{"text":{$token_group_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -173,12 +170,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel group_member token_personal }","bold":true},{"text":{$token_personal_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel group_member membership_type }","bold":true},{"text":{$membership_type_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel group_member valid }","bold":true},{"text":{$valid_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

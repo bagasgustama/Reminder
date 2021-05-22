@@ -1,1 +1,0 @@
-[20-May-2021 23:17:39 America/New_York] PHP Fatal error:  Call to a member function gSQLWhere() on a non-object in C:\github-project\Reminder\output\include\update_order_progess_variables.php on line 18

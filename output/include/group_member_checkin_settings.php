@@ -513,6 +513,9 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "member_id";
 
 	
 	
@@ -596,7 +599,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 	$fdata["GoodName"] = "member_id";
 	$fdata["ownerTable"] = "group_member_checkin";
 	$fdata["Label"] = GetFieldLabel("group_member_checkin","member_id");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 20;
 
 	
 	
@@ -655,7 +658,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "personal";
+	$edata["LookupTable"] = "personal1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -672,7 +675,10 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "group_member_id", "lookup" => "group_member_id" );
+
 	
 	
 
@@ -723,7 +729,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

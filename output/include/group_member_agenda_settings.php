@@ -205,6 +205,17 @@ $tdatagroup_member_agenda[".sqlFrom"] = "FROM group_member_agenda";
 $tdatagroup_member_agenda[".sqlWhereExpr"] = "";
 $tdatagroup_member_agenda[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatagroup_member_agenda[".arrGridTabs"] = $arrGridTabs;
 
 
 

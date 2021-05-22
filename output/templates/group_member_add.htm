@@ -156,29 +156,6 @@
 
 {END group_id_fieldblock}
 											
-{BEGIN user_type_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_user_type}  r-vertical-field" 
-	data-fieldname="user_type" 
-	data-signal-error-for="user_type{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="user_type" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_user_type}">
-		{BEGIN user_type_label}{$label group_member user_type }{END user_type_label}
-	</label>
-	<div class="r-edit-field">
-		{$user_type_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="user_type">
-		<div class="text-muted" >
-		{$tooltip group_member user_type }		</div>
-	</div>
-</div>
-
-
-{END user_type_fieldblock}
-											
 {BEGIN token_group_fieldblock}
 
 
@@ -247,52 +224,6 @@
 
 
 {END token_personal_fieldblock}
-											
-{BEGIN membership_type_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_membership_type}  r-vertical-field" 
-	data-fieldname="membership_type" 
-	data-signal-error-for="membership_type{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="membership_type" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_membership_type}">
-		{BEGIN membership_type_label}{$label group_member membership_type }{END membership_type_label}
-	</label>
-	<div class="r-edit-field">
-		{$membership_type_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="membership_type">
-		<div class="text-muted" >
-		{$tooltip group_member membership_type }		</div>
-	</div>
-</div>
-
-
-{END membership_type_fieldblock}
-											
-{BEGIN valid_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_valid}  r-vertical-field" 
-	data-fieldname="valid" 
-	data-signal-error-for="valid{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="valid" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_valid}">
-		{BEGIN valid_label}{$label group_member valid }{END valid_label}
-	</label>
-	<div class="r-edit-field">
-		{$valid_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="valid">
-		<div class="text-muted" >
-		{$tooltip group_member valid }		</div>
-	</div>
-</div>
-
-
-{END valid_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

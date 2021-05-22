@@ -593,7 +593,7 @@ $tdatavalidate_checkin[".hideMobileList"] = array();
 	$fdata["GoodName"] = "member_id";
 	$fdata["ownerTable"] = "group_member_checkin";
 	$fdata["Label"] = GetFieldLabel("validate_checkin","member_id");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 20;
 
 	
 	
