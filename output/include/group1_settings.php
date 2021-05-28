@@ -70,6 +70,57 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup1["English"]))
 		$tdatagroup1[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup1["Indonesian"] = array();
+	$fieldToolTipsgroup1["Indonesian"] = array();
+	$placeHoldersgroup1["Indonesian"] = array();
+	$pageTitlesgroup1["Indonesian"] = array();
+	$fieldLabelsgroup1["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup1["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup1["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup1["Indonesian"]["group_name"] = "Group Name";
+	$fieldToolTipsgroup1["Indonesian"]["group_name"] = "";
+	$placeHoldersgroup1["Indonesian"]["group_name"] = "";
+	$fieldLabelsgroup1["Indonesian"]["description"] = "Description";
+	$fieldToolTipsgroup1["Indonesian"]["description"] = "";
+	$placeHoldersgroup1["Indonesian"]["description"] = "";
+	$fieldLabelsgroup1["Indonesian"]["logo"] = "Logo";
+	$fieldToolTipsgroup1["Indonesian"]["logo"] = "";
+	$placeHoldersgroup1["Indonesian"]["logo"] = "";
+	$fieldLabelsgroup1["Indonesian"]["token_type"] = "Token Type";
+	$fieldToolTipsgroup1["Indonesian"]["token_type"] = "";
+	$placeHoldersgroup1["Indonesian"]["token_type"] = "";
+	$fieldLabelsgroup1["Indonesian"]["token_group"] = "Token Group";
+	$fieldToolTipsgroup1["Indonesian"]["token_group"] = "";
+	$placeHoldersgroup1["Indonesian"]["token_group"] = "";
+	$fieldLabelsgroup1["Indonesian"]["membership_type"] = "Membership Type";
+	$fieldToolTipsgroup1["Indonesian"]["membership_type"] = "";
+	$placeHoldersgroup1["Indonesian"]["membership_type"] = "";
+	$fieldLabelsgroup1["Indonesian"]["business_type"] = "Business Type";
+	$fieldToolTipsgroup1["Indonesian"]["business_type"] = "";
+	$placeHoldersgroup1["Indonesian"]["business_type"] = "";
+	$fieldLabelsgroup1["Indonesian"]["open_time"] = "Open Time";
+	$fieldToolTipsgroup1["Indonesian"]["open_time"] = "";
+	$placeHoldersgroup1["Indonesian"]["open_time"] = "";
+	$fieldLabelsgroup1["Indonesian"]["close_time"] = "Close Time";
+	$fieldToolTipsgroup1["Indonesian"]["close_time"] = "";
+	$placeHoldersgroup1["Indonesian"]["close_time"] = "";
+	$fieldLabelsgroup1["Indonesian"]["off_day"] = "Off Day";
+	$fieldToolTipsgroup1["Indonesian"]["off_day"] = "";
+	$placeHoldersgroup1["Indonesian"]["off_day"] = "";
+	$fieldLabelsgroup1["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsgroup1["Indonesian"]["group_member_id"] = "";
+	$placeHoldersgroup1["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsgroup1["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsgroup1["Indonesian"]["member_id"] = "";
+	$placeHoldersgroup1["Indonesian"]["member_id"] = "";
+	$fieldLabelsgroup1["Indonesian"]["group_id1"] = "Group Id1";
+	$fieldToolTipsgroup1["Indonesian"]["group_id1"] = "";
+	$placeHoldersgroup1["Indonesian"]["group_id1"] = "";
+	if (count($fieldToolTipsgroup1["Indonesian"]))
+		$tdatagroup1[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup1[".NCSearch"] = true;

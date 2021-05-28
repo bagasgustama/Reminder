@@ -127,6 +127,7 @@ function getLangFileName($langName)
 {
 	$langArr = array();
 	$langArr["English"] = "English";
+	$langArr["Indonesian"] = "Indonesian";
 	return $langArr[$langName];
 }
 
@@ -294,6 +295,18 @@ function checkTableName($shortTName )
 	if ("group_agenda_type11" == $shortTName )
 		return true;
 	if ("personal1" == $shortTName )
+		return true;
+	if ("member_checkin" == $shortTName )
+		return true;
+	if ("group4" == $shortTName )
+		return true;
+	if ("group11" == $shortTName )
+		return true;
+	if ("group_product1" == $shortTName )
+		return true;
+	if ("payment" == $shortTName )
+		return true;
+	if ("personal11" == $shortTName )
 		return true;
 	return false;
 }
@@ -840,6 +853,60 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="personal1";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("member checkin");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="member checkin";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group4");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group4";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group11");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group11";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("group_product1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="group_product1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("payment");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="payment";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("personal11");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="personal11";
+	}
 	return $arr;
 }
 
@@ -904,6 +971,12 @@ function GetTablesListWithoutSecurity()
 	$arr[]="group_agenda_type1";
 	$arr[]="group_agenda_type11";
 	$arr[]="personal1";
+	$arr[]="member checkin";
+	$arr[]="group4";
+	$arr[]="group11";
+	$arr[]="group_product1";
+	$arr[]="payment";
+	$arr[]="personal11";
 	return $arr;
 }
 
@@ -2114,6 +2187,60 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
+	if( $table=="member checkin" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group4" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group11" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="group_product1" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="payment" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="personal11" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
 	// grant nothing by default
 	return "";
 }
@@ -2240,6 +2367,7 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 		$_SESSION["_review_checkin_OwnerID"] = $data["member_id"];
 		$_SESSION["_update_order_progess_OwnerID"] = $data["member_id"];
 		$_SESSION["_personal1_OwnerID"] = $data["member_id"];
+		$_SESSION["_personal11_OwnerID"] = $data["member_id"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -2257,7 +2385,7 @@ function DoLogin($callAfterLoginEvent = false, $userID = "Guest", $userName = ""
 	global $globalEvents;
 
 	if($userID == "Guest" && $userName == "")
-		$userName = "Guest";
+		$userName = mlang_message("AA_GROUP_GUEST");
 
 	if( !GetGlobalData("bTwoFactorAuth", false) || $userID == "Guest" )
 	{
@@ -2332,6 +2460,12 @@ function CheckSecurity($strValue, $strAction, $table = "")
 				return false;
 		}
 		if($table=="personal1")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="personal11")
 		{
 
 				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
@@ -2430,6 +2564,10 @@ function SecuritySQL($strAction, $table, $strPerm="")
 				$ret=GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
 		if($table=="personal1")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="personal11")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
@@ -3119,6 +3257,7 @@ function SetLangVars($xt, $prefix, $pageName = "", $extraparams = "")
 	$xt->assign($currentLang . "LANGLINK_ACTIVE", true);
 
 	$xt->assign("EnglishLANGLINK", "English" != $currentLang);
+	$xt->assign("IndonesianLANGLINK", "Indonesian" != $currentLang);
 
 	if( isEnableSection508() )
 		$xt->assign_section("lang_label", "<label for=\"languageSelector\">","</label>");
@@ -3274,18 +3413,18 @@ function mlang_getlanglist()
 function getMountNames()
 {
 	$mounts = array();
-		$mounts[1] = "January";
-	$mounts[2] = "February";
-	$mounts[3] = "March";
-	$mounts[4] = "April";
-	$mounts[5] = "May";
-	$mounts[6] = "June";
-	$mounts[7] = "July";
-	$mounts[8] = "August";
-	$mounts[9] = "September";
-	$mounts[10] = "October";
-	$mounts[11] = "November";
-	$mounts[12] = "December";
+		$mounts[1] = mlang_message("MONTH_JAN");
+	$mounts[2] = mlang_message("MONTH_FEB");
+	$mounts[3] = mlang_message("MONTH_MAR");
+	$mounts[4] = mlang_message("MONTH_APR");
+	$mounts[5] = mlang_message("MONTH_MAY");
+	$mounts[6] = mlang_message("MONTH_JUN");
+	$mounts[7] = mlang_message("MONTH_JUL");
+	$mounts[8] = mlang_message("MONTH_AUG");
+	$mounts[9] = mlang_message("MONTH_SEP");
+	$mounts[10] = mlang_message("MONTH_OCT");
+	$mounts[11] = mlang_message("MONTH_NOV");
+	$mounts[12] = mlang_message("MONTH_DEC");
 
 	return $mounts;
 }
@@ -4425,6 +4564,7 @@ function getDefaultLanguage()
 	{
 		$arrWizardLang = array();
 		$arrWizardLang[] = "English";
+		$arrWizardLang[] = "Indonesian";
 		$arrLang = array();
 		$arrLang["af"] = "Afrikaans";
 		$arrLang["ar"] = "Arabic";
@@ -4792,8 +4932,8 @@ function verifyRecaptchaResponse( $response ) {
 	$verifyUrl = "https://www.google.com/recaptcha/api/siteverify?";
 
 	$errors = array();
-	$errors["missing-input-response"] = "Invalid security code.";
-	$errors["invalid-input-response"] = "Invalid security code.";
+	$errors["missing-input-response"] = mlang_message("SEC_INVALID_CAPTCHA_CODE");
+	$errors["invalid-input-response"] = mlang_message("SEC_INVALID_CAPTCHA_CODE");
 	$errors["missing-input-secret"] = "The secret parameter is missing";
 	$errors["invalid-input-secret"] = "The secret parameter is invalid or malformed";
 	$errors["bad-request"] = "The request is invalid or malformed";

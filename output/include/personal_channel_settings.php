@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipspersonal_channel["English"]))
 		$tdatapersonal_channel[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelspersonal_channel["Indonesian"] = array();
+	$fieldToolTipspersonal_channel["Indonesian"] = array();
+	$placeHolderspersonal_channel["Indonesian"] = array();
+	$pageTitlespersonal_channel["Indonesian"] = array();
+	$fieldLabelspersonal_channel["Indonesian"]["member_ch_id"] = "Member Ch Id";
+	$fieldToolTipspersonal_channel["Indonesian"]["member_ch_id"] = "";
+	$placeHolderspersonal_channel["Indonesian"]["member_ch_id"] = "";
+	$fieldLabelspersonal_channel["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipspersonal_channel["Indonesian"]["member_id"] = "";
+	$placeHolderspersonal_channel["Indonesian"]["member_id"] = "";
+	$fieldLabelspersonal_channel["Indonesian"]["channel_id"] = "Channel Id";
+	$fieldToolTipspersonal_channel["Indonesian"]["channel_id"] = "";
+	$placeHolderspersonal_channel["Indonesian"]["channel_id"] = "";
+	$fieldLabelspersonal_channel["Indonesian"]["chat_id"] = "Chat Id";
+	$fieldToolTipspersonal_channel["Indonesian"]["chat_id"] = "";
+	$placeHolderspersonal_channel["Indonesian"]["chat_id"] = "";
+	if (count($fieldToolTipspersonal_channel["Indonesian"]))
+		$tdatapersonal_channel[".isUseToolTips"] = true;
+}
 
 
 	$tdatapersonal_channel[".NCSearch"] = true;

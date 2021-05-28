@@ -6,6 +6,7 @@ class Labels {
 	{
 		$languages = array();
 		$languages[] = "English";
+		$languages[] = "Indonesian";
 		return $languages;
 	}
 

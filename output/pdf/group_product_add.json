@@ -157,9 +157,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel group_product group_id }","bold":true},{"text":{$group_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_product product_type }","bold":true},{"text":{$product_type_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

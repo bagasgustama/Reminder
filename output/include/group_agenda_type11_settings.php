@@ -49,6 +49,36 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup_agenda_type11["English"]))
 		$tdatagroup_agenda_type11[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup_agenda_type11["Indonesian"] = array();
+	$fieldToolTipsgroup_agenda_type11["Indonesian"] = array();
+	$placeHoldersgroup_agenda_type11["Indonesian"] = array();
+	$pageTitlesgroup_agenda_type11["Indonesian"] = array();
+	$fieldLabelsgroup_agenda_type11["Indonesian"]["agenda_type_id"] = "Agenda Type Id";
+	$fieldToolTipsgroup_agenda_type11["Indonesian"]["agenda_type_id"] = "";
+	$placeHoldersgroup_agenda_type11["Indonesian"]["agenda_type_id"] = "";
+	$fieldLabelsgroup_agenda_type11["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup_agenda_type11["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup_agenda_type11["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup_agenda_type11["Indonesian"]["agenda_type"] = "Agenda Type";
+	$fieldToolTipsgroup_agenda_type11["Indonesian"]["agenda_type"] = "";
+	$placeHoldersgroup_agenda_type11["Indonesian"]["agenda_type"] = "";
+	$fieldLabelsgroup_agenda_type11["Indonesian"]["description"] = "Description";
+	$fieldToolTipsgroup_agenda_type11["Indonesian"]["description"] = "";
+	$placeHoldersgroup_agenda_type11["Indonesian"]["description"] = "";
+	$fieldLabelsgroup_agenda_type11["Indonesian"]["group_requested"] = "Group Requested";
+	$fieldToolTipsgroup_agenda_type11["Indonesian"]["group_requested"] = "";
+	$placeHoldersgroup_agenda_type11["Indonesian"]["group_requested"] = "";
+	$fieldLabelsgroup_agenda_type11["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsgroup_agenda_type11["Indonesian"]["valid"] = "";
+	$placeHoldersgroup_agenda_type11["Indonesian"]["valid"] = "";
+	$fieldLabelsgroup_agenda_type11["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsgroup_agenda_type11["Indonesian"]["member_id"] = "";
+	$placeHoldersgroup_agenda_type11["Indonesian"]["member_id"] = "";
+	if (count($fieldToolTipsgroup_agenda_type11["Indonesian"]))
+		$tdatagroup_agenda_type11[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup_agenda_type11[".NCSearch"] = true;

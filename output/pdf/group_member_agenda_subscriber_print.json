@@ -169,7 +169,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -241,11 +241,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field4}","text":"{$jslabel group_member_agenda_subscriber member_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field4}","text":"{$jslabel group_member_agenda_subscriber agenda_type_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$member_id_align}',
+          "alignment": '{$agenda_type_id_align}',
   },
 
 {END cellblock_grid_headcell_field1}
@@ -267,11 +267,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field5}","text":"{$jslabel group_member_agenda_subscriber agenda_type_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field5}","text":"{$jslabel group_member_agenda_subscriber member_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$agenda_type_id_align}',
+          "alignment": '{$member_id_align}',
   },
 
 {END cellblock_grid_headcell_field2}
@@ -327,11 +327,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field1}","text":{$member_id_pdfvalue}},
+			{"hidden":"{$item_hide_simple_grid_field2}","text":{$agenda_type_id_pdfvalue}},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$member_id_align}',
+          "alignment": '{$agenda_type_id_align}',
   },
 
 {END cellblock_grid_cell_field1}
@@ -353,11 +353,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field2}","text":{$agenda_type_id_pdfvalue}},
+			{"hidden":"{$item_hide_simple_grid_field1}","text":{$member_id_pdfvalue}},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$agenda_type_id_align}',
+          "alignment": '{$member_id_align}',
   },
 
 {END cellblock_grid_cell_field2}

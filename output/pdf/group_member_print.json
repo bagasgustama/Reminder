@@ -190,7 +190,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -762,6 +762,16 @@ pdfDocument = {
 			 {BEGIN details_update_order_progess}
 			{$displayDetailTable_update_order_progess }
 		{END details_update_order_progess},
+				
+				
+			 {BEGIN details_member_checkin}
+			{$displayDetailTable_member_checkin }
+		{END details_member_checkin},
+				
+				
+			 {BEGIN details_payment}
+			{$displayDetailTable_payment }
+		{END details_payment},
 				
 		  ],
   "border": [ true, true, true, true ],

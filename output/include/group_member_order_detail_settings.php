@@ -58,6 +58,45 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup_member_order_detail["English"]))
 		$tdatagroup_member_order_detail[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup_member_order_detail["Indonesian"] = array();
+	$fieldToolTipsgroup_member_order_detail["Indonesian"] = array();
+	$placeHoldersgroup_member_order_detail["Indonesian"] = array();
+	$pageTitlesgroup_member_order_detail["Indonesian"] = array();
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["group_member_order_detail_id"] = "Group Member Order Detail Id";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["group_member_order_detail_id"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["group_member_order_detail_id"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["group_member_order_id"] = "Group Member Order Id";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["group_member_order_id"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["group_member_order_id"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["group_member_id"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["member_id"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["member_id"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["group_product_id"] = "Group Product Id";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["group_product_id"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["group_product_id"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["nominal"] = "Nominal";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["nominal"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["nominal"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["quantity"] = "Quantity";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["quantity"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["quantity"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["total"] = "Total";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["total"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["total"] = "";
+	$fieldLabelsgroup_member_order_detail["Indonesian"]["progress"] = "Progress";
+	$fieldToolTipsgroup_member_order_detail["Indonesian"]["progress"] = "";
+	$placeHoldersgroup_member_order_detail["Indonesian"]["progress"] = "";
+	if (count($fieldToolTipsgroup_member_order_detail["Indonesian"]))
+		$tdatagroup_member_order_detail[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup_member_order_detail[".NCSearch"] = true;
@@ -171,7 +210,7 @@ $tdatagroup_member_order_detail[".addPageEvents"] = false;
 $tdatagroup_member_order_detail[".isUseTimeForSearch"] = false;
 
 
-$tdatagroup_member_order_detail[".badgeColor"] = "6B8E23";
+$tdatagroup_member_order_detail[".badgeColor"] = "6b8e23";
 
 
 $tdatagroup_member_order_detail[".allSearchFields"] = array();
@@ -522,6 +561,9 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 				//dependent dropdowns @deprecated data ?
 	$edata["DependentLookups"] = array();
 	$edata["DependentLookups"][] = "group_id";
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "group_product_id";
 
 	
 	
@@ -1011,9 +1053,6 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 	
 	
-				//dependent dropdowns @deprecated data ?
-	$edata["DependentLookups"] = array();
-	$edata["DependentLookups"][] = "group_product_id";
 
 	
 	
@@ -1156,13 +1195,14 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "group_product";
+	$edata["LookupTable"] = "group_product1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-		
+			$edata["LookupUnique"] = true;
+
 	$edata["LinkField"] = "group_product_id";
 	$edata["LinkFieldType"] = 20;
 	$edata["DisplayField"] = "product_name";
@@ -1175,7 +1215,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 	
 		$edata["UseCategory"] = true;
 	$edata["categoryFields"] = array();
-	$edata["categoryFields"][] = array( "main" => "group_id", "lookup" => "group_id" );
+	$edata["categoryFields"][] = array( "main" => "group_member_order_id", "lookup" => "group_member_order" );
 
 	
 	
@@ -1675,7 +1715,7 @@ $tdatagroup_member_order_detail[".hideMobileList"] = array();
 	$fdata["GoodName"] = "progress";
 	$fdata["ownerTable"] = "group_member_order_detail";
 	$fdata["Label"] = GetFieldLabel("group_member_order_detail","progress");
-	$fdata["FieldType"] = 16;
+	$fdata["FieldType"] = 129;
 
 	
 	
@@ -1932,6 +1972,22 @@ $masterTablesData["group_member_order_detail"] = array();
 	$masterTablesData["group_member_order_detail"][6]["masterKeys"][]="group_member_order";
 				$masterTablesData["group_member_order_detail"][6]["detailKeys"] = array();
 	$masterTablesData["group_member_order_detail"][6]["detailKeys"][]="group_member_order_id";
+		
+	
+				$strOriginalDetailsTable="group_member_order";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="payment";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "payment";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["group_member_order_detail"][7] = $masterParams;
+				$masterTablesData["group_member_order_detail"][7]["masterKeys"] = array();
+	$masterTablesData["group_member_order_detail"][7]["masterKeys"][]="group_member_order";
+				$masterTablesData["group_member_order_detail"][7]["detailKeys"] = array();
+	$masterTablesData["group_member_order_detail"][7]["detailKeys"][]="group_member_order_id";
 		
 // -----------------end  prepare master-details data arrays ------------------------------//
 

@@ -58,6 +58,45 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsreview_checkin["English"]))
 		$tdatareview_checkin[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsreview_checkin["Indonesian"] = array();
+	$fieldToolTipsreview_checkin["Indonesian"] = array();
+	$placeHoldersreview_checkin["Indonesian"] = array();
+	$pageTitlesreview_checkin["Indonesian"] = array();
+	$fieldLabelsreview_checkin["Indonesian"]["group_member_checkin_id"] = "Group Member Checkin Id";
+	$fieldToolTipsreview_checkin["Indonesian"]["group_member_checkin_id"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["group_member_checkin_id"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsreview_checkin["Indonesian"]["group_member_id"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsreview_checkin["Indonesian"]["member_id"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["member_id"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsreview_checkin["Indonesian"]["group_id"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["group_id"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["checkin_date"] = "Checkin Date";
+	$fieldToolTipsreview_checkin["Indonesian"]["checkin_date"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["checkin_date"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["checkout_date"] = "Checkout Date";
+	$fieldToolTipsreview_checkin["Indonesian"]["checkout_date"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["checkout_date"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["id_room"] = "Id Room";
+	$fieldToolTipsreview_checkin["Indonesian"]["id_room"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["id_room"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsreview_checkin["Indonesian"]["valid"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["valid"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["review_member"] = "Review Member";
+	$fieldToolTipsreview_checkin["Indonesian"]["review_member"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["review_member"] = "";
+	$fieldLabelsreview_checkin["Indonesian"]["rating_member"] = "Rating Member";
+	$fieldToolTipsreview_checkin["Indonesian"]["rating_member"] = "";
+	$placeHoldersreview_checkin["Indonesian"]["rating_member"] = "";
+	if (count($fieldToolTipsreview_checkin["Indonesian"]))
+		$tdatareview_checkin[".isUseToolTips"] = true;
+}
 
 
 	$tdatareview_checkin[".NCSearch"] = true;
@@ -1651,7 +1690,7 @@ $tdatareview_checkin[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1661,6 +1700,25 @@ $tdatareview_checkin[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "5";
+	$edata["LookupValues"][] = "4";
+	$edata["LookupValues"][] = "3";
+	$edata["LookupValues"][] = "2";
+	$edata["LookupValues"][] = "1";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1676,17 +1734,14 @@ $tdatareview_checkin[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation
@@ -1706,7 +1761,7 @@ $tdatareview_checkin[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

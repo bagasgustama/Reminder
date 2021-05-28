@@ -3320,6 +3320,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "group_agenda_type11" ] = "group_agenda_type11";
 	$projectEntities[ "personal1" ] = array( "url" => "personal1", "type" => 1 );
 	$projectEntitiesReverse[ "personal1" ] = "personal1";
+	$projectEntities[ "member checkin" ] = array( "url" => "member_checkin", "type" => 1 );
+	$projectEntitiesReverse[ "member_checkin" ] = "member checkin";
+	$projectEntities[ "group4" ] = array( "url" => "group4", "type" => 1 );
+	$projectEntitiesReverse[ "group4" ] = "group4";
+	$projectEntities[ "group11" ] = array( "url" => "group11", "type" => 1 );
+	$projectEntitiesReverse[ "group11" ] = "group11";
+	$projectEntities[ "group_product1" ] = array( "url" => "group_product1", "type" => 1 );
+	$projectEntitiesReverse[ "group_product1" ] = "group_product1";
+	$projectEntities[ "payment" ] = array( "url" => "payment", "type" => 1 );
+	$projectEntitiesReverse[ "payment" ] = "payment";
+	$projectEntities[ "personal11" ] = array( "url" => "personal11", "type" => 1 );
+	$projectEntitiesReverse[ "personal11" ] = "personal11";
 }
 
 function findTable( $table ) {

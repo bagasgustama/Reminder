@@ -46,7 +46,7 @@ class PanelSearchControl extends SearchControl
 	{
 		$options = "";
 		if (sizeof($this->pSet->getGoogleLikeFields()) != 0)
-			$options = '<option value="" >'."Any field".'</option>';
+			$options = '<option value="" >'.mlang_message("ANY_FIELD").'</option>';
 		
 		foreach($fNamesArr as $fName)
 		{

@@ -67,7 +67,7 @@
 	<div class="panel-heading">
 		<div class="btn-group" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -77,12 +77,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
 			</ul>
 		</div>
 
@@ -113,6 +113,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_country_id}</span>
 						</div>
 		{END searchCtrlBlock_country_id}
+																{BEGIN searchCtrlBlock_phonecode}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_phonecode}" {$filterRow_attrs_phonecode}>
+			<label>{$label country phonecode }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_phonecode}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_phonecode}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_phonecode}</span>
+						</div>
+		{END searchCtrlBlock_phonecode}
+																{BEGIN searchCtrlBlock_sortname}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_sortname}" {$filterRow_attrs_sortname}>
+			<label>{$label country sortname }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_sortname}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_sortname}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_sortname}</span>
+						</div>
+		{END searchCtrlBlock_sortname}
 																{BEGIN searchCtrlBlock_country_name}
 
 
@@ -131,8 +157,8 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -184,7 +210,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -210,7 +236,7 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		Export selected		
+		{mlang_message EXPORT_SELECTED}		
 		</a>
 	</li>
 {END exportselected_link}
@@ -218,21 +244,21 @@
 	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
 				
-		Delete selected		
+		{mlang_message DELETE_SELECTED}		
 		</a>
 	</li>
 {END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="country_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		Advanced search		
+		{mlang_message ADVANCED_SEARCH}		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		Show search panel		
+		{mlang_message SHOW_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -240,7 +266,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		Hide search panel		
+		{mlang_message HIDE_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -248,7 +274,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		Export results		
+		{mlang_message EXPORT_RESULTS}		
 		</a>
 	</li>
 {END export_link}
@@ -256,10 +282,20 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="country_import.php{$stateLink_full}"  title="" >
 				
-		Import		
+		{mlang_message IMPORT}		
 		</a>
 	</li>
 {END import_link}
+							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN IndonesianLANGLINK}
+	<li><a href="#" data-lang="Indonesian" class="rnr-langlink">
+		{BEGIN IndonesianLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END IndonesianLANGLINK_ACTIVE}
+		Bahasa Indonesia</a></li>
+	{END IndonesianLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -270,7 +306,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							Login			</a>
+							{mlang_message LOGIN}			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -288,7 +324,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		Log out		
+		{mlang_message LOG_OUT}		
 		</a>
 	</li>
 {END logoutbutton}
@@ -296,7 +332,7 @@
 	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="admin_rights_list.php"  title="" >
 				
-		Admin Area		
+		{mlang_message AA_ADMINAREA}		
 		</a>
 	</li>
 {END adminarea_link}
@@ -334,7 +370,7 @@
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$addlink_attrs} href="country_add.php{$stateLink_full}" >
-							Add new			</a>
+							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
 	 
@@ -342,7 +378,7 @@
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Delete			</a>
+							{mlang_message DELETE}			</a>
 </span>
 {END deleteselected_link}
 			{END firstAboveGridCell}	
@@ -361,7 +397,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -373,13 +409,13 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			Scope:		</div>
+			{mlang_message PPANEL_SCOPE}		</div>
 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="country_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
-									Print all pages							</label>
+									{mlang_message PPANEL_ALL_PAGES}							</label>
 		</div>
 		{END print_friendly_all}
 	</div>
@@ -388,7 +424,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="country_print.php?{$crosstable_attrs}">
-				Print this page			</label>
+				{mlang_message PPANEL_THIS_PAGE}			</label>
 		</div>
 	</div>
 	
@@ -399,7 +435,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio">
-			Print selected			</label>
+			{mlang_message PPANEL_SELECTED}			</label>
 		</div>
 	</div>
 	</div>				 
@@ -413,7 +449,7 @@
 <div>
 	<label for="printDetailsToggler{$id}">
 		<input type="checkbox" id="printDetailsToggler{$id}">
-		Print details	</label>
+		{mlang_message PPANEL_DETAILS}	</label>
 	<div  id="printdetailstables{$id}" style="display:none;">
 											{BEGIN print_details_province}
 			<div>
@@ -441,7 +477,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					Records Per Page							
+					{mlang_message RECORDS_PP}							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -455,7 +491,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							Print			</a>
+							{mlang_message PPANEL_PRINT}			</a>
 </span>
 				 
 					</li>
@@ -482,6 +518,12 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="country_name"]:before {
 		content: "{$label country country_name}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="sortname"]:before {
+		content: "{$label country sortname}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="phonecode"]:before {
+		content: "{$label country phonecode}";
 	}
 	}
 </style>
@@ -572,7 +614,7 @@
 	 
 		{BEGIN country_id_fieldheadercolumn}
 	{BEGIN country_id_fieldheader}
-	<SPAN {$country_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country_id">
+	<SPAN {$country_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country_id">
 	{$label country country_id }	{$arrow_icon_country_id}
 	</SPAN>
 	{END country_id_fieldheader}
@@ -599,7 +641,7 @@
 	 
 		{BEGIN country_name_fieldheadercolumn}
 	{BEGIN country_name_fieldheader}
-	<SPAN {$country_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country_name">
+	<SPAN {$country_name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country_name">
 	{$label country country_name }	{$arrow_icon_country_name}
 	</SPAN>
 	{END country_name_fieldheader}
@@ -608,6 +650,60 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
+				 
+					{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$sortname_class}
+			"
+
+			data-field="sortname"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN sortname_fieldheadercolumn}
+	{BEGIN sortname_fieldheader}
+	<SPAN {$sortname_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sortname">
+	{$label country sortname }	{$arrow_icon_sortname}
+	</SPAN>
+	{END sortname_fieldheader}
+{END sortname_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+				 
+					{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$phonecode_class}
+			"
+
+			data-field="phonecode"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN phonecode_fieldheadercolumn}
+	{BEGIN phonecode_fieldheader}
+	<SPAN {$phonecode_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="phonecode">
+	{$label country phonecode }	{$arrow_icon_phonecode}
+	</SPAN>
+	{END phonecode_fieldheader}
+{END phonecode_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
 							</tr>
 					 
 					 
@@ -642,8 +738,8 @@
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Edit" class="btn-link   
-	 glyphicon glyphicon-pencil" href="country_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
+	<a type="button" title="{mlang_message EDIT}" class="btn-link   
+	 glyphicon glyphicon-pencil" href="country_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >		
 				
 								</a>
 </span>
@@ -653,8 +749,8 @@
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn-link   
-	 glyphicon glyphicon-search" href="country_view.php?{$editlink}" {$viewlink_attrs} title="View" >		
+	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
+	 glyphicon glyphicon-search" href="country_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
 				
 								</a>
 </span>
@@ -707,7 +803,7 @@
 		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
 		{$dtables_link_attrs} 
 		class="{$dtables_link_class}" 
-		title="Show details"
+		title="{mlang_message SHOW_DETAILS}"
 	>
 					<span class="glyphicon glyphicon-th-list"></span>
 					</a>
@@ -799,6 +895,52 @@
 {END country_name_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
+				 
+					{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$sortname_class}
+			"
+
+			data-field="sortname"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN sortname_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sortname" data-default-width >
+{$sortname_value}
+</span>
+{END sortname_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+				 
+					{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$phonecode_class}
+			"
+
+			data-field="phonecode"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN phonecode_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="phonecode" data-default-width >
+{$phonecode_value}
+</span>
+{END phonecode_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
 							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
@@ -928,6 +1070,38 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
+				 
+					{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="country_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+				 
+					{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="country_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

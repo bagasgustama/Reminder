@@ -154,5 +154,23 @@
 [data-page=".global_menu"][data-itemid="welcome_item51"] > .bs-welcome-header {
   background-color: #CD853F;
 }
+[data-page=".global_menu"][data-itemid="welcome_item52"] > .bs-welcome-header {
+  background-color: #6493EA;
+}
+[data-page=".global_menu"][data-itemid="welcome_item53"] > .bs-welcome-header {
+  background-color: #DC143C;
+}
+[data-page=".global_menu"][data-itemid="welcome_item54"] > .bs-welcome-header {
+  background-color: #D2AF80;
+}
+[data-page=".global_menu"][data-itemid="welcome_item55"] > .bs-welcome-header {
+  background-color: #6B8E23;
+}
+[data-page=".global_menu"][data-itemid="welcome_item56"] > .bs-welcome-header {
+  background-color: #6B8E23;
+}
+[data-page=".global_menu"][data-itemid="welcome_item57"] > .bs-welcome-header {
+  background-color: #008B8B;
+}
 
 

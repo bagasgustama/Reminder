@@ -130,7 +130,8 @@ array( 'cell' => 'c2' ) ),
 'edit_view' => array( 'type' => 'edit_view' ),
 'integrated_edit_field8' => array( 'field' => 'progress',
 'type' => 'integrated_edit_field',
-'orientation' => 0 ) ),
+'orientation' => 0,
+'updateOnEdit' => false ) ),
 'dbProps' => array(  ),
 'version' => 4 );
 		?>

@@ -49,6 +49,7 @@ include(getabspath('classes/pdlayout.php'));
 //	custom labels
 $custom_labels = array();
 $custom_labels["English"] = array();
+$custom_labels["Indonesian"] = array();
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -557,6 +558,7 @@ $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
 $globalSettings["ProjectLogo"]["English"] = "Reminder";
+$globalSettings["ProjectLogo"]["Indonesian"] = "Reminder";
 
 $globalSettings["CookieBanner"] = array();
 
@@ -659,9 +661,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "209_1621599055";
+$projectBuildKey = "327_1622180673";
 $wizardBuildKey = "34702";
-$projectBuildNumber = "209";
+$projectBuildNumber = "327";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -737,6 +739,75 @@ $tableCaptions["English"]["group_agenda1"] = "Group Agenda1";
 $tableCaptions["English"]["group_agenda_type1"] = "Group Agenda Type1";
 $tableCaptions["English"]["group_agenda_type11"] = "Group Agenda Type11";
 $tableCaptions["English"]["personal1"] = "Personal1";
+$tableCaptions["English"]["member_checkin"] = "Member Checkin";
+$tableCaptions["English"]["group4"] = "Group4";
+$tableCaptions["English"]["group11"] = "Group11";
+$tableCaptions["English"]["group_product1"] = "Group Product1";
+$tableCaptions["English"]["payment"] = "Payment";
+$tableCaptions["English"]["personal11"] = "Personal11";
+$tableCaptions["Indonesian"] = array();
+$tableCaptions["Indonesian"][""] = "";
+$tableCaptions["Indonesian"]["business_type"] = "Business Type";
+$tableCaptions["Indonesian"]["channel"] = "Channel";
+$tableCaptions["Indonesian"]["country"] = "Country";
+$tableCaptions["Indonesian"]["group"] = "Group";
+$tableCaptions["Indonesian"]["stock_type"] = "Stock Type";
+$tableCaptions["Indonesian"]["province"] = "Province";
+$tableCaptions["Indonesian"]["product_type"] = "Product Type";
+$tableCaptions["Indonesian"]["personal_channel"] = "Personal Channel";
+$tableCaptions["Indonesian"]["personal_agenda_repeat_date"] = "Personal Agenda Repeat Date";
+$tableCaptions["Indonesian"]["personal_agenda"] = "Personal Agenda";
+$tableCaptions["Indonesian"]["outbox_telegram"] = "Outbox Telegram";
+$tableCaptions["Indonesian"]["personal"] = "Personal";
+$tableCaptions["Indonesian"]["order_type"] = "Order Type";
+$tableCaptions["Indonesian"]["membership_type"] = "Membership Type";
+$tableCaptions["Indonesian"]["loop_type"] = "Loop Type";
+$tableCaptions["Indonesian"]["outbox_mail_aws"] = "Outbox Mail Aws";
+$tableCaptions["Indonesian"]["lookup_token"] = "Lookup Token";
+$tableCaptions["Indonesian"]["group_user_type"] = "Group User Type";
+$tableCaptions["Indonesian"]["group_operation_off"] = "Group Operation Off";
+$tableCaptions["Indonesian"]["group_product"] = "Group Product";
+$tableCaptions["Indonesian"]["group_member_order_detail"] = "Group Member Order Detail";
+$tableCaptions["Indonesian"]["group_member_order"] = "Group Member Order";
+$tableCaptions["Indonesian"]["group_member_agenda_subscriber"] = "Group Member Agenda Subscriber";
+$tableCaptions["Indonesian"]["group_member_agenda"] = "Group Member Agenda";
+$tableCaptions["Indonesian"]["group_member"] = "Group Member";
+$tableCaptions["Indonesian"]["group_agenda_private"] = "Group Agenda Private";
+$tableCaptions["Indonesian"]["group_agenda_general_logs"] = "Group Agenda General Logs";
+$tableCaptions["Indonesian"]["group_agenda"] = "Group Agenda";
+$tableCaptions["Indonesian"]["group_agenda_repeat_date"] = "Group Agenda Repeat Date";
+$tableCaptions["Indonesian"]["group_member_checkin"] = "Group Member Checkin";
+$tableCaptions["Indonesian"]["group_agenda_type"] = "Group Agenda Type";
+$tableCaptions["Indonesian"]["admin_rights"] = "Admin Rights";
+$tableCaptions["Indonesian"]["admin_members"] = "Admin Members";
+$tableCaptions["Indonesian"]["admin_users"] = "Add/Edit users";
+$tableCaptions["Indonesian"]["project5_uggroups"] = "Project5 Uggroups";
+$tableCaptions["Indonesian"]["project5_ugmembers"] = "Project5 Ugmembers";
+$tableCaptions["Indonesian"]["project5_ugrights"] = "Project5 Ugrights";
+$tableCaptions["Indonesian"]["validate_checkin"] = "Validate Checkin";
+$tableCaptions["Indonesian"]["validate_order"] = "Validate Order";
+$tableCaptions["Indonesian"]["review_order"] = "Review Order";
+$tableCaptions["Indonesian"]["review_checkin"] = "Review Checkin";
+$tableCaptions["Indonesian"]["update_order_progess"] = "Update Order Progess";
+$tableCaptions["Indonesian"]["group1"] = "Group1";
+$tableCaptions["Indonesian"]["group2"] = "Group2";
+$tableCaptions["Indonesian"]["group21"] = "Group21";
+$tableCaptions["Indonesian"]["group211"] = "Group211";
+$tableCaptions["Indonesian"]["group212"] = "Group212";
+$tableCaptions["Indonesian"]["group2121"] = "Group2121";
+$tableCaptions["Indonesian"]["group_member1"] = "Group Member1";
+$tableCaptions["Indonesian"]["group_member11"] = "Group Member11";
+$tableCaptions["Indonesian"]["group3"] = "Group3";
+$tableCaptions["Indonesian"]["group_agenda1"] = "Group Agenda1";
+$tableCaptions["Indonesian"]["group_agenda_type1"] = "Group Agenda Type1";
+$tableCaptions["Indonesian"]["group_agenda_type11"] = "Group Agenda Type11";
+$tableCaptions["Indonesian"]["personal1"] = "Personal1";
+$tableCaptions["Indonesian"]["member_checkin"] = "Member Checkin";
+$tableCaptions["Indonesian"]["group4"] = "Group4";
+$tableCaptions["Indonesian"]["group11"] = "Group11";
+$tableCaptions["Indonesian"]["group_product1"] = "Group Product1";
+$tableCaptions["Indonesian"]["payment"] = "Payment";
+$tableCaptions["Indonesian"]["personal11"] = "Personal11";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -782,6 +853,9 @@ $mediaType = $mediaType ? $mediaType : 0;
 
 $page_titles[".global"] = array();
 if(mlang_getcurrentlang()=="English")
+{
+}
+if(mlang_getcurrentlang()=="Indonesian")
 {
 }
 

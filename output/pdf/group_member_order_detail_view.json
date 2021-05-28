@@ -129,9 +129,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel group_member_order_detail member_id }","bold":true},{"text":{$member_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel group_member_order_detail group_id }","bold":true},{"text":{$group_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel group_member_order_detail group_product_id }","bold":true},{"text":{$group_product_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

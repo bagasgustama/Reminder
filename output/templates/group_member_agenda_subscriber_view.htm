@@ -104,25 +104,6 @@
 
 {END group_member_id_fieldblock}
 											
-{BEGIN member_id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_member_id}  r-vertical-field" data-fieldname="member_id" data-signal-error-for="member_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="member_id" >
-
-	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_member_id}">
-		
-		{BEGIN member_id_label}{$label group_member_agenda_subscriber member_id }{END member_id_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$member_id_value}	</div>
-
-		
-</div>
-
-
-{END member_id_fieldblock}
-											
 {BEGIN agenda_type_id_fieldblock}
 
 
@@ -141,6 +122,25 @@
 
 
 {END agenda_type_id_fieldblock}
+											
+{BEGIN member_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_member_id}  r-vertical-field" data-fieldname="member_id" data-signal-error-for="member_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="member_id" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_member_id}">
+		
+		{BEGIN member_id_label}{$label group_member_agenda_subscriber member_id }{END member_id_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$member_id_value}	</div>
+
+		
+</div>
+
+
+{END member_id_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -165,7 +165,7 @@
 <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -173,7 +173,7 @@
 <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" href="#" {$closebutton_attrs} >
-							Close window			</a>
+							{mlang_message CLOSE_WINDOW}			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -193,7 +193,7 @@
 	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
 				<a  href="group_member_agenda_subscriber_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
 				
-		Edit		
+		{mlang_message EDIT}		
 		</a>
 	</li>
 {END edit_page_button}

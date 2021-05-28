@@ -138,7 +138,10 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel group_member_order rating_member }","bold":true},{"text":{$rating_member_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member_order group_member_id }","bold":true},{"text":{$group_member_id_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member_order money_received }","bold":true},{"text":{$money_received_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel group_member_order change_money }","bold":true},{"text":{$change_money_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel group_member_order member_id }","bold":true},{"text":{$member_id_pdfvalue}}],"margin":[0,0,0,15]},

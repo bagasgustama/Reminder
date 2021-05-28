@@ -58,6 +58,12 @@ include_once(getabspath("include/update_order_progess_events.php"));
 $tableEvents["update_order_progess"] = new eventclass_update_order_progess;
 include_once(getabspath("include/group_agenda1_events.php"));
 $tableEvents["group_agenda1"] = new eventclass_group_agenda1;
+include_once(getabspath("include/member_checkin_events.php"));
+$tableEvents["member checkin"] = new eventclass_member_checkin;
+include_once(getabspath("include/group4_events.php"));
+$tableEvents["group4"] = new eventclass_group4;
+include_once(getabspath("include/payment_events.php"));
+$tableEvents["payment"] = new eventclass_payment;
 
 $xt = new Xtempl();
 

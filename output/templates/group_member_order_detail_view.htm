@@ -161,25 +161,6 @@
 
 {END member_id_fieldblock}
 											
-{BEGIN group_id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_group_id}  r-vertical-field" data-fieldname="group_id" data-signal-error-for="group_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="group_id" >
-
-	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_group_id}">
-		
-		{BEGIN group_id_label}{$label group_member_order_detail group_id }{END group_id_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$group_id_value}	</div>
-
-		
-</div>
-
-
-{END group_id_fieldblock}
-											
 {BEGIN group_product_id_fieldblock}
 
 
@@ -298,7 +279,7 @@
 <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -306,7 +287,7 @@
 <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" href="#" {$closebutton_attrs} >
-							Close window			</a>
+							{mlang_message CLOSE_WINDOW}			</a>
 </span>
 {END close_button}
 	</div>			 

@@ -250,7 +250,7 @@ class AddPage extends RunnerPage
 		{
 			$returnJSON = array();
 			$returnJSON['success'] = false;
-			$returnJSON['message'] = "Error occurred";
+			$returnJSON['message'] = mlang_message("INLINE_ERROR");
 			$returnJSON['fatalError'] = true;
 			echo printJSON($returnJSON);
 			exit();
@@ -532,9 +532,9 @@ class AddPage extends RunnerPage
 
 		if( isLoggedAsGuest() || !isLogged() )
 		{
-			$this->setMessage( "Your session has expired."
-				. "<a href='#' id='loginButtonContinue" . $this->id . "'>" . "Login" . "</a>"
-				. " to save data." );
+			$this->setMessage( mlang_message("SESSION_EXPIRED1")
+				. "<a href='#' id='loginButtonContinue" . $this->id . "'>" . mlang_message("SESSION_EXPIRED3") . "</a>"
+				. mlang_message("SESSION_EXPIRED4") );
 		}
 		else
 		{
@@ -667,9 +667,9 @@ class AddPage extends RunnerPage
 			return;
 
 		if( $this->mode == ADD_INLINE )
-			$infoMessage = ""."Record was added"."";
+			$infoMessage = "".mlang_message("RECORD_ADDED")."";
 		else
-			$infoMessage = "<strong><<< "."Record was added"." >>></strong>";
+			$infoMessage = "<strong><<< ".mlang_message("RECORD_ADDED")." >>></strong>";
 
 		if( $this->mode != ADD_SIMPLE && $this->mode != ADD_MASTER || !count($this->keys) )
 		{
@@ -696,10 +696,10 @@ class AddPage extends RunnerPage
 			$infoMessage.= "<br>";
 
 			if( $this->editAvailable() )
-				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "edit", $keylink )."'>"."Edit"."</a>&nbsp;";
+				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "edit", $keylink )."'>".mlang_message("EDIT")."</a>&nbsp;";
 
 			if( $this->viewAvailable() )
-				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "view", $keylink )."'>"."View"."</a>&nbsp;";
+				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "view", $keylink )."'>".mlang_message("VIEW")."</a>&nbsp;";
 		}
 
 		$this->setMessage( $infoMessage );
@@ -1637,11 +1637,11 @@ class AddPage extends RunnerPage
 	{
 		if( $this->mode != ADD_INLINE )
 		{
-			$this->message = "<strong>&lt;&lt;&lt; "."Record was NOT added"."</strong> &gt;&gt;&gt;<br><br>".$message;
+			$this->message = "<strong>&lt;&lt;&lt; ".mlang_message("RECORD_NOT_ADDED")."</strong> &gt;&gt;&gt;<br><br>".$message;
 		}
 		else
 		{
-			$this->message = "Record was NOT added".". ".$message;
+			$this->message = mlang_message("RECORD_NOT_ADDED").". ".$message;
 		}
 
 		$this->messageType = MESSAGE_ERROR;

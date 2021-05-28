@@ -162,6 +162,15 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel review_order rating_member }","bold":true},{"text":{$rating_member_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel review_order payment_status }","bold":true},{"text":{$payment_status_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel review_order money_received }","bold":true},{"text":{$money_received_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel review_order change_money }","bold":true},{"text":{$change_money_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',

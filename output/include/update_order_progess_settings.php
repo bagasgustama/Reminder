@@ -61,6 +61,48 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsupdate_order_progess["English"]))
 		$tdataupdate_order_progess[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsupdate_order_progess["Indonesian"] = array();
+	$fieldToolTipsupdate_order_progess["Indonesian"] = array();
+	$placeHoldersupdate_order_progess["Indonesian"] = array();
+	$pageTitlesupdate_order_progess["Indonesian"] = array();
+	$fieldLabelsupdate_order_progess["Indonesian"]["group_member_order_detail_id"] = "Group Member Order Detail Id";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["group_member_order_detail_id"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["group_member_order_detail_id"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["group_member_order_id"] = "Group Member Order Id";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["group_member_order_id"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["group_member_order_id"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["group_member_id"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["member_id"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["member_id"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["group_id"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["group_id"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["group_product_id"] = "Group Product Id";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["group_product_id"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["group_product_id"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["nominal"] = "Nominal";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["nominal"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["nominal"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["quantity"] = "Quantity";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["quantity"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["quantity"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["total"] = "Total";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["total"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["total"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["progress"] = "Progress";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["progress"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["progress"] = "";
+	$fieldLabelsupdate_order_progess["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsupdate_order_progess["Indonesian"]["valid"] = "";
+	$placeHoldersupdate_order_progess["Indonesian"]["valid"] = "";
+	if (count($fieldToolTipsupdate_order_progess["Indonesian"]))
+		$tdataupdate_order_progess[".isUseToolTips"] = true;
+}
 
 
 	$tdataupdate_order_progess[".NCSearch"] = true;
@@ -239,7 +281,7 @@ $arrGridTabs[] = array(
 	'tabId' => "",
 	'name' => "All data",
 	'nameType' => 'Text',
-	'where' => "group_member_order_detail.group_id = ':session.group_id' and valid = 1 and group_member_order_detail.progress = 0",
+	'where' => "group_member_order_detail.group_id = ':session.group_id' and valid = 1 and group_member_order_detail.progress = \"on_progress\"",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );
@@ -1658,7 +1700,7 @@ $tdataupdate_order_progess[".hideMobileList"] = array();
 	$fdata["GoodName"] = "progress";
 	$fdata["ownerTable"] = "group_member_order_detail";
 	$fdata["Label"] = GetFieldLabel("update_order_progess","progress");
-	$fdata["FieldType"] = 16;
+	$fdata["FieldType"] = 129;
 
 	
 	
@@ -1705,7 +1747,7 @@ $tdataupdate_order_progess[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1730,19 +1772,17 @@ $tdataupdate_order_progess[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
 	
+		$edata["autoUpdatable"] = true;
+
 	//	End validation
 
 	
@@ -1760,7 +1800,7 @@ $tdataupdate_order_progess[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2295,6 +2335,9 @@ $proto33["m_columns"][] = "total";
 $proto33["m_columns"][] = "currency";
 $proto33["m_columns"][] = "review_member";
 $proto33["m_columns"][] = "rating_member";
+$proto33["m_columns"][] = "payment_status";
+$proto33["m_columns"][] = "money_received";
+$proto33["m_columns"][] = "change_money";
 $obj = new SQLTable($proto33);
 
 $proto32["m_table"] = $obj;

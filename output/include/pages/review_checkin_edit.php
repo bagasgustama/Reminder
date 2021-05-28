@@ -140,7 +140,8 @@ array( 'cell' => 'c2' ) ),
 'orientation' => 0 ),
 'integrated_edit_field8' => array( 'field' => 'rating_member',
 'type' => 'integrated_edit_field',
-'orientation' => 0 ) ),
+'orientation' => 0,
+'updateOnEdit' => false ) ),
 'dbProps' => array(  ),
 'version' => 4 );
 		?>

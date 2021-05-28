@@ -55,6 +55,42 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup_member["English"]))
 		$tdatagroup_member[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup_member["Indonesian"] = array();
+	$fieldToolTipsgroup_member["Indonesian"] = array();
+	$placeHoldersgroup_member["Indonesian"] = array();
+	$pageTitlesgroup_member["Indonesian"] = array();
+	$fieldLabelsgroup_member["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsgroup_member["Indonesian"]["group_member_id"] = "";
+	$placeHoldersgroup_member["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsgroup_member["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsgroup_member["Indonesian"]["member_id"] = "";
+	$placeHoldersgroup_member["Indonesian"]["member_id"] = "";
+	$fieldLabelsgroup_member["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup_member["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup_member["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup_member["Indonesian"]["user_type"] = "User Type";
+	$fieldToolTipsgroup_member["Indonesian"]["user_type"] = "";
+	$placeHoldersgroup_member["Indonesian"]["user_type"] = "";
+	$fieldLabelsgroup_member["Indonesian"]["token_group"] = "Token Group";
+	$fieldToolTipsgroup_member["Indonesian"]["token_group"] = "";
+	$placeHoldersgroup_member["Indonesian"]["token_group"] = "";
+	$fieldLabelsgroup_member["Indonesian"]["identifier_group"] = "Identifier Group";
+	$fieldToolTipsgroup_member["Indonesian"]["identifier_group"] = "";
+	$placeHoldersgroup_member["Indonesian"]["identifier_group"] = "";
+	$fieldLabelsgroup_member["Indonesian"]["token_personal"] = "Token Personal";
+	$fieldToolTipsgroup_member["Indonesian"]["token_personal"] = "";
+	$placeHoldersgroup_member["Indonesian"]["token_personal"] = "";
+	$fieldLabelsgroup_member["Indonesian"]["membership_type"] = "Membership Type";
+	$fieldToolTipsgroup_member["Indonesian"]["membership_type"] = "";
+	$placeHoldersgroup_member["Indonesian"]["membership_type"] = "";
+	$fieldLabelsgroup_member["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsgroup_member["Indonesian"]["valid"] = "";
+	$placeHoldersgroup_member["Indonesian"]["valid"] = "";
+	if (count($fieldToolTipsgroup_member["Indonesian"]))
+		$tdatagroup_member[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup_member[".NCSearch"] = true;
@@ -1882,6 +1918,66 @@ $detailsTablesData["group_member"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "update_order_progess";
 	$detailsParam["dCaptionTable"] = GetTableCaption("update_order_progess");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["group_member"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["group_member"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["group_member"][$dIndex]["masterKeys"][]="group_member_id";
+
+				$detailsTablesData["group_member"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["group_member"][$dIndex]["detailKeys"][]="group_member_id";
+//	member checkin
+	
+	
+
+		$dIndex = 9;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="member checkin";
+		$detailsParam["dOriginalTable"] = "group_member_checkin";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "member_checkin";
+	$detailsParam["dCaptionTable"] = GetTableCaption("member_checkin");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["group_member"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["group_member"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["group_member"][$dIndex]["masterKeys"][]="group_member_id";
+
+				$detailsTablesData["group_member"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["group_member"][$dIndex]["detailKeys"][]="group_member_id";
+//	payment
+	
+	
+
+		$dIndex = 10;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="payment";
+		$detailsParam["dOriginalTable"] = "group_member_order";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "payment";
+	$detailsParam["dCaptionTable"] = GetTableCaption("payment");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

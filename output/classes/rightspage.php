@@ -123,9 +123,9 @@ class RightsPage extends ListPage
 		global $cman;
 		$grConnection = $cman->getForUserGroups();
 
-		$this->groups[-1] = "<"."Admin".">";
-		$this->groups[-2] = "<"."Default".">";
-		$this->groups[-3] = "<"."Guest".">";
+		$this->groups[-1] = "<".mlang_message("AA_GROUP_ADMIN").">";
+		$this->groups[-2] = "<".mlang_message("AA_GROUP_DEFAULT").">";
+		$this->groups[-3] = "<".mlang_message("AA_GROUP_GUEST").">";
 
 		$sql = "select ".
 			$grConnection->addFieldWrappers( "GroupID" ) .", ".
@@ -332,7 +332,7 @@ class RightsPage extends ListPage
 			$unlistedId = count($this->menuOrderedTables);
 			$arr = array();
 			$arr["collapsed"] = true;
-			$arr["title"] = "Unlisted tables";
+			$arr["title"] = mlang_message("UNLISTED");
 			$arr["items"] = array();
 			$this->menuOrderedTables[] = $arr;
 			foreach( $this->alphaOrderedTables as $table)

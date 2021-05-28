@@ -110,6 +110,12 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_import_field1}","text":{$country_name_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_import_field2}","text":{$sortname_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field3}","text":{$phonecode_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',

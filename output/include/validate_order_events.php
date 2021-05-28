@@ -52,6 +52,20 @@ while( $record = $rs->fetchAssoc() )
 	$group = $record["group_name"];
 }
 
+$data = array();
+$data["group_member_order_id"] = $oldvalues["group_member_order"];
+$rs = DB::Select("group_member_order_detail", $data );
+while( $record = $rs->fetchAssoc() )
+{
+	$group = $record["group_name"];
+	
+	$data = array();
+	$keyvalues = array();
+	$data["progress"] = "on_progress";
+	$keyvalues["group_member_order_detail_id"] = $record["group_member_order_detail_id"];
+	DB::Update("group_member_order_detail", $data , $keyvalues);
+}
+
 $msg = "Transaksi order anda di " . $group . " dengan id " . $oldvalues[group_member_order] . 
 				" telah divalidasi. Terimakasih.";
 

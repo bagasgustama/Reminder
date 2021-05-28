@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["AfterAdd"]=true;
 
+		$this->events["BeforeShowAdd"]=true;
+
 
 	}
 
@@ -54,6 +56,7 @@ $keyvalues = array();
 $data["member_id"] = $_SESSION["member_id"];
 $data["group_member_id"] = $group_member_id;
 $data["valid"] = 0;
+$data["payment_status"] = "not_paid";
 $data["order_date"] = NOW();
 $keyvalues["group_member_order"] = $values["group_member_order"];
 DB::Update("group_member_order", $data , $keyvalues);
@@ -189,6 +192,80 @@ else
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowAdd(&$xt, &$templatefile, &$pageObject)
+{
+
+		
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function BeforeShowAdd
+
 		
 		
 		

@@ -46,6 +46,33 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsoutbox_mail_aws["English"]))
 		$tdataoutbox_mail_aws[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsoutbox_mail_aws["Indonesian"] = array();
+	$fieldToolTipsoutbox_mail_aws["Indonesian"] = array();
+	$placeHoldersoutbox_mail_aws["Indonesian"] = array();
+	$pageTitlesoutbox_mail_aws["Indonesian"] = array();
+	$fieldLabelsoutbox_mail_aws["Indonesian"]["id_outbox"] = "Id Outbox";
+	$fieldToolTipsoutbox_mail_aws["Indonesian"]["id_outbox"] = "";
+	$placeHoldersoutbox_mail_aws["Indonesian"]["id_outbox"] = "";
+	$fieldLabelsoutbox_mail_aws["Indonesian"]["chat_id"] = "Chat Id";
+	$fieldToolTipsoutbox_mail_aws["Indonesian"]["chat_id"] = "";
+	$placeHoldersoutbox_mail_aws["Indonesian"]["chat_id"] = "";
+	$fieldLabelsoutbox_mail_aws["Indonesian"]["out_msg"] = "Out Msg";
+	$fieldToolTipsoutbox_mail_aws["Indonesian"]["out_msg"] = "";
+	$placeHoldersoutbox_mail_aws["Indonesian"]["out_msg"] = "";
+	$fieldLabelsoutbox_mail_aws["Indonesian"]["type"] = "Type";
+	$fieldToolTipsoutbox_mail_aws["Indonesian"]["type"] = "";
+	$placeHoldersoutbox_mail_aws["Indonesian"]["type"] = "";
+	$fieldLabelsoutbox_mail_aws["Indonesian"]["flag"] = "Flag";
+	$fieldToolTipsoutbox_mail_aws["Indonesian"]["flag"] = "";
+	$placeHoldersoutbox_mail_aws["Indonesian"]["flag"] = "";
+	$fieldLabelsoutbox_mail_aws["Indonesian"]["tgl"] = "Tgl";
+	$fieldToolTipsoutbox_mail_aws["Indonesian"]["tgl"] = "";
+	$placeHoldersoutbox_mail_aws["Indonesian"]["tgl"] = "";
+	if (count($fieldToolTipsoutbox_mail_aws["Indonesian"]))
+		$tdataoutbox_mail_aws[".isUseToolTips"] = true;
+}
 
 
 	$tdataoutbox_mail_aws[".NCSearch"] = true;
@@ -213,6 +240,17 @@ $tdataoutbox_mail_aws[".sqlFrom"] = "FROM outbox_mail_aws";
 $tdataoutbox_mail_aws[".sqlWhereExpr"] = "";
 $tdataoutbox_mail_aws[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdataoutbox_mail_aws[".arrGridTabs"] = $arrGridTabs;
 
 
 

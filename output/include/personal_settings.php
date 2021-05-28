@@ -46,6 +46,33 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipspersonal["English"]))
 		$tdatapersonal[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelspersonal["Indonesian"] = array();
+	$fieldToolTipspersonal["Indonesian"] = array();
+	$placeHolderspersonal["Indonesian"] = array();
+	$pageTitlespersonal["Indonesian"] = array();
+	$fieldLabelspersonal["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipspersonal["Indonesian"]["member_id"] = "";
+	$placeHolderspersonal["Indonesian"]["member_id"] = "";
+	$fieldLabelspersonal["Indonesian"]["name"] = "Name";
+	$fieldToolTipspersonal["Indonesian"]["name"] = "";
+	$placeHolderspersonal["Indonesian"]["name"] = "";
+	$fieldLabelspersonal["Indonesian"]["mail"] = "Mail";
+	$fieldToolTipspersonal["Indonesian"]["mail"] = "";
+	$placeHolderspersonal["Indonesian"]["mail"] = "";
+	$fieldLabelspersonal["Indonesian"]["password"] = "Password";
+	$fieldToolTipspersonal["Indonesian"]["password"] = "";
+	$placeHolderspersonal["Indonesian"]["password"] = "";
+	$fieldLabelspersonal["Indonesian"]["country_id"] = "Country Id";
+	$fieldToolTipspersonal["Indonesian"]["country_id"] = "";
+	$placeHolderspersonal["Indonesian"]["country_id"] = "";
+	$fieldLabelspersonal["Indonesian"]["province_id"] = "Province Id";
+	$fieldToolTipspersonal["Indonesian"]["province_id"] = "";
+	$placeHolderspersonal["Indonesian"]["province_id"] = "";
+	if (count($fieldToolTipspersonal["Indonesian"]))
+		$tdatapersonal[".isUseToolTips"] = true;
+}
 
 
 	$tdatapersonal[".NCSearch"] = true;
@@ -1598,6 +1625,66 @@ $detailsTablesData["personal"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "update_order_progess";
 	$detailsParam["dCaptionTable"] = GetTableCaption("update_order_progess");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["personal"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["personal"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["masterKeys"][]="member_id";
+
+				$detailsTablesData["personal"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["detailKeys"][]="member_id";
+//	member checkin
+	
+	
+
+		$dIndex = 15;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="member checkin";
+		$detailsParam["dOriginalTable"] = "group_member_checkin";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "member_checkin";
+	$detailsParam["dCaptionTable"] = GetTableCaption("member_checkin");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["personal"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["personal"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["masterKeys"][]="member_id";
+
+				$detailsTablesData["personal"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["personal"][$dIndex]["detailKeys"][]="member_id";
+//	payment
+	
+	
+
+		$dIndex = 16;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="payment";
+		$detailsParam["dOriginalTable"] = "group_member_order";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "payment";
+	$detailsParam["dCaptionTable"] = GetTableCaption("payment");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

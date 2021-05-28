@@ -117,9 +117,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_import_field3}","text":{$member_id_pdfvalue}},
 				
 				
-			{"hidden":"{$item_hide_import_field4}","text":{$group_id_pdfvalue}},
-				
-				
 			{"hidden":"{$item_hide_import_field5}","text":{$group_product_id_pdfvalue}},
 				
 				

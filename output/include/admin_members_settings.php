@@ -46,6 +46,33 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsadmin_members["English"]))
 		$tdataadmin_members[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsadmin_members["Indonesian"] = array();
+	$fieldToolTipsadmin_members["Indonesian"] = array();
+	$placeHoldersadmin_members["Indonesian"] = array();
+	$pageTitlesadmin_members["Indonesian"] = array();
+	$fieldLabelsadmin_members["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsadmin_members["Indonesian"]["member_id"] = "";
+	$placeHoldersadmin_members["Indonesian"]["member_id"] = "";
+	$fieldLabelsadmin_members["Indonesian"]["name"] = "Name";
+	$fieldToolTipsadmin_members["Indonesian"]["name"] = "";
+	$placeHoldersadmin_members["Indonesian"]["name"] = "";
+	$fieldLabelsadmin_members["Indonesian"]["mail"] = "Mail";
+	$fieldToolTipsadmin_members["Indonesian"]["mail"] = "";
+	$placeHoldersadmin_members["Indonesian"]["mail"] = "";
+	$fieldLabelsadmin_members["Indonesian"]["password"] = "Password";
+	$fieldToolTipsadmin_members["Indonesian"]["password"] = "";
+	$placeHoldersadmin_members["Indonesian"]["password"] = "";
+	$fieldLabelsadmin_members["Indonesian"]["country_id"] = "Country Id";
+	$fieldToolTipsadmin_members["Indonesian"]["country_id"] = "";
+	$placeHoldersadmin_members["Indonesian"]["country_id"] = "";
+	$fieldLabelsadmin_members["Indonesian"]["province_id"] = "Province Id";
+	$fieldToolTipsadmin_members["Indonesian"]["province_id"] = "";
+	$placeHoldersadmin_members["Indonesian"]["province_id"] = "";
+	if (count($fieldToolTipsadmin_members["Indonesian"]))
+		$tdataadmin_members[".isUseToolTips"] = true;
+}
 
 
 	$tdataadmin_members[".NCSearch"] = true;

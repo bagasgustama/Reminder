@@ -122,6 +122,44 @@
 
 
 {END country_name_fieldblock}
+											
+{BEGIN sortname_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_sortname}  r-vertical-field" data-fieldname="sortname" data-signal-error-for="sortname{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="sortname" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_sortname}">
+		
+		{BEGIN sortname_label}{$label country sortname }{END sortname_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$sortname_value}	</div>
+
+		
+</div>
+
+
+{END sortname_fieldblock}
+											
+{BEGIN phonecode_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_phonecode}  r-vertical-field" data-fieldname="phonecode" data-signal-error-for="phonecode{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="phonecode" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_phonecode}">
+		
+		{BEGIN phonecode_label}{$label country phonecode }{END phonecode_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$phonecode_value}	</div>
+
+		
+</div>
+
+
+{END phonecode_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -146,7 +184,7 @@
 <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -154,7 +192,7 @@
 <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" href="#" {$closebutton_attrs} >
-							Close window			</a>
+							{mlang_message CLOSE_WINDOW}			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -174,7 +212,7 @@
 	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
 				<a  href="country_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
 				
-		Edit		
+		{mlang_message EDIT}		
 		</a>
 	</li>
 {END edit_page_button}

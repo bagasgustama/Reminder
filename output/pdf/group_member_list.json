@@ -227,7 +227,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Displaying %first% - %last% of %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
@@ -963,6 +963,16 @@ pdfDocument = {
 			 {BEGIN details_update_order_progess}
 			{$displayDetailTable_update_order_progess }
 		{END details_update_order_progess},
+				
+				
+			 {BEGIN details_member_checkin}
+			{$displayDetailTable_member_checkin }
+		{END details_member_checkin},
+				
+				
+			 {BEGIN details_payment}
+			{$displayDetailTable_payment }
+		{END details_payment},
 				
 		  ],
   "border": [ true, true, true, true ],

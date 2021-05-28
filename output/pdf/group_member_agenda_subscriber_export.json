@@ -108,10 +108,10 @@ pdfDocument = {
 			{"hidden":"{$item_hide_export_field}","text":{$group_member_id_pdfvalue}},
 				
 				
-			{"hidden":"{$item_hide_export_field1}","text":{$member_id_pdfvalue}},
-				
-				
 			{"hidden":"{$item_hide_export_field2}","text":{$agenda_type_id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field1}","text":{$member_id_pdfvalue}},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup_member_agenda["English"]))
 		$tdatagroup_member_agenda[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup_member_agenda["Indonesian"] = array();
+	$fieldToolTipsgroup_member_agenda["Indonesian"] = array();
+	$placeHoldersgroup_member_agenda["Indonesian"] = array();
+	$pageTitlesgroup_member_agenda["Indonesian"] = array();
+	$fieldLabelsgroup_member_agenda["Indonesian"]["group_member_agenda_id"] = "Group Member Agenda Id";
+	$fieldToolTipsgroup_member_agenda["Indonesian"]["group_member_agenda_id"] = "";
+	$placeHoldersgroup_member_agenda["Indonesian"]["group_member_agenda_id"] = "";
+	$fieldLabelsgroup_member_agenda["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsgroup_member_agenda["Indonesian"]["group_member_id"] = "";
+	$placeHoldersgroup_member_agenda["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsgroup_member_agenda["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsgroup_member_agenda["Indonesian"]["member_id"] = "";
+	$placeHoldersgroup_member_agenda["Indonesian"]["member_id"] = "";
+	$fieldLabelsgroup_member_agenda["Indonesian"]["group_agenda_id"] = "Group Agenda Id";
+	$fieldToolTipsgroup_member_agenda["Indonesian"]["group_agenda_id"] = "";
+	$placeHoldersgroup_member_agenda["Indonesian"]["group_agenda_id"] = "";
+	if (count($fieldToolTipsgroup_member_agenda["Indonesian"]))
+		$tdatagroup_member_agenda[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup_member_agenda[".NCSearch"] = true;

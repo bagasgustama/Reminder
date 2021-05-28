@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipslookup_token["English"]))
 		$tdatalookup_token[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelslookup_token["Indonesian"] = array();
+	$fieldToolTipslookup_token["Indonesian"] = array();
+	$placeHolderslookup_token["Indonesian"] = array();
+	$pageTitleslookup_token["Indonesian"] = array();
+	$fieldLabelslookup_token["Indonesian"]["id_lookup"] = "Id Lookup";
+	$fieldToolTipslookup_token["Indonesian"]["id_lookup"] = "";
+	$placeHolderslookup_token["Indonesian"]["id_lookup"] = "";
+	$fieldLabelslookup_token["Indonesian"]["id_group"] = "Id Group";
+	$fieldToolTipslookup_token["Indonesian"]["id_group"] = "";
+	$placeHolderslookup_token["Indonesian"]["id_group"] = "";
+	$fieldLabelslookup_token["Indonesian"]["group_identifier"] = "Group Identifier";
+	$fieldToolTipslookup_token["Indonesian"]["group_identifier"] = "";
+	$placeHolderslookup_token["Indonesian"]["group_identifier"] = "";
+	$fieldLabelslookup_token["Indonesian"]["token"] = "Token";
+	$fieldToolTipslookup_token["Indonesian"]["token"] = "";
+	$placeHolderslookup_token["Indonesian"]["token"] = "";
+	if (count($fieldToolTipslookup_token["Indonesian"]))
+		$tdatalookup_token[".isUseToolTips"] = true;
+}
 
 
 	$tdatalookup_token[".NCSearch"] = true;

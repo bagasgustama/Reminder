@@ -88,6 +88,15 @@ pdfDocument = {
 										{BEGIN col_grid_9}
 					"%",
 					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
+										{BEGIN col_grid_12}
+					"%",
+					{END col_grid_12}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -193,7 +202,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -239,7 +248,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field10}","text":"{$jslabel review_order group_member_order }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field13}","text":"{$jslabel review_order group_member_order }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -265,7 +274,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field11}","text":"{$jslabel review_order group_member_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field14}","text":"{$jslabel review_order group_member_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -291,7 +300,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field12}","text":"{$jslabel review_order member_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field15}","text":"{$jslabel review_order member_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -317,7 +326,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field13}","text":"{$jslabel review_order group_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field16}","text":"{$jslabel review_order group_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -343,7 +352,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field14}","text":"{$jslabel review_order order_date }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field17}","text":"{$jslabel review_order order_date }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -369,7 +378,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field15}","text":"{$jslabel review_order valid }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field18}","text":"{$jslabel review_order valid }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -395,7 +404,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field16}","text":"{$jslabel review_order total }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field19}","text":"{$jslabel review_order total }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -421,7 +430,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field17}","text":"{$jslabel review_order currency }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field20}","text":"{$jslabel review_order currency }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -447,7 +456,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field18}","text":"{$jslabel review_order review_member }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field21}","text":"{$jslabel review_order review_member }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -473,7 +482,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field19}","text":"{$jslabel review_order rating_member }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field22}","text":"{$jslabel review_order rating_member }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -481,6 +490,84 @@ pdfDocument = {
   },
 
 {END cellblock_grid_headcell_field9}
+																			{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_simple_grid_field23}","text":"{$jslabel review_order payment_status }","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+          "alignment": '{$payment_status_align}',
+  },
+
+{END cellblock_grid_headcell_field10}
+																			{BEGIN cellblock_grid_headcell_field11}
+{
+	cellId: 'headcell_field11',
+	col:0,
+	row:0,
+			style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_simple_grid_field24}","text":"{$jslabel review_order money_received }","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+          "alignment": '{$money_received_align}',
+  },
+
+{END cellblock_grid_headcell_field11}
+																			{BEGIN cellblock_grid_headcell_field12}
+{
+	cellId: 'headcell_field12',
+	col:0,
+	row:0,
+			style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_simple_grid_field25}","text":"{$jslabel review_order change_money }","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+          "alignment": '{$change_money_align}',
+  },
+
+{END cellblock_grid_headcell_field12}
 											],
 				{END row_grid_0}
 									
@@ -749,6 +836,84 @@ pdfDocument = {
   },
 
 {END cellblock_grid_cell_field9}
+																			{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_simple_grid_field10}","text":{$payment_status_pdfvalue}},
+				
+		  ],
+  "border": [ true, true, true, true ],
+          "alignment": '{$payment_status_align}',
+  },
+
+{END cellblock_grid_cell_field10}
+																			{BEGIN cellblock_grid_cell_field11}
+{
+	cellId: 'cell_field11',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_simple_grid_field11}","text":{$money_received_pdfvalue}},
+				
+		  ],
+  "border": [ true, true, true, true ],
+          "alignment": '{$money_received_align}',
+  },
+
+{END cellblock_grid_cell_field11}
+																			{BEGIN cellblock_grid_cell_field12}
+{
+	cellId: 'cell_field12',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_simple_grid_field12}","text":{$change_money_pdfvalue}},
+				
+		  ],
+  "border": [ true, true, true, true ],
+          "alignment": '{$change_money_align}',
+  },
+
+{END cellblock_grid_cell_field12}
 											],
 				{END row_grid_1}
 								{BEGIN row_grid_2}
@@ -836,6 +1001,24 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  12,
 				text: ''
 			},
 							],
@@ -1086,6 +1269,78 @@ pdfDocument = {
   },
 
 {END cellblock_grid_footcell_field9}
+																			{BEGIN cellblock_grid_footcell_field10}
+{
+	cellId: 'footcell_field10',
+	col:0,
+	row:0,
+			style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+          "alignment": 'left',
+  },
+
+{END cellblock_grid_footcell_field10}
+																			{BEGIN cellblock_grid_footcell_field11}
+{
+	cellId: 'footcell_field11',
+	col:0,
+	row:0,
+			style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+          "alignment": 'left',
+  },
+
+{END cellblock_grid_footcell_field11}
+																			{BEGIN cellblock_grid_footcell_field12}
+{
+	cellId: 'footcell_field12',
+	col:0,
+	row:0,
+			style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+          "alignment": 'left',
+  },
+
+{END cellblock_grid_footcell_field12}
 											],
 				{END row_grid_3}
 							

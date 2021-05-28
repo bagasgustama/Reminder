@@ -46,6 +46,33 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup_agenda_type["English"]))
 		$tdatagroup_agenda_type[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup_agenda_type["Indonesian"] = array();
+	$fieldToolTipsgroup_agenda_type["Indonesian"] = array();
+	$placeHoldersgroup_agenda_type["Indonesian"] = array();
+	$pageTitlesgroup_agenda_type["Indonesian"] = array();
+	$fieldLabelsgroup_agenda_type["Indonesian"]["agenda_type_id"] = "Agenda Type Id";
+	$fieldToolTipsgroup_agenda_type["Indonesian"]["agenda_type_id"] = "";
+	$placeHoldersgroup_agenda_type["Indonesian"]["agenda_type_id"] = "";
+	$fieldLabelsgroup_agenda_type["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup_agenda_type["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup_agenda_type["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup_agenda_type["Indonesian"]["agenda_type"] = "Agenda Type";
+	$fieldToolTipsgroup_agenda_type["Indonesian"]["agenda_type"] = "";
+	$placeHoldersgroup_agenda_type["Indonesian"]["agenda_type"] = "";
+	$fieldLabelsgroup_agenda_type["Indonesian"]["description"] = "Description";
+	$fieldToolTipsgroup_agenda_type["Indonesian"]["description"] = "";
+	$placeHoldersgroup_agenda_type["Indonesian"]["description"] = "";
+	$fieldLabelsgroup_agenda_type["Indonesian"]["group_requested"] = "Group Requested";
+	$fieldToolTipsgroup_agenda_type["Indonesian"]["group_requested"] = "";
+	$placeHoldersgroup_agenda_type["Indonesian"]["group_requested"] = "";
+	$fieldLabelsgroup_agenda_type["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsgroup_agenda_type["Indonesian"]["valid"] = "";
+	$placeHoldersgroup_agenda_type["Indonesian"]["valid"] = "";
+	if (count($fieldToolTipsgroup_agenda_type["Indonesian"]))
+		$tdatagroup_agenda_type[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup_agenda_type[".NCSearch"] = true;

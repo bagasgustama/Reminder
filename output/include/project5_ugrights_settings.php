@@ -40,6 +40,27 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsproject5_ugrights["English"]))
 		$tdataproject5_ugrights[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsproject5_ugrights["Indonesian"] = array();
+	$fieldToolTipsproject5_ugrights["Indonesian"] = array();
+	$placeHoldersproject5_ugrights["Indonesian"] = array();
+	$pageTitlesproject5_ugrights["Indonesian"] = array();
+	$fieldLabelsproject5_ugrights["Indonesian"]["TableName"] = "Table Name";
+	$fieldToolTipsproject5_ugrights["Indonesian"]["TableName"] = "";
+	$placeHoldersproject5_ugrights["Indonesian"]["TableName"] = "";
+	$fieldLabelsproject5_ugrights["Indonesian"]["GroupID"] = "Group ID";
+	$fieldToolTipsproject5_ugrights["Indonesian"]["GroupID"] = "";
+	$placeHoldersproject5_ugrights["Indonesian"]["GroupID"] = "";
+	$fieldLabelsproject5_ugrights["Indonesian"]["AccessMask"] = "Access Mask";
+	$fieldToolTipsproject5_ugrights["Indonesian"]["AccessMask"] = "";
+	$placeHoldersproject5_ugrights["Indonesian"]["AccessMask"] = "";
+	$fieldLabelsproject5_ugrights["Indonesian"]["Page"] = "Page";
+	$fieldToolTipsproject5_ugrights["Indonesian"]["Page"] = "";
+	$placeHoldersproject5_ugrights["Indonesian"]["Page"] = "";
+	if (count($fieldToolTipsproject5_ugrights["Indonesian"]))
+		$tdataproject5_ugrights[".isUseToolTips"] = true;
+}
 
 
 	$tdataproject5_ugrights[".NCSearch"] = true;

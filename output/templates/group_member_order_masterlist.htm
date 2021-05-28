@@ -13,7 +13,7 @@
 		<span data-itemtype="back_master" data-itemid="back_master" {$item_back_master} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-link  btn-xs 
 	" {$backtomasterlink_attrs} >
-							Back to Master table			</a>
+							{mlang_message BACK_TO_MASTER}			</a>
 </span>
 	 
 		<h3 class="panel-title" data-itemtype="masterlist_header" data-itemid="masterlist_header" {$item_masterlist_header} data-pageid="{$pageid}" >{$pagetitlelabel group_member_order masterlist}</h3>
@@ -37,7 +37,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
+							{mlang_message INLINE_ADD}			</a>
 </span>
 {END inlineadd_link}
 			{END firstAboveGridCell}	
@@ -100,7 +100,7 @@
 	 
 		{BEGIN group_member_order_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_order">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_order">
 	{$label group_member_order group_member_order }	</span>
 {END group_member_order_fieldheadercolumn}
 
@@ -125,7 +125,7 @@
 	 
 		{BEGIN group_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_id">
 	{$label group_member_order group_id }	</span>
 {END group_id_fieldheadercolumn}
 
@@ -150,7 +150,7 @@
 	 
 		{BEGIN valid_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="valid">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="valid">
 	{$label group_member_order valid }	</span>
 {END valid_fieldheadercolumn}
 
@@ -175,7 +175,7 @@
 	 
 		{BEGIN total_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="total">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="total">
 	{$label group_member_order total }	</span>
 {END total_fieldheadercolumn}
 
@@ -200,7 +200,7 @@
 	 
 		{BEGIN currency_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="currency">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="currency">
 	{$label group_member_order currency }	</span>
 {END currency_fieldheadercolumn}
 
@@ -225,7 +225,7 @@
 	 
 		{BEGIN review_member_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="review_member">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="review_member">
 	{$label group_member_order review_member }	</span>
 {END review_member_fieldheadercolumn}
 
@@ -250,7 +250,7 @@
 	 
 		{BEGIN rating_member_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="rating_member">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="rating_member">
 	{$label group_member_order rating_member }	</span>
 {END rating_member_fieldheadercolumn}
 
@@ -264,20 +264,20 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$group_member_id_class}
+		 r-ori-vert				{$money_received_class}
 			"
 
-			data-field="group_member_id"
+			data-field="money_received"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN group_member_id_fieldheadercolumn}
+		{BEGIN money_received_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_id">
-	{$label group_member_order group_member_id }	</span>
-{END group_member_id_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="money_received">
+	{$label group_member_order money_received }	</span>
+{END money_received_fieldheadercolumn}
 
 	
 	</th>
@@ -289,24 +289,49 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$member_id_class}
+		 r-ori-vert				{$change_money_class}
 			"
 
-			data-field="member_id"
+			data-field="change_money"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN change_money_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="change_money">
+	{$label group_member_order change_money }	</span>
+{END change_money_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+				 
+					{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$member_id_class}
+			"
+
+			data-field="member_id"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN member_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
 	{$label group_member_order member_id }	</span>
 {END member_id_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field9}
 							</tr>
 					 
 					 
@@ -339,8 +364,8 @@
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
+	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
 				
 								</a>
 </span>
@@ -516,20 +541,20 @@
 	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$group_member_id_class}
+		 r-ori-vert				{$money_received_class}
 			"
 
-			data-field="group_member_id"
+			data-field="money_received"
 	
 	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN group_member_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_id" data-default-width >
-{$group_member_id_value}
+		{BEGIN money_received_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="money_received" data-default-width >
+{$money_received_value}
 </span>
-{END group_member_id_fieldcolumn}	
+{END money_received_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field7}
 				 
@@ -539,12 +564,35 @@
 	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
+		 r-ori-vert				{$change_money_class}
+			"
+
+			data-field="change_money"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN change_money_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="change_money" data-default-width >
+{$change_money_value}
+</span>
+{END change_money_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+				 
+					{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
 		 r-ori-vert				{$member_id_class}
 			"
 
 			data-field="member_id"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -554,7 +602,7 @@
 </span>
 {END member_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field9}
 							</tr>
 					 
 					
@@ -730,6 +778,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field8}
+				 
+					{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="group_member_order_masterlist"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
 							</tr>
 					
 					</tfoot>

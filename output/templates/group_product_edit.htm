@@ -62,10 +62,10 @@
 <h5>{$message}</h5>
 <div>
 {BEGIN back_button}
-			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
 	{END back_button}
 {BEGIN view_page_button}
-	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
 {END view_page_button}
 </div>
 </div>
@@ -105,29 +105,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN group_id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_group_id}  r-vertical-field" 
-	data-fieldname="group_id" 
-	data-signal-error-for="group_id{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="group_id" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_group_id}">
-		{BEGIN group_id_label}{$label group_product group_id }{END group_id_label}
-	</label>
-	<div class="r-edit-field">
-		{$group_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="group_id">
-		<div class="text-muted" >
-		{$tooltip group_product group_id }		</div>
-	</div>
-</div>
-
-
-{END group_id_fieldblock}
-											
 {BEGIN product_type_fieldblock}
 
 
@@ -335,7 +312,7 @@
 <span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$savebutton_attrs} >
-							Save			</a>
+							{mlang_message SAVE}			</a>
 </span>
 {END save_edit}
 	 
@@ -343,7 +320,7 @@
 <span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$backbutton_attrs} >
-							Back to list			</a>
+							{mlang_message BACK_TO_LIST}			</a>
 </span>
 {END back_button}
 	 
@@ -351,7 +328,7 @@
 <span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$closebutton_attrs} >
-							Cancel			</a>
+							{mlang_message CANCEL}			</a>
 </span>
 {END close_button}
 	</div>			 
@@ -370,14 +347,14 @@
 								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
 				<a  {$resetbutton_attrs}  title="" >
 				
-		Reset		
+		{mlang_message RESET}		
 		</a>
 	</li>
 							{BEGIN view_page_button}
 	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
 				<a  href="group_product_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
 				
-		View		
+		{mlang_message VIEW}		
 		</a>
 	</li>
 {END view_page_button}

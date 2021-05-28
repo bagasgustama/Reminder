@@ -67,7 +67,7 @@
 	<div class="panel-heading">
 		<div class="btn-group" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -77,12 +77,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
 			</ul>
 		</div>
 
@@ -235,8 +235,8 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -288,7 +288,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -314,21 +314,21 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		Export selected		
+		{mlang_message EXPORT_SELECTED}		
 		</a>
 	</li>
 {END exportselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="review_checkin_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		Advanced search		
+		{mlang_message ADVANCED_SEARCH}		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		Show search panel		
+		{mlang_message SHOW_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -336,7 +336,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		Hide search panel		
+		{mlang_message HIDE_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -344,7 +344,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		Export results		
+		{mlang_message EXPORT_RESULTS}		
 		</a>
 	</li>
 {END export_link}
@@ -352,10 +352,20 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="review_checkin_import.php{$stateLink_full}"  title="" >
 				
-		Import		
+		{mlang_message IMPORT}		
 		</a>
 	</li>
 {END import_link}
+							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN IndonesianLANGLINK}
+	<li><a href="#" data-lang="Indonesian" class="rnr-langlink">
+		{BEGIN IndonesianLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END IndonesianLANGLINK_ACTIVE}
+		Bahasa Indonesia</a></li>
+	{END IndonesianLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -366,7 +376,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							Login			</a>
+							{mlang_message LOGIN}			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -384,7 +394,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		Log out		
+		{mlang_message LOG_OUT}		
 		</a>
 	</li>
 {END logoutbutton}
@@ -392,7 +402,7 @@
 	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="admin_rights_list.php"  title="" >
 				
-		Admin Area		
+		{mlang_message AA_ADMINAREA}		
 		</a>
 	</li>
 {END adminarea_link}
@@ -444,7 +454,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
+							{mlang_message INLINE_ADD}			</a>
 </span>
 {END inlineadd_link}
 			{END firstAboveGridCell}	
@@ -463,7 +473,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -475,13 +485,13 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			Scope:		</div>
+			{mlang_message PPANEL_SCOPE}		</div>
 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="review_checkin_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
-									Print all pages							</label>
+									{mlang_message PPANEL_ALL_PAGES}							</label>
 		</div>
 		{END print_friendly_all}
 	</div>
@@ -490,7 +500,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="review_checkin_print.php?{$crosstable_attrs}">
-				Print this page			</label>
+				{mlang_message PPANEL_THIS_PAGE}			</label>
 		</div>
 	</div>
 	
@@ -501,7 +511,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio">
-			Print selected			</label>
+			{mlang_message PPANEL_SELECTED}			</label>
 		</div>
 	</div>
 	</div>				 
@@ -513,7 +523,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					Records Per Page							
+					{mlang_message RECORDS_PP}							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -527,7 +537,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							Print			</a>
+							{mlang_message PPANEL_PRINT}			</a>
 </span>
 				 
 					</li>
@@ -552,10 +562,7 @@
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group_member_checkin_id"]:before {
 		content: "{$label review_checkin group_member_checkin_id}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group_member_id"]:before {
-		content: "{$label review_checkin group_member_id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="member_id"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="member_id"]:before {
 		content: "{$label review_checkin member_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group_id"]:before {
@@ -570,16 +577,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id_room"]:before {
 		content: "{$label review_checkin id_room}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="valid"]:before {
-		content: "{$label review_checkin valid}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="review_member"]:before {
-		content: "{$label review_checkin review_member}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="rating_member"]:before {
-		content: "{$label review_checkin rating_member}";
-	}
-	}
+				}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
@@ -621,16 +619,10 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="review_checkin_list"	
-		data-checkbox-cell
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="review_checkin_list"		data-control-cell
+	
 	>
 
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkboxheader_attrs}>
-</span>
-{END checkbox_column}
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
@@ -661,33 +653,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field}
-				 
-					{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$group_member_id_class}
-			"
-
-			data-field="group_member_id"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN group_member_id_fieldheadercolumn}
-	{BEGIN group_member_id_fieldheader}
-	<SPAN {$group_member_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_id">
-	{$label review_checkin group_member_id }	{$arrow_icon_group_member_id}
-	</SPAN>
-	{END group_member_id_fieldheader}
-{END group_member_id_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
 				 
 					{BEGIN cellblock_grid_headcell_field2}
 	<th
@@ -823,87 +788,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field6}
-				 
-					{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$valid_class}
-			"
-
-			data-field="valid"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN valid_fieldheadercolumn}
-	{BEGIN valid_fieldheader}
-	<SPAN {$valid_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="valid">
-	{$label review_checkin valid }	{$arrow_icon_valid}
-	</SPAN>
-	{END valid_fieldheader}
-{END valid_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
-				 
-					{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$review_member_class}
-			"
-
-			data-field="review_member"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN review_member_fieldheadercolumn}
-	{BEGIN review_member_fieldheader}
-	<SPAN {$review_member_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="review_member">
-	{$label review_checkin review_member }	{$arrow_icon_review_member}
-	</SPAN>
-	{END review_member_fieldheader}
-{END review_member_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
-				 
-					{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$rating_member_class}
-			"
-
-			data-field="rating_member"
-	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN rating_member_fieldheadercolumn}
-	{BEGIN rating_member_fieldheader}
-	<SPAN {$rating_member_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="rating_member">
-	{$label review_checkin rating_member }	{$arrow_icon_rating_member}
-	</SPAN>
-	{END rating_member_fieldheader}
-{END rating_member_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field9}
 							</tr>
 					 
 					 
@@ -937,33 +821,22 @@
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Edit" class="btn-link   
-	 glyphicon glyphicon-pencil" href="review_checkin_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
-				
-								</a>
+	<a type="button" title="{mlang_message EDIT}" class="btn btn-default   
+	" href="review_checkin_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" >
+					<span class="glyphicon glyphicon-plus"></span>
+							Add Review			</a>
 </span>
 {END edit_link}
 {END edit_column}
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
+	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
 				
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn-link   
-	 glyphicon glyphicon-search" href="review_checkin_view.php?{$editlink}" {$viewlink_attrs} title="View" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -979,15 +852,8 @@
 	
 	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
 	
-		data-checkbox-cell
 	>
 
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkbox_attrs}>
-</span>	
-{END checkbox_column}
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
@@ -1014,29 +880,6 @@
 {END group_member_checkin_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$group_member_id_class}
-			"
-
-			data-field="group_member_id"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN group_member_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_id" data-default-width >
-{$group_member_id_value}
-</span>
-{END group_member_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
 				 
 					{BEGIN cellblock_grid_cell_field2}
 	<td
@@ -1152,75 +995,6 @@
 {END id_room_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
-				 
-					{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$valid_class}
-			"
-
-			data-field="valid"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN valid_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="valid" data-default-width >
-{$valid_value}
-</span>
-{END valid_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-				 
-					{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$review_member_class}
-			"
-
-			data-field="review_member"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN review_member_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="review_member" data-default-width >
-{$review_member_value}
-</span>
-{END review_member_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-				 
-					{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$rating_member_class}
-			"
-
-			data-field="rating_member"
-	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN rating_member_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="rating_member" data-default-width >
-{$rating_member_value}
-</span>
-{END rating_member_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field9}
 							</tr>
 					 
 					
@@ -1284,22 +1058,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-				 
-					{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="review_checkin_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 				 
 					{BEGIN cellblock_grid_footcell_field2}
 	<td
@@ -1380,54 +1138,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
-				 
-					{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="review_checkin_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
-				 
-					{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="review_checkin_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
-				 
-					{BEGIN cellblock_grid_footcell_field9}
-	<td
-	
-	{$cell_grid_footcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="review_checkin_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field9}
 							</tr>
 					
 					</tfoot>

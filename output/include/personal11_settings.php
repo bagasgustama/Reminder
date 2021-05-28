@@ -46,7 +46,43 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelspersonal11["English"]["group_member_id"] = "Group Member Id";
 	$fieldToolTipspersonal11["English"]["group_member_id"] = "";
 	$placeHolderspersonal11["English"]["group_member_id"] = "";
+	$fieldLabelspersonal11["English"]["group_id"] = "Group Id";
+	$fieldToolTipspersonal11["English"]["group_id"] = "";
+	$placeHolderspersonal11["English"]["group_id"] = "";
 	if (count($fieldToolTipspersonal11["English"]))
+		$tdatapersonal11[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelspersonal11["Indonesian"] = array();
+	$fieldToolTipspersonal11["Indonesian"] = array();
+	$placeHolderspersonal11["Indonesian"] = array();
+	$pageTitlespersonal11["Indonesian"] = array();
+	$fieldLabelspersonal11["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipspersonal11["Indonesian"]["member_id"] = "";
+	$placeHolderspersonal11["Indonesian"]["member_id"] = "";
+	$fieldLabelspersonal11["Indonesian"]["name"] = "Name";
+	$fieldToolTipspersonal11["Indonesian"]["name"] = "";
+	$placeHolderspersonal11["Indonesian"]["name"] = "";
+	$fieldLabelspersonal11["Indonesian"]["mail"] = "Mail";
+	$fieldToolTipspersonal11["Indonesian"]["mail"] = "";
+	$placeHolderspersonal11["Indonesian"]["mail"] = "";
+	$fieldLabelspersonal11["Indonesian"]["password"] = "Password";
+	$fieldToolTipspersonal11["Indonesian"]["password"] = "";
+	$placeHolderspersonal11["Indonesian"]["password"] = "";
+	$fieldLabelspersonal11["Indonesian"]["country_id"] = "Country Id";
+	$fieldToolTipspersonal11["Indonesian"]["country_id"] = "";
+	$placeHolderspersonal11["Indonesian"]["country_id"] = "";
+	$fieldLabelspersonal11["Indonesian"]["province_id"] = "Province Id";
+	$fieldToolTipspersonal11["Indonesian"]["province_id"] = "";
+	$placeHolderspersonal11["Indonesian"]["province_id"] = "";
+	$fieldLabelspersonal11["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipspersonal11["Indonesian"]["group_member_id"] = "";
+	$placeHolderspersonal11["Indonesian"]["group_member_id"] = "";
+	$fieldLabelspersonal11["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipspersonal11["Indonesian"]["group_id"] = "";
+	$placeHolderspersonal11["Indonesian"]["group_id"] = "";
+	if (count($fieldToolTipspersonal11["Indonesian"]))
 		$tdatapersonal11[".isUseToolTips"] = true;
 }
 
@@ -162,7 +198,7 @@ $tdatapersonal11[".addPageEvents"] = false;
 $tdatapersonal11[".isUseTimeForSearch"] = false;
 
 
-$tdatapersonal11[".badgeColor"] = "1E90FF";
+$tdatapersonal11[".badgeColor"] = "008B8B";
 
 
 $tdatapersonal11[".allSearchFields"] = array();
@@ -177,6 +213,7 @@ $tdatapersonal11[".googleLikeFields"][] = "password";
 $tdatapersonal11[".googleLikeFields"][] = "country_id";
 $tdatapersonal11[".googleLikeFields"][] = "province_id";
 $tdatapersonal11[".googleLikeFields"][] = "group_member_id";
+$tdatapersonal11[".googleLikeFields"][] = "group_id";
 
 
 
@@ -212,7 +249,7 @@ $tdatapersonal11[".strOrderBy"] = $tstrOrderBy;
 $tdatapersonal11[".orderindexes"] = array();
 
 
-$tdatapersonal11[".sqlHead"] = "SELECT personal.member_id,  personal.name,  personal.mail,  personal.password,  personal.country_id,  personal.province_id,  group_member.group_member_id";
+$tdatapersonal11[".sqlHead"] = "SELECT personal.member_id,  personal.name,  personal.mail,  personal.password,  personal.country_id,  personal.province_id,  group_member.group_member_id,  group_member.group_id";
 $tdatapersonal11[".sqlFrom"] = "FROM personal  LEFT OUTER JOIN group_member ON personal.member_id = group_member.member_id";
 $tdatapersonal11[".sqlWhereExpr"] = "";
 $tdatapersonal11[".sqlTail"] = "";
@@ -1292,6 +1329,145 @@ $tdatapersonal11[".hideMobileList"] = array();
 
 	$tdatapersonal11["group_member_id"] = $fdata;
 		$tdatapersonal11[".searchableFields"][] = "group_member_id";
+//	group_id
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "group_id";
+	$fdata["GoodName"] = "group_id";
+	$fdata["ownerTable"] = "group_member";
+	$fdata["Label"] = GetFieldLabel("personal11","group_id");
+	$fdata["FieldType"] = 20;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "group_id";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "group_member.group_id";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatapersonal11["group_id"] = $fdata;
+		$tdatapersonal11[".searchableFields"][] = "group_id";
 
 
 $tables_data["personal11"]=&$tdatapersonal11;
@@ -1329,7 +1505,7 @@ function createSqlQuery_personal11()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "personal.member_id,  personal.name,  personal.mail,  personal.password,  personal.country_id,  personal.province_id,  group_member.group_member_id";
+$proto0["m_strFieldList"] = "personal.member_id,  personal.name,  personal.mail,  personal.password,  personal.country_id,  personal.province_id,  group_member.group_member_id,  group_member.group_id";
 $proto0["m_strFrom"] = "FROM personal  LEFT OUTER JOIN group_member ON personal.member_id = group_member.member_id";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1467,84 +1643,98 @@ $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto20=array();
-$proto20["m_link"] = "SQLL_MAIN";
-			$proto21=array();
-$proto21["m_strName"] = "personal";
-$proto21["m_srcTableName"] = "personal11";
-$proto21["m_columns"] = array();
-$proto21["m_columns"][] = "member_id";
-$proto21["m_columns"][] = "name";
-$proto21["m_columns"][] = "mail";
-$proto21["m_columns"][] = "password";
-$proto21["m_columns"][] = "country_id";
-$proto21["m_columns"][] = "province_id";
-$obj = new SQLTable($proto21);
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "group_id",
+	"m_strTable" => "group_member",
+	"m_srcTableName" => "personal11"
+));
 
-$proto20["m_table"] = $obj;
-$proto20["m_sql"] = "personal";
-$proto20["m_alias"] = "";
+$proto20["m_sql"] = "group_member.group_id";
 $proto20["m_srcTableName"] = "personal11";
-$proto22=array();
-$proto22["m_sql"] = "";
-$proto22["m_uniontype"] = "SQLL_UNKNOWN";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "personal";
+$proto23["m_srcTableName"] = "personal11";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "member_id";
+$proto23["m_columns"][] = "name";
+$proto23["m_columns"][] = "mail";
+$proto23["m_columns"][] = "password";
+$proto23["m_columns"][] = "country_id";
+$proto23["m_columns"][] = "province_id";
+$obj = new SQLTable($proto23);
+
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "personal";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "personal11";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto22["m_column"]=$obj;
-$proto22["m_contained"] = array();
-$proto22["m_strCase"] = "";
-$proto22["m_havingmode"] = false;
-$proto22["m_inBrackets"] = false;
-$proto22["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto22);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto20["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto20);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto24=array();
-$proto24["m_link"] = "SQLL_LEFTJOIN";
-			$proto25=array();
-$proto25["m_strName"] = "group_member";
-$proto25["m_srcTableName"] = "personal11";
-$proto25["m_columns"] = array();
-$proto25["m_columns"][] = "group_member_id";
-$proto25["m_columns"][] = "member_id";
-$proto25["m_columns"][] = "group_id";
-$proto25["m_columns"][] = "user_type";
-$proto25["m_columns"][] = "token_group";
-$proto25["m_columns"][] = "identifier_group";
-$proto25["m_columns"][] = "token_personal";
-$proto25["m_columns"][] = "membership_type";
-$proto25["m_columns"][] = "valid";
-$obj = new SQLTable($proto25);
+												$proto26=array();
+$proto26["m_link"] = "SQLL_LEFTJOIN";
+			$proto27=array();
+$proto27["m_strName"] = "group_member";
+$proto27["m_srcTableName"] = "personal11";
+$proto27["m_columns"] = array();
+$proto27["m_columns"][] = "group_member_id";
+$proto27["m_columns"][] = "member_id";
+$proto27["m_columns"][] = "group_id";
+$proto27["m_columns"][] = "user_type";
+$proto27["m_columns"][] = "token_group";
+$proto27["m_columns"][] = "identifier_group";
+$proto27["m_columns"][] = "token_personal";
+$proto27["m_columns"][] = "membership_type";
+$proto27["m_columns"][] = "valid";
+$obj = new SQLTable($proto27);
 
-$proto24["m_table"] = $obj;
-$proto24["m_sql"] = "LEFT OUTER JOIN group_member ON personal.member_id = group_member.member_id";
-$proto24["m_alias"] = "";
-$proto24["m_srcTableName"] = "personal11";
-$proto26=array();
-$proto26["m_sql"] = "personal.member_id = group_member.member_id";
-$proto26["m_uniontype"] = "SQLL_UNKNOWN";
+$proto26["m_table"] = $obj;
+$proto26["m_sql"] = "LEFT OUTER JOIN group_member ON personal.member_id = group_member.member_id";
+$proto26["m_alias"] = "";
+$proto26["m_srcTableName"] = "personal11";
+$proto28=array();
+$proto28["m_sql"] = "personal.member_id = group_member.member_id";
+$proto28["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "member_id",
 	"m_strTable" => "personal",
 	"m_srcTableName" => "personal11"
 ));
 
-$proto26["m_column"]=$obj;
-$proto26["m_contained"] = array();
-$proto26["m_strCase"] = "= group_member.member_id";
-$proto26["m_havingmode"] = false;
-$proto26["m_inBrackets"] = false;
-$proto26["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto26);
+$proto28["m_column"]=$obj;
+$proto28["m_contained"] = array();
+$proto28["m_strCase"] = "= group_member.member_id";
+$proto28["m_havingmode"] = false;
+$proto28["m_inBrackets"] = false;
+$proto28["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto28);
 
-$proto24["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto24);
+$proto26["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto26);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1560,7 +1750,7 @@ $queryData_personal11 = createSqlQuery_personal11();
 	
 		;
 
-							
+								
 
 $tdatapersonal11[".sqlquery"] = $queryData_personal11;
 

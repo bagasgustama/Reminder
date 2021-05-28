@@ -126,7 +126,10 @@ pdfDocument = {
 			{"hidden":"{$item_hide_export_field9}","text":{$rating_member_pdfvalue}},
 				
 				
-			{"hidden":"{$item_hide_export_field1}","text":{$group_member_id_pdfvalue}},
+			{"hidden":"{$item_hide_export_field1}","text":{$money_received_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field4}","text":{$change_money_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_export_field2}","text":{$member_id_pdfvalue}},

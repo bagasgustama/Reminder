@@ -3,6 +3,8 @@
 $langfile="";
 if(mlang_getcurrentlang() == "English")
 	$langfile="English.php";
+if(mlang_getcurrentlang() == "Indonesian")
+	$langfile="Indonesian.php";
 
 if($langfile)
 	include(getabspath("include/lang/".$langfile));

@@ -61,6 +61,48 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup["English"]))
 		$tdatagroup[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup["Indonesian"] = array();
+	$fieldToolTipsgroup["Indonesian"] = array();
+	$placeHoldersgroup["Indonesian"] = array();
+	$pageTitlesgroup["Indonesian"] = array();
+	$fieldLabelsgroup["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup["Indonesian"]["group_name"] = "Group Name";
+	$fieldToolTipsgroup["Indonesian"]["group_name"] = "";
+	$placeHoldersgroup["Indonesian"]["group_name"] = "";
+	$fieldLabelsgroup["Indonesian"]["description"] = "Description";
+	$fieldToolTipsgroup["Indonesian"]["description"] = "";
+	$placeHoldersgroup["Indonesian"]["description"] = "";
+	$fieldLabelsgroup["Indonesian"]["logo"] = "Logo";
+	$fieldToolTipsgroup["Indonesian"]["logo"] = "";
+	$placeHoldersgroup["Indonesian"]["logo"] = "";
+	$fieldLabelsgroup["Indonesian"]["token_type"] = "Token Type";
+	$fieldToolTipsgroup["Indonesian"]["token_type"] = "";
+	$placeHoldersgroup["Indonesian"]["token_type"] = "";
+	$fieldLabelsgroup["Indonesian"]["token_group"] = "Token Group";
+	$fieldToolTipsgroup["Indonesian"]["token_group"] = "";
+	$placeHoldersgroup["Indonesian"]["token_group"] = "";
+	$fieldLabelsgroup["Indonesian"]["membership_type"] = "Membership Type";
+	$fieldToolTipsgroup["Indonesian"]["membership_type"] = "";
+	$placeHoldersgroup["Indonesian"]["membership_type"] = "";
+	$fieldLabelsgroup["Indonesian"]["business_type"] = "Business Type";
+	$fieldToolTipsgroup["Indonesian"]["business_type"] = "";
+	$placeHoldersgroup["Indonesian"]["business_type"] = "";
+	$fieldLabelsgroup["Indonesian"]["open_time"] = "Open Time";
+	$fieldToolTipsgroup["Indonesian"]["open_time"] = "";
+	$placeHoldersgroup["Indonesian"]["open_time"] = "";
+	$fieldLabelsgroup["Indonesian"]["close_time"] = "Close Time";
+	$fieldToolTipsgroup["Indonesian"]["close_time"] = "";
+	$placeHoldersgroup["Indonesian"]["close_time"] = "";
+	$fieldLabelsgroup["Indonesian"]["off_day"] = "Off Day";
+	$fieldToolTipsgroup["Indonesian"]["off_day"] = "";
+	$placeHoldersgroup["Indonesian"]["off_day"] = "";
+	if (count($fieldToolTipsgroup["Indonesian"]))
+		$tdatagroup[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup[".NCSearch"] = true;
@@ -2289,6 +2331,66 @@ $detailsTablesData["group"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "update_order_progess";
 	$detailsParam["dCaptionTable"] = GetTableCaption("update_order_progess");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["group"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["group"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["group"][$dIndex]["masterKeys"][]="group_id";
+
+				$detailsTablesData["group"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["group"][$dIndex]["detailKeys"][]="group_id";
+//	member checkin
+	
+	
+
+		$dIndex = 14;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="member checkin";
+		$detailsParam["dOriginalTable"] = "group_member_checkin";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "member_checkin";
+	$detailsParam["dCaptionTable"] = GetTableCaption("member_checkin");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["group"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["group"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["group"][$dIndex]["masterKeys"][]="group_id";
+
+				$detailsTablesData["group"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["group"][$dIndex]["detailKeys"][]="group_id";
+//	payment
+	
+	
+
+		$dIndex = 15;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="payment";
+		$detailsParam["dOriginalTable"] = "group_member_order";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "payment";
+	$detailsParam["dCaptionTable"] = GetTableCaption("payment");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

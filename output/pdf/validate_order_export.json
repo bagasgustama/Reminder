@@ -134,6 +134,15 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_export_field9}","text":{$rating_member_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_export_field10}","text":{$payment_status_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field11}","text":{$money_received_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field12}","text":{$change_money_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',

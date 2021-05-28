@@ -67,7 +67,7 @@
 	<div class="panel-heading">
 		<div class="btn-group" id="addSearchFieldButton{$id}">
 			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
 			</button>
 		</div>
 
@@ -77,12 +77,12 @@
 				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
 			</button>
 			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
 				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
 				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
 			</ul>
 		</div>
 
@@ -100,20 +100,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_group_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_group_id}" {$filterRow_attrs_group_id}>
-			<label>{$label group_member_order_detail group_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_group_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_group_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_group_id}</span>
-						</div>
-		{END searchCtrlBlock_group_id}
-																{BEGIN searchCtrlBlock_total}
+																		{BEGIN searchCtrlBlock_total}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_total}" {$filterRow_attrs_total}>
@@ -235,8 +222,8 @@
 	</div>
 
 	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
 	</div>
 </div>
 <!-- End Search panel content -->
@@ -288,7 +275,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -314,21 +301,21 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		Export selected		
+		{mlang_message EXPORT_SELECTED}		
 		</a>
 	</li>
 {END exportselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="group_member_order_detail_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		Advanced search		
+		{mlang_message ADVANCED_SEARCH}		
 		</a>
 	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
-		Show search panel		
+		{mlang_message SHOW_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -336,7 +323,7 @@
 	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="hideOptPanel{$id}"  title="" >
 				
-		Hide search panel		
+		{mlang_message HIDE_SEARCH_PANEL}		
 		</a>
 	</li>
 {END searchPanelTopButtons}
@@ -344,7 +331,7 @@
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		Export results		
+		{mlang_message EXPORT_RESULTS}		
 		</a>
 	</li>
 {END export_link}
@@ -352,10 +339,20 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="group_member_order_detail_import.php{$stateLink_full}"  title="" >
 				
-		Import		
+		{mlang_message IMPORT}		
 		</a>
 	</li>
 {END import_link}
+							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN IndonesianLANGLINK}
+	<li><a href="#" data-lang="Indonesian" class="rnr-langlink">
+		{BEGIN IndonesianLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END IndonesianLANGLINK_ACTIVE}
+		Bahasa Indonesia</a></li>
+	{END IndonesianLANGLINK}
 					</ul>
 	</span>
 </span>
@@ -366,7 +363,7 @@
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" href="#" {$guestloginlink_attrs} >
-							Login			</a>
+							{mlang_message LOGIN}			</a>
 </span>
 {END guestloginbutton}
 			</span>
@@ -384,7 +381,7 @@
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
 				
-		Log out		
+		{mlang_message LOG_OUT}		
 		</a>
 	</li>
 {END logoutbutton}
@@ -392,7 +389,7 @@
 	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
 				<a  href="admin_rights_list.php"  title="" >
 				
-		Admin Area		
+		{mlang_message AA_ADMINAREA}		
 		</a>
 	</li>
 {END adminarea_link}
@@ -444,7 +441,7 @@
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$addlink_attrs} href="group_member_order_detail_add.php{$stateLink_full}" >
-							Add new			</a>
+							{mlang_message ADD_NEW}			</a>
 </span>
 {END add_link}
 	 
@@ -452,7 +449,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
+							{mlang_message INLINE_ADD}			</a>
 </span>
 {END inlineadd_link}
 			{END firstAboveGridCell}	
@@ -471,7 +468,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -483,13 +480,13 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			Scope:		</div>
+			{mlang_message PPANEL_SCOPE}		</div>
 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="group_member_order_detail_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
-									Print all pages							</label>
+									{mlang_message PPANEL_ALL_PAGES}							</label>
 		</div>
 		{END print_friendly_all}
 	</div>
@@ -498,7 +495,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="group_member_order_detail_print.php?{$crosstable_attrs}">
-				Print this page			</label>
+				{mlang_message PPANEL_THIS_PAGE}			</label>
 		</div>
 	</div>
 	
@@ -509,7 +506,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio">
-			Print selected			</label>
+			{mlang_message PPANEL_SELECTED}			</label>
 		</div>
 	</div>
 	</div>				 
@@ -521,7 +518,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					Records Per Page							
+					{mlang_message RECORDS_PP}							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -535,7 +532,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							Print			</a>
+							{mlang_message PPANEL_PRINT}			</a>
 </span>
 				 
 					</li>
@@ -563,16 +560,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group_member_order_id"]:before {
 		content: "{$label group_member_order_detail group_member_order_id}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group_member_id"]:before {
-		content: "{$label group_member_order_detail group_member_id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="member_id"]:before {
-		content: "{$label group_member_order_detail member_id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group_id"]:before {
-		content: "{$label group_member_order_detail group_id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group_product_id"]:before {
+						[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="group_product_id"]:before {
 		content: "{$label group_member_order_detail group_product_id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nominal"]:before {
@@ -660,7 +648,7 @@
 	 
 		{BEGIN group_member_order_detail_id_fieldheadercolumn}
 	{BEGIN group_member_order_detail_id_fieldheader}
-	<SPAN {$group_member_order_detail_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_order_detail_id">
+	<SPAN {$group_member_order_detail_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_order_detail_id">
 	{$label group_member_order_detail group_member_order_detail_id }	{$arrow_icon_group_member_order_detail_id}
 	</SPAN>
 	{END group_member_order_detail_id_fieldheader}
@@ -687,7 +675,7 @@
 	 
 		{BEGIN group_member_order_id_fieldheadercolumn}
 	{BEGIN group_member_order_id_fieldheader}
-	<SPAN {$group_member_order_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_order_id">
+	<SPAN {$group_member_order_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_order_id">
 	{$label group_member_order_detail group_member_order_id }	{$arrow_icon_group_member_order_id}
 	</SPAN>
 	{END group_member_order_id_fieldheader}
@@ -703,22 +691,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$group_member_id_class}
+		 r-ori-vert				{$group_product_id_class}
 			"
 
-			data-field="group_member_id"
+			data-field="group_product_id"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN group_member_id_fieldheadercolumn}
-	{BEGIN group_member_id_fieldheader}
-	<SPAN {$group_member_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_id">
-	{$label group_member_order_detail group_member_id }	{$arrow_icon_group_member_id}
+		{BEGIN group_product_id_fieldheadercolumn}
+	{BEGIN group_product_id_fieldheader}
+	<SPAN {$group_product_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_product_id">
+	{$label group_member_order_detail group_product_id }	{$arrow_icon_group_product_id}
 	</SPAN>
-	{END group_member_id_fieldheader}
-{END group_member_id_fieldheadercolumn}
+	{END group_product_id_fieldheader}
+{END group_product_id_fieldheadercolumn}
 
 	
 	</th>
@@ -730,22 +718,22 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$member_id_class}
+		 r-ori-vert				{$nominal_class}
 			"
 
-			data-field="member_id"
+			data-field="nominal"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN member_id_fieldheadercolumn}
-	{BEGIN member_id_fieldheader}
-	<SPAN {$member_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
-	{$label group_member_order_detail member_id }	{$arrow_icon_member_id}
+		{BEGIN nominal_fieldheadercolumn}
+	{BEGIN nominal_fieldheader}
+	<SPAN {$nominal_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nominal">
+	{$label group_member_order_detail nominal }	{$arrow_icon_nominal}
 	</SPAN>
-	{END member_id_fieldheader}
-{END member_id_fieldheadercolumn}
+	{END nominal_fieldheader}
+{END nominal_fieldheadercolumn}
 
 	
 	</th>
@@ -757,22 +745,22 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$group_id_class}
+		 r-ori-vert				{$quantity_class}
 			"
 
-			data-field="group_id"
+			data-field="quantity"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN group_id_fieldheadercolumn}
-	{BEGIN group_id_fieldheader}
-	<SPAN {$group_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_id">
-	{$label group_member_order_detail group_id }	{$arrow_icon_group_id}
+		{BEGIN quantity_fieldheadercolumn}
+	{BEGIN quantity_fieldheader}
+	<SPAN {$quantity_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="quantity">
+	{$label group_member_order_detail quantity }	{$arrow_icon_quantity}
 	</SPAN>
-	{END group_id_fieldheader}
-{END group_id_fieldheadercolumn}
+	{END quantity_fieldheader}
+{END quantity_fieldheadercolumn}
 
 	
 	</th>
@@ -784,22 +772,22 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$group_product_id_class}
+		 r-ori-vert				{$total_class}
 			"
 
-			data-field="group_product_id"
+			data-field="total"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN group_product_id_fieldheadercolumn}
-	{BEGIN group_product_id_fieldheader}
-	<SPAN {$group_product_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_product_id">
-	{$label group_member_order_detail group_product_id }	{$arrow_icon_group_product_id}
+		{BEGIN total_fieldheadercolumn}
+	{BEGIN total_fieldheader}
+	<SPAN {$total_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="total">
+	{$label group_member_order_detail total }	{$arrow_icon_total}
 	</SPAN>
-	{END group_product_id_fieldheader}
-{END group_product_id_fieldheadercolumn}
+	{END total_fieldheader}
+{END total_fieldheadercolumn}
 
 	
 	</th>
@@ -811,99 +799,18 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$nominal_class}
-			"
-
-			data-field="nominal"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN nominal_fieldheadercolumn}
-	{BEGIN nominal_fieldheader}
-	<SPAN {$nominal_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nominal">
-	{$label group_member_order_detail nominal }	{$arrow_icon_nominal}
-	</SPAN>
-	{END nominal_fieldheader}
-{END nominal_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-				 
-					{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$quantity_class}
-			"
-
-			data-field="quantity"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN quantity_fieldheadercolumn}
-	{BEGIN quantity_fieldheader}
-	<SPAN {$quantity_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="quantity">
-	{$label group_member_order_detail quantity }	{$arrow_icon_quantity}
-	</SPAN>
-	{END quantity_fieldheader}
-{END quantity_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
-				 
-					{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$total_class}
-			"
-
-			data-field="total"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN total_fieldheadercolumn}
-	{BEGIN total_fieldheader}
-	<SPAN {$total_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="total">
-	{$label group_member_order_detail total }	{$arrow_icon_total}
-	</SPAN>
-	{END total_fieldheader}
-{END total_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
-				 
-					{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$progress_class}
 			"
 
 			data-field="progress"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN progress_fieldheadercolumn}
 	{BEGIN progress_fieldheader}
-	<SPAN {$progress_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="progress">
+	<SPAN {$progress_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="progress">
 	{$label group_member_order_detail progress }	{$arrow_icon_progress}
 	</SPAN>
 	{END progress_fieldheader}
@@ -911,7 +818,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field9}
+	{END cellblock_grid_headcell_field6}
 							</tr>
 					 
 					 
@@ -944,8 +851,8 @@
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
+	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
 				
 								</a>
 </span>
@@ -954,8 +861,8 @@
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn-link   
-	 glyphicon glyphicon-search" href="group_member_order_detail_view.php?{$editlink}" {$viewlink_attrs} title="View" >		
+	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
+	 glyphicon glyphicon-search" href="group_member_order_detail_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" >		
 				
 								</a>
 </span>
@@ -1041,81 +948,12 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$group_member_id_class}
-			"
-
-			data-field="group_member_id"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN group_member_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_id" data-default-width >
-{$group_member_id_value}
-</span>
-{END group_member_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-				 
-					{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$member_id_class}
-			"
-
-			data-field="member_id"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN member_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id" data-default-width >
-{$member_id_value}
-</span>
-{END member_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-				 
-					{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$group_id_class}
-			"
-
-			data-field="group_id"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN group_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_id" data-default-width >
-{$group_id_value}
-</span>
-{END group_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-				 
-					{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$group_product_id_class}
 			"
 
 			data-field="group_product_id"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1125,12 +963,12 @@
 </span>
 {END group_product_id_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field2}
 				 
-					{BEGIN cellblock_grid_cell_field6}
+					{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$nominal_class}
@@ -1138,7 +976,7 @@
 
 			data-field="nominal"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1148,12 +986,12 @@
 </span>
 {END nominal_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field3}
 				 
-					{BEGIN cellblock_grid_cell_field7}
+					{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$quantity_class}
@@ -1161,7 +999,7 @@
 
 			data-field="quantity"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1171,12 +1009,12 @@
 </span>
 {END quantity_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field4}
 				 
-					{BEGIN cellblock_grid_cell_field8}
+					{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$total_class}
@@ -1184,7 +1022,7 @@
 
 			data-field="total"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1194,12 +1032,12 @@
 </span>
 {END total_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field5}
 				 
-					{BEGIN cellblock_grid_cell_field9}
+					{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$progress_class}
@@ -1207,7 +1045,7 @@
 
 			data-field="progress"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1217,7 +1055,7 @@
 </span>
 {END progress_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field6}
 							</tr>
 					 
 					
@@ -1377,54 +1215,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
-				 
-					{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="group_member_order_detail_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
-				 
-					{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="group_member_order_detail_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
-				 
-					{BEGIN cellblock_grid_footcell_field9}
-	<td
-	
-	{$cell_grid_footcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="group_member_order_detail_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field9}
 							</tr>
 					
 					</tfoot>

@@ -58,7 +58,7 @@
 	 
 		{BEGIN member_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
 	{$label personal11 member_id }	</span>
 {END member_id_fieldheadercolumn}
 
@@ -83,7 +83,7 @@
 	 
 		{BEGIN name_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name">
 	{$label personal11 name }	</span>
 {END name_fieldheadercolumn}
 
@@ -108,7 +108,7 @@
 	 
 		{BEGIN mail_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mail">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mail">
 	{$label personal11 mail }	</span>
 {END mail_fieldheadercolumn}
 
@@ -133,7 +133,7 @@
 	 
 		{BEGIN password_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password">
 	{$label personal11 password }	</span>
 {END password_fieldheadercolumn}
 
@@ -158,7 +158,7 @@
 	 
 		{BEGIN country_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country_id">
 	{$label personal11 country_id }	</span>
 {END country_id_fieldheadercolumn}
 
@@ -183,7 +183,7 @@
 	 
 		{BEGIN province_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="province_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="province_id">
 	{$label personal11 province_id }	</span>
 {END province_id_fieldheadercolumn}
 
@@ -208,13 +208,38 @@
 	 
 		{BEGIN group_member_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_member_id">
 	{$label personal11 group_member_id }	</span>
 {END group_member_id_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field6}
+				 
+					{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$group_id_class}
+			"
+
+			data-field="group_id"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN group_id_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_id">
+	{$label personal11 group_id }	</span>
+{END group_id_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
 							</tr>
 					 
 					 
@@ -391,6 +416,29 @@
 {END group_member_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
+				 
+					{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$group_id_class}
+			"
+
+			data-field="group_id"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN group_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="group_id" data-default-width >
+{$group_id_value}
+</span>
+{END group_id_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
 							</tr>
 					 
 					
@@ -518,6 +566,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
+				 
+					{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="personal11_masterprint"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

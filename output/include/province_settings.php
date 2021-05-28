@@ -37,6 +37,24 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsprovince["English"]))
 		$tdataprovince[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsprovince["Indonesian"] = array();
+	$fieldToolTipsprovince["Indonesian"] = array();
+	$placeHoldersprovince["Indonesian"] = array();
+	$pageTitlesprovince["Indonesian"] = array();
+	$fieldLabelsprovince["Indonesian"]["province_id"] = "Province Id";
+	$fieldToolTipsprovince["Indonesian"]["province_id"] = "";
+	$placeHoldersprovince["Indonesian"]["province_id"] = "";
+	$fieldLabelsprovince["Indonesian"]["country_id"] = "Country Id";
+	$fieldToolTipsprovince["Indonesian"]["country_id"] = "";
+	$placeHoldersprovince["Indonesian"]["country_id"] = "";
+	$fieldLabelsprovince["Indonesian"]["province_name"] = "Province Name";
+	$fieldToolTipsprovince["Indonesian"]["province_name"] = "";
+	$placeHoldersprovince["Indonesian"]["province_name"] = "";
+	if (count($fieldToolTipsprovince["Indonesian"]))
+		$tdataprovince[".isUseToolTips"] = true;
+}
 
 
 	$tdataprovince[".NCSearch"] = true;

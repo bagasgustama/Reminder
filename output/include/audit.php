@@ -522,6 +522,30 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="member checkin")
+		{
+			return false;
+		}
+		if($table=="group4")
+		{
+			return false;
+		}
+		if($table=="group11")
+		{
+			return false;
+		}
+		if($table=="group_product1")
+		{
+			return false;
+		}
+		if($table=="payment")
+		{
+			return false;
+		}
+		if($table=="personal11")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1047,6 +1071,30 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="personal1")
+		{
+			return false;
+		}
+		if($table=="member checkin")
+		{
+			return false;
+		}
+		if($table=="group4")
+		{
+			return false;
+		}
+		if($table=="group11")
+		{
+			return false;
+		}
+		if($table=="group_product1")
+		{
+			return false;
+		}
+		if($table=="payment")
+		{
+			return false;
+		}
+		if($table=="personal11")
 		{
 			return false;
 		}

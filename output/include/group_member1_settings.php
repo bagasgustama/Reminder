@@ -55,6 +55,42 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup_member1["English"]))
 		$tdatagroup_member1[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup_member1["Indonesian"] = array();
+	$fieldToolTipsgroup_member1["Indonesian"] = array();
+	$placeHoldersgroup_member1["Indonesian"] = array();
+	$pageTitlesgroup_member1["Indonesian"] = array();
+	$fieldLabelsgroup_member1["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsgroup_member1["Indonesian"]["group_member_id"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsgroup_member1["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsgroup_member1["Indonesian"]["member_id"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["member_id"] = "";
+	$fieldLabelsgroup_member1["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup_member1["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup_member1["Indonesian"]["user_type"] = "User Type";
+	$fieldToolTipsgroup_member1["Indonesian"]["user_type"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["user_type"] = "";
+	$fieldLabelsgroup_member1["Indonesian"]["token_group"] = "Token Group";
+	$fieldToolTipsgroup_member1["Indonesian"]["token_group"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["token_group"] = "";
+	$fieldLabelsgroup_member1["Indonesian"]["identifier_group"] = "Identifier Group";
+	$fieldToolTipsgroup_member1["Indonesian"]["identifier_group"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["identifier_group"] = "";
+	$fieldLabelsgroup_member1["Indonesian"]["token_personal"] = "Token Personal";
+	$fieldToolTipsgroup_member1["Indonesian"]["token_personal"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["token_personal"] = "";
+	$fieldLabelsgroup_member1["Indonesian"]["membership_type"] = "Membership Type";
+	$fieldToolTipsgroup_member1["Indonesian"]["membership_type"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["membership_type"] = "";
+	$fieldLabelsgroup_member1["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsgroup_member1["Indonesian"]["valid"] = "";
+	$placeHoldersgroup_member1["Indonesian"]["valid"] = "";
+	if (count($fieldToolTipsgroup_member1["Indonesian"]))
+		$tdatagroup_member1[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup_member1[".NCSearch"] = true;

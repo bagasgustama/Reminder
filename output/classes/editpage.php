@@ -1295,7 +1295,7 @@ class EditPage extends RunnerPage
 		{
 			$messageLink = "";
 			if( !isLogged() || isLoggedAsGuest() )
-				$messageLink = " <a href='#' id='loginButtonContinue'>". "Login" . "</a>";
+				$messageLink = " <a href='#' id='loginButtonContinue'>". mlang_message("SESSION_EXPIRED3") . "</a>";
 			Security::sendPermissionError( $messageLink );
 			return false;
 		}
@@ -1334,7 +1334,7 @@ class EditPage extends RunnerPage
 		{
 			$returnJSON = array();
 			$returnJSON['success'] = false;
-			$returnJSON['message'] = "Error occurred";
+			$returnJSON['message'] = mlang_message("INLINE_ERROR");
 			$returnJSON['fatalError'] = true;
 			echo printJSON($returnJSON);
 			exit();
@@ -1347,7 +1347,7 @@ class EditPage extends RunnerPage
 				exit();
 			}
 			else
-				$_SESSION["message_edit"] = "<< "."Error occurred"." >>";
+				$_SESSION["message_edit"] = "<< ".mlang_message("INLINE_ERROR")." >>";
 		}
 	}
 
@@ -1471,7 +1471,7 @@ class EditPage extends RunnerPage
 		if( $this->isMessageSet() )
 			return;
 
-		$this->setMessage( "<strong>&lt;&lt;&lt; "."Record updated". " &gt;&gt;&gt;</strong>" );
+		$this->setMessage( "<strong>&lt;&lt;&lt; ".mlang_message("RECORD_UPDATED"). " &gt;&gt;&gt;</strong>" );
 	}
 
 	/**
@@ -1653,10 +1653,10 @@ class EditPage extends RunnerPage
 			return true;
 		if( isLoggedAsGuest() || !isLogged() )
 		{
-			$this->setMessage( "Your session has expired." .
+			$this->setMessage( mlang_message("SESSION_EXPIRED1") .
 				"<a href='#' id='loginButtonContinue" . $this->id . "'>" .
-				"Login" . "</a>" .
-				" to save data." );
+				mlang_message("SESSION_EXPIRED3") . "</a>" .
+				mlang_message("SESSION_EXPIRED4") );
 		}
 		else
 		{
@@ -1723,7 +1723,7 @@ class EditPage extends RunnerPage
 	{
 		if($this->mode == EDIT_INLINE)
 		{
-			echo printJSON(array("success" => false, "message" => "The record is not editable"));
+			echo printJSON(array("success" => false, "message" => mlang_message("RECORD_ISNOT_EDITABLE")));
 			exit();
 		}
 		Security::redirectToList( $this->tName );
@@ -1803,10 +1803,10 @@ class EditPage extends RunnerPage
 	{
 		if( $this->mode != EDIT_INLINE )
 		{
-			$this->message = "<strong>&lt;&lt;&lt; "."Record was NOT edited"."</strong> &gt;&gt;&gt;<br><br>".$message;
+			$this->message = "<strong>&lt;&lt;&lt; ".mlang_message("RECORD_NOT_UPDATED")."</strong> &gt;&gt;&gt;<br><br>".$message;
 		}
 		else
-			$this->message = "Record was NOT edited".". ".$message;
+			$this->message = mlang_message("RECORD_NOT_UPDATED").". ".$message;
 
 		$this->messageType = MESSAGE_ERROR;
 	}

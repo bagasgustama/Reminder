@@ -52,6 +52,39 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipspersonal_agenda["English"]))
 		$tdatapersonal_agenda[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelspersonal_agenda["Indonesian"] = array();
+	$fieldToolTipspersonal_agenda["Indonesian"] = array();
+	$placeHolderspersonal_agenda["Indonesian"] = array();
+	$pageTitlespersonal_agenda["Indonesian"] = array();
+	$fieldLabelspersonal_agenda["Indonesian"]["member_agenda_id"] = "Member Agenda Id";
+	$fieldToolTipspersonal_agenda["Indonesian"]["member_agenda_id"] = "";
+	$placeHolderspersonal_agenda["Indonesian"]["member_agenda_id"] = "";
+	$fieldLabelspersonal_agenda["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipspersonal_agenda["Indonesian"]["member_id"] = "";
+	$placeHolderspersonal_agenda["Indonesian"]["member_id"] = "";
+	$fieldLabelspersonal_agenda["Indonesian"]["loop_type"] = "Loop Type";
+	$fieldToolTipspersonal_agenda["Indonesian"]["loop_type"] = "";
+	$placeHolderspersonal_agenda["Indonesian"]["loop_type"] = "";
+	$fieldLabelspersonal_agenda["Indonesian"]["loop_value"] = "Loop Value";
+	$fieldToolTipspersonal_agenda["Indonesian"]["loop_value"] = "";
+	$placeHolderspersonal_agenda["Indonesian"]["loop_value"] = "";
+	$fieldLabelspersonal_agenda["Indonesian"]["message_content"] = "Message Content";
+	$fieldToolTipspersonal_agenda["Indonesian"]["message_content"] = "";
+	$placeHolderspersonal_agenda["Indonesian"]["message_content"] = "";
+	$fieldLabelspersonal_agenda["Indonesian"]["attachment"] = "Attachment";
+	$fieldToolTipspersonal_agenda["Indonesian"]["attachment"] = "";
+	$placeHolderspersonal_agenda["Indonesian"]["attachment"] = "";
+	$fieldLabelspersonal_agenda["Indonesian"]["repeat"] = "Repeat";
+	$fieldToolTipspersonal_agenda["Indonesian"]["repeat"] = "";
+	$placeHolderspersonal_agenda["Indonesian"]["repeat"] = "";
+	$fieldLabelspersonal_agenda["Indonesian"]["repeat_type"] = "Repeat Type";
+	$fieldToolTipspersonal_agenda["Indonesian"]["repeat_type"] = "";
+	$placeHolderspersonal_agenda["Indonesian"]["repeat_type"] = "";
+	if (count($fieldToolTipspersonal_agenda["Indonesian"]))
+		$tdatapersonal_agenda[".isUseToolTips"] = true;
+}
 
 
 	$tdatapersonal_agenda[".NCSearch"] = true;

@@ -77,8 +77,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_lang_selector}"},
+				
+		  ],
   "border": [ false, false, false, false ],
           "alignment": 'right',
   },
@@ -176,7 +178,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Username","hidden":"{$item_hide_username_label}","isHtml":true},
+			{"text":"{mlang_message USERNAME}","hidden":"{$item_hide_username_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -222,7 +224,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Password","hidden":"{$item_hide_password_label}","isHtml":true},
+			{"text":"{mlang_message PASSWORD}","hidden":"{$item_hide_password_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

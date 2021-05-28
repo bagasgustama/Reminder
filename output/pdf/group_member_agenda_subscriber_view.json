@@ -120,10 +120,10 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel group_member_agenda_subscriber group_member_id }","bold":true},{"text":{$group_member_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member_agenda_subscriber member_id }","bold":true},{"text":{$member_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel group_member_agenda_subscriber agenda_type_id }","bold":true},{"text":{$agenda_type_id_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member_agenda_subscriber member_id }","bold":true},{"text":{$member_id_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

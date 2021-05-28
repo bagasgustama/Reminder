@@ -61,6 +61,48 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup211["English"]))
 		$tdatagroup211[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup211["Indonesian"] = array();
+	$fieldToolTipsgroup211["Indonesian"] = array();
+	$placeHoldersgroup211["Indonesian"] = array();
+	$pageTitlesgroup211["Indonesian"] = array();
+	$fieldLabelsgroup211["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup211["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup211["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup211["Indonesian"]["group_name"] = "Group Name";
+	$fieldToolTipsgroup211["Indonesian"]["group_name"] = "";
+	$placeHoldersgroup211["Indonesian"]["group_name"] = "";
+	$fieldLabelsgroup211["Indonesian"]["description"] = "Description";
+	$fieldToolTipsgroup211["Indonesian"]["description"] = "";
+	$placeHoldersgroup211["Indonesian"]["description"] = "";
+	$fieldLabelsgroup211["Indonesian"]["logo"] = "Logo";
+	$fieldToolTipsgroup211["Indonesian"]["logo"] = "";
+	$placeHoldersgroup211["Indonesian"]["logo"] = "";
+	$fieldLabelsgroup211["Indonesian"]["token_type"] = "Token Type";
+	$fieldToolTipsgroup211["Indonesian"]["token_type"] = "";
+	$placeHoldersgroup211["Indonesian"]["token_type"] = "";
+	$fieldLabelsgroup211["Indonesian"]["token_group"] = "Token Group";
+	$fieldToolTipsgroup211["Indonesian"]["token_group"] = "";
+	$placeHoldersgroup211["Indonesian"]["token_group"] = "";
+	$fieldLabelsgroup211["Indonesian"]["membership_type"] = "Membership Type";
+	$fieldToolTipsgroup211["Indonesian"]["membership_type"] = "";
+	$placeHoldersgroup211["Indonesian"]["membership_type"] = "";
+	$fieldLabelsgroup211["Indonesian"]["business_type"] = "Business Type";
+	$fieldToolTipsgroup211["Indonesian"]["business_type"] = "";
+	$placeHoldersgroup211["Indonesian"]["business_type"] = "";
+	$fieldLabelsgroup211["Indonesian"]["open_time"] = "Open Time";
+	$fieldToolTipsgroup211["Indonesian"]["open_time"] = "";
+	$placeHoldersgroup211["Indonesian"]["open_time"] = "";
+	$fieldLabelsgroup211["Indonesian"]["close_time"] = "Close Time";
+	$fieldToolTipsgroup211["Indonesian"]["close_time"] = "";
+	$placeHoldersgroup211["Indonesian"]["close_time"] = "";
+	$fieldLabelsgroup211["Indonesian"]["off_day"] = "Off Day";
+	$fieldToolTipsgroup211["Indonesian"]["off_day"] = "";
+	$placeHoldersgroup211["Indonesian"]["off_day"] = "";
+	if (count($fieldToolTipsgroup211["Indonesian"]))
+		$tdatagroup211[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup211[".NCSearch"] = true;

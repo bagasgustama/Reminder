@@ -58,6 +58,45 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup_member_checkin["English"]))
 		$tdatagroup_member_checkin[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup_member_checkin["Indonesian"] = array();
+	$fieldToolTipsgroup_member_checkin["Indonesian"] = array();
+	$placeHoldersgroup_member_checkin["Indonesian"] = array();
+	$pageTitlesgroup_member_checkin["Indonesian"] = array();
+	$fieldLabelsgroup_member_checkin["Indonesian"]["group_member_checkin_id"] = "Group Member Checkin Id";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["group_member_checkin_id"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["group_member_checkin_id"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["group_member_id"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["member_id"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["member_id"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["checkin_date"] = "Checkin Date";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["checkin_date"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["checkin_date"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["checkout_date"] = "Checkout Date";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["checkout_date"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["checkout_date"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["id_room"] = "Id Room";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["id_room"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["id_room"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["valid"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["valid"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["review_member"] = "Review Member";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["review_member"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["review_member"] = "";
+	$fieldLabelsgroup_member_checkin["Indonesian"]["rating_member"] = "Rating Member";
+	$fieldToolTipsgroup_member_checkin["Indonesian"]["rating_member"] = "";
+	$placeHoldersgroup_member_checkin["Indonesian"]["rating_member"] = "";
+	if (count($fieldToolTipsgroup_member_checkin["Indonesian"]))
+		$tdatagroup_member_checkin[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup_member_checkin[".NCSearch"] = true;
@@ -513,9 +552,6 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 	
 	
-				//dependent dropdowns @deprecated data ?
-	$edata["DependentLookups"] = array();
-	$edata["DependentLookups"][] = "member_id";
 
 	
 	
@@ -658,7 +694,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "personal1";
+	$edata["LookupTable"] = "personal11";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -677,7 +713,7 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 	
 		$edata["UseCategory"] = true;
 	$edata["categoryFields"] = array();
-	$edata["categoryFields"][] = array( "main" => "group_member_id", "lookup" => "group_member_id" );
+	$edata["categoryFields"][] = array( "main" => "group_id", "lookup" => "group_id" );
 
 	
 	
@@ -847,6 +883,9 @@ $tdatagroup_member_checkin[".hideMobileList"] = array();
 				//dependent dropdowns @deprecated data ?
 	$edata["DependentLookups"] = array();
 	$edata["DependentLookups"][] = "group_member_id";
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "member_id";
 
 	
 	

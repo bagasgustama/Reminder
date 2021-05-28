@@ -60,7 +60,7 @@ class ViewPage extends RunnerPage
 		$messageLink = "";
 
 		if( !isLogged() || isLoggedAsGuest() )
-			$messageLink = " <a href='#' id='loginButtonContinue'>". "Login" . "</a>";
+			$messageLink = " <a href='#' id='loginButtonContinue'>". mlang_message("SESSION_EXPIRED3") . "</a>";
 
 		if( !Security::processPageSecurity( $table, "S", $pageMode != VIEW_SIMPLE, $messageLink) )
 			return false;

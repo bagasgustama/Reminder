@@ -1,0 +1,416 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel group_product1 search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN group_product_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_group_product_id}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="group_product_id" 
+	
+	data-signal-error-for="group_product_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="group_product_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_group_product_id}">
+		{$label group_product1 group_product_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_group_product_id}
+	</div>
+	<div class="r-search-field">
+		{$group_product_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$group_product_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END group_product_id_fieldblock}
+											
+{BEGIN group_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_group_id}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="group_id" 
+	
+	data-signal-error-for="group_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="group_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_group_id}">
+		{$label group_product1 group_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_group_id}
+	</div>
+	<div class="r-search-field">
+		{$group_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$group_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END group_id_fieldblock}
+											
+{BEGIN product_type_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_product_type}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="product_type" 
+	
+	data-signal-error-for="product_type{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="product_type" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_product_type}">
+		{$label group_product1 product_type }	</label>
+	<div class="r-search-option">
+		{$searchtype_product_type}
+	</div>
+	<div class="r-search-field">
+		{$product_type_editcontrol}	</div>
+	<div class="r-search-field">
+		{$product_type_editcontrol1}
+	</div>
+	
+</div>
+
+{END product_type_fieldblock}
+											
+{BEGIN product_name_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_product_name}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="product_name" 
+	
+	data-signal-error-for="product_name{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="product_name" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_product_name}">
+		{$label group_product1 product_name }	</label>
+	<div class="r-search-option">
+		{$searchtype_product_name}
+	</div>
+	<div class="r-search-field">
+		{$product_name_editcontrol}	</div>
+	<div class="r-search-field">
+		{$product_name_editcontrol1}
+	</div>
+	
+</div>
+
+{END product_name_fieldblock}
+											
+{BEGIN stock_type_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_stock_type}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="stock_type" 
+	
+	data-signal-error-for="stock_type{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="stock_type" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_stock_type}">
+		{$label group_product1 stock_type }	</label>
+	<div class="r-search-option">
+		{$searchtype_stock_type}
+	</div>
+	<div class="r-search-field">
+		{$stock_type_editcontrol}	</div>
+	<div class="r-search-field">
+		{$stock_type_editcontrol1}
+	</div>
+	
+</div>
+
+{END stock_type_fieldblock}
+											
+{BEGIN stock_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_stock}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="stock" 
+	
+	data-signal-error-for="stock{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="stock" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_stock}">
+		{$label group_product1 stock }	</label>
+	<div class="r-search-option">
+		{$searchtype_stock}
+	</div>
+	<div class="r-search-field">
+		{$stock_editcontrol}	</div>
+	<div class="r-search-field">
+		{$stock_editcontrol1}
+	</div>
+	
+</div>
+
+{END stock_fieldblock}
+											
+{BEGIN order_type_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_order_type}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="order_type" 
+	
+	data-signal-error-for="order_type{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="order_type" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_order_type}">
+		{$label group_product1 order_type }	</label>
+	<div class="r-search-option">
+		{$searchtype_order_type}
+	</div>
+	<div class="r-search-field">
+		{$order_type_editcontrol}	</div>
+	<div class="r-search-field">
+		{$order_type_editcontrol1}
+	</div>
+	
+</div>
+
+{END order_type_fieldblock}
+											
+{BEGIN price_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_price}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="price" 
+	
+	data-signal-error-for="price{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="price" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_price}">
+		{$label group_product1 price }	</label>
+	<div class="r-search-option">
+		{$searchtype_price}
+	</div>
+	<div class="r-search-field">
+		{$price_editcontrol}	</div>
+	<div class="r-search-field">
+		{$price_editcontrol1}
+	</div>
+	
+</div>
+
+{END price_fieldblock}
+											
+{BEGIN curency_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_curency}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="curency" 
+	
+	data-signal-error-for="curency{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="curency" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_curency}">
+		{$label group_product1 curency }	</label>
+	<div class="r-search-option">
+		{$searchtype_curency}
+	</div>
+	<div class="r-search-field">
+		{$curency_editcontrol}	</div>
+	<div class="r-search-field">
+		{$curency_editcontrol1}
+	</div>
+	
+</div>
+
+{END curency_fieldblock}
+											
+{BEGIN image_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_image}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="image" 
+	
+	data-signal-error-for="image{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="image" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_image}">
+		{$label group_product1 image }	</label>
+	<div class="r-search-option">
+		{$searchtype_image}
+	</div>
+	<div class="r-search-field">
+		{$image_editcontrol}	</div>
+	<div class="r-search-field">
+		{$image_editcontrol1}
+	</div>
+	
+</div>
+
+{END image_fieldblock}
+											
+{BEGIN group_member_order_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_group_member_order}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="group_member_order" 
+	
+	data-signal-error-for="group_member_order{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="group_member_order" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_group_member_order}">
+		{$label group_product1 group_member_order }	</label>
+	<div class="r-search-option">
+		{$searchtype_group_member_order}
+	</div>
+	<div class="r-search-field">
+		{$group_member_order_editcontrol}	</div>
+	<div class="r-search-field">
+		{$group_member_order_editcontrol1}
+	</div>
+	
+</div>
+
+{END group_member_order_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							{mlang_message SEARCH}			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							{mlang_message RESET}			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							{mlang_message CANCEL}			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -34,6 +34,21 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipschannel["English"]))
 		$tdatachannel[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelschannel["Indonesian"] = array();
+	$fieldToolTipschannel["Indonesian"] = array();
+	$placeHolderschannel["Indonesian"] = array();
+	$pageTitleschannel["Indonesian"] = array();
+	$fieldLabelschannel["Indonesian"]["channel_id"] = "Channel Id";
+	$fieldToolTipschannel["Indonesian"]["channel_id"] = "";
+	$placeHolderschannel["Indonesian"]["channel_id"] = "";
+	$fieldLabelschannel["Indonesian"]["channel_name"] = "Channel Name";
+	$fieldToolTipschannel["Indonesian"]["channel_name"] = "";
+	$placeHolderschannel["Indonesian"]["channel_name"] = "";
+	if (count($fieldToolTipschannel["Indonesian"]))
+		$tdatachannel[".isUseToolTips"] = true;
+}
 
 
 	$tdatachannel[".NCSearch"] = true;

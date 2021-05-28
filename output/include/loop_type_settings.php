@@ -37,6 +37,24 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsloop_type["English"]))
 		$tdataloop_type[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsloop_type["Indonesian"] = array();
+	$fieldToolTipsloop_type["Indonesian"] = array();
+	$placeHoldersloop_type["Indonesian"] = array();
+	$pageTitlesloop_type["Indonesian"] = array();
+	$fieldLabelsloop_type["Indonesian"]["id_loop"] = "Id Loop";
+	$fieldToolTipsloop_type["Indonesian"]["id_loop"] = "";
+	$placeHoldersloop_type["Indonesian"]["id_loop"] = "";
+	$fieldLabelsloop_type["Indonesian"]["loop_type"] = "Loop Type";
+	$fieldToolTipsloop_type["Indonesian"]["loop_type"] = "";
+	$placeHoldersloop_type["Indonesian"]["loop_type"] = "";
+	$fieldLabelsloop_type["Indonesian"]["desc"] = "Desc";
+	$fieldToolTipsloop_type["Indonesian"]["desc"] = "";
+	$placeHoldersloop_type["Indonesian"]["desc"] = "";
+	if (count($fieldToolTipsloop_type["Indonesian"]))
+		$tdataloop_type[".isUseToolTips"] = true;
+}
 
 
 	$tdataloop_type[".NCSearch"] = true;

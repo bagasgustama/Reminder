@@ -940,6 +940,18 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="group_member_order_detail" && $field=="quantity")
+	{
+		return 1;
+	}
+				if($table=="group_member_order" && $field=="member_id")
+	{
+		return ':session.member_id';
+	}
+				if($table=="group_member_order" && $field=="currency")
+	{
+		return IDR;
+	}
 				if($table=="group_member_agenda_subscriber" && $field=="member_id")
 	{
 		return $_SESSION["member_id"];
@@ -952,6 +964,18 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return $_SESSION["group_id"];
 	}
+				if($table=="validate_checkin" && $field=="valid")
+	{
+		return 1;
+	}
+				if($table=="validate_order" && $field=="valid")
+	{
+		return 1;
+	}
+				if($table=="update_order_progess" && $field=="progress")
+	{
+		return ready;
+	}
 	return "";
 }
 
@@ -963,6 +987,18 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="validate_checkin" && $field=="valid")
+	{
+		return 1;
+	}
+				if($table=="validate_order" && $field=="valid")
+	{
+		return 1;
+	}
+				if($table=="update_order_progess" && $field=="progress")
+	{
+		return ready;
+	}
 	return "";
 }
 

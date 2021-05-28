@@ -54,7 +54,28 @@
 	class="r-align-right r-ori-vert			col-md-6
 	
 ">
-			</div>			</div>		
+		 
+		{BEGIN languages_block}
+<span class="pull-right btn-group">	
+		<button class="dropdown-toggle btn btn-flat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-globe"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+	{BEGIN EnglishLANGLINK}
+		<li><a href="#" data-lang="English" class="rnr-langlink">
+			{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+			English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN IndonesianLANGLINK}
+		<li><a href="#" data-lang="Indonesian" class="rnr-langlink">
+			{BEGIN IndonesianLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END IndonesianLANGLINK_ACTIVE}
+			Bahasa Indonesia</a></li>
+	{END IndonesianLANGLINK}
+	</ul>
+	</span>
+{END languages_block}
+		</div>			</div>		
 {END top_block}
 						</div>
 					<div class="panel-body">
@@ -92,7 +113,7 @@
 									data-cellId="grid_c1" data-pageid="{$pageid}"		>
 			<div edit-form-cell class="clearfix">
 								<label data-itemtype="username_label" data-itemid="username_label" {$item_username_label} data-pageid="{$pageid}" data-small class="r-edit-label control-label" for="username">
-	{BEGIN username_label}Username:{END username_label}
+	{BEGIN username_label}{mlang_message USERNAME}:{END username_label}
 </label>					</div>
 		</td>
 	 
@@ -120,7 +141,7 @@
 									data-cellId="grid_c3" data-pageid="{$pageid}"		>
 			<div edit-form-cell class="clearfix">
 								<label data-itemtype="password_label" data-itemid="password_label" {$item_password_label} data-pageid="{$pageid}" data-small class="r-edit-label control-label" for="password">
-	{BEGIN password_label}Password:{END password_label}
+	{BEGIN password_label}{mlang_message PASSWORD}:{END password_label}
 </label>					</div>
 		</td>
 	 
@@ -159,7 +180,7 @@
 			<div edit-form-cell class="clearfix">
 								<div class="checkbox r-edit-field" data-itemtype="remember_password" data-itemid="remember_password" {$item_remember_password} data-pageid="{$pageid}" >
 	<label>
-		<input type="checkbox" {$rememberbox_attrs}> {BEGIN remember_password_label}<span>Remember me</span>{END remember_password_label}
+		<input type="checkbox" {$rememberbox_attrs}> {BEGIN remember_password_label}<span>{mlang_message REMEMBER_ME}</span>{END remember_password_label}
 	</label>
 </div>					</div>
 		</td>
@@ -189,7 +210,7 @@
 <span data-itemtype="login_button" data-itemid="login_button" {$item_login_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$loginlink_attrs} >
-							Sign in			</a>
+							{mlang_message SIGN_IN}			</a>
 </span>
 {END signin_button}
 	 
@@ -197,7 +218,7 @@
 <span data-itemtype="continue_login_button" data-itemid="continue_login_button" {$item_continue_login_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$continuebutton_attrs} >
-							Continue			</a>
+							{mlang_message CONTINUE}			</a>
 </span>
 {END continue_button}
 	 
@@ -205,7 +226,7 @@
 <span data-itemtype="guest_login" data-itemid="guest_login" {$item_guest_login} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-link   
 	" {$guestlink_attrs} >
-							Login as Guest			</a>
+							{mlang_message GUEST}			</a>
 </span>
 {END guestlink_block}
 		</div>					</div>
@@ -227,7 +248,7 @@
 		<span data-itemtype="loginform_register_link" data-itemid="loginform_register_link" {$item_loginform_register_link} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-link   
 	" {$registerlink_attrs} href="register.php" >
-							Sign Up			</a>
+							{mlang_message SIGN_UP}			</a>
 </span>
 		</div>					</div>
 	</div>		

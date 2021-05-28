@@ -64,8 +64,8 @@
 </span>	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="Cancel" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
+	<a type="button" title="{mlang_message CANCEL}" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="{mlang_message CANCEL}" >		
 				
 								</a>
 </span>
@@ -75,7 +75,7 @@
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$inlineaddlink_attrs} >
-							Inline Add			</a>
+							{mlang_message INLINE_ADD}			</a>
 </span>
 {END inlineadd_link}
 			{END firstAboveGridCell}	
@@ -130,20 +130,20 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$member_id_class}
+		 r-ori-vert				{$agenda_type_id_class}
 			"
 
-			data-field="member_id"
+			data-field="agenda_type_id"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN member_id_fieldheadercolumn}
+		{BEGIN agenda_type_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
-	{$label group_member_agenda_subscriber member_id }	</span>
-{END member_id_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="agenda_type_id">
+	{$label group_member_agenda_subscriber agenda_type_id }	</span>
+{END agenda_type_id_fieldheadercolumn}
 
 	
 	</th>
@@ -155,20 +155,20 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$agenda_type_id_class}
+		 r-ori-vert				{$member_id_class}
 			"
 
-			data-field="agenda_type_id"
+			data-field="member_id"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN agenda_type_id_fieldheadercolumn}
+		{BEGIN member_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="agenda_type_id">
-	{$label group_member_agenda_subscriber agenda_type_id }	</span>
-{END agenda_type_id_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
+	{$label group_member_agenda_subscriber member_id }	</span>
+{END member_id_fieldheadercolumn}
 
 	
 	</th>
@@ -218,20 +218,20 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$member_id_class}
+		 r-ori-vert				{$agenda_type_id_class}
 			"
 
-			data-field="member_id"
+			data-field="agenda_type_id"
 	
 	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN member_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id" data-default-width >
-{$member_id_value}
+		{BEGIN agenda_type_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="agenda_type_id" data-default-width >
+{$agenda_type_id_value}
 </span>
-{END member_id_fieldcolumn}	
+{END agenda_type_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 				 
@@ -241,20 +241,20 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$agenda_type_id_class}
+		 r-ori-vert				{$member_id_class}
 			"
 
-			data-field="agenda_type_id"
+			data-field="member_id"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN agenda_type_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="agenda_type_id" data-default-width >
-{$agenda_type_id_value}
+		{BEGIN member_id_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id" data-default-width >
+{$member_id_value}
 </span>
-{END agenda_type_id_fieldcolumn}	
+{END member_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 							</tr>

@@ -159,6 +159,12 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel country country_name }","bold":true},{"text":{$country_name_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel country sortname }","bold":true},{"text":{$sortname_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel country phonecode }","bold":true},{"text":{$phonecode_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',

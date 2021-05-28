@@ -125,6 +125,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_import_field6}","text":{$group_member_id_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_import_field7}","text":{$group_id_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',

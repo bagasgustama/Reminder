@@ -64,7 +64,7 @@ class ViewDatabaseFileField extends ViewControl
 	 */
 	public function getExportValue(&$data, $keylink = "")
 	{
-		return "LONG BINARY DATA - CANNOT BE DISPLAYED";
+		return mlang_message("LONG_BINARY");
 	}
 }
 ?>

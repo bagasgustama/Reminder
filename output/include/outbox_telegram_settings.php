@@ -46,6 +46,33 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsoutbox_telegram["English"]))
 		$tdataoutbox_telegram[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsoutbox_telegram["Indonesian"] = array();
+	$fieldToolTipsoutbox_telegram["Indonesian"] = array();
+	$placeHoldersoutbox_telegram["Indonesian"] = array();
+	$pageTitlesoutbox_telegram["Indonesian"] = array();
+	$fieldLabelsoutbox_telegram["Indonesian"]["id_outbox"] = "Id Outbox";
+	$fieldToolTipsoutbox_telegram["Indonesian"]["id_outbox"] = "";
+	$placeHoldersoutbox_telegram["Indonesian"]["id_outbox"] = "";
+	$fieldLabelsoutbox_telegram["Indonesian"]["chat_id"] = "Chat Id";
+	$fieldToolTipsoutbox_telegram["Indonesian"]["chat_id"] = "";
+	$placeHoldersoutbox_telegram["Indonesian"]["chat_id"] = "";
+	$fieldLabelsoutbox_telegram["Indonesian"]["out_msg"] = "Out Msg";
+	$fieldToolTipsoutbox_telegram["Indonesian"]["out_msg"] = "";
+	$placeHoldersoutbox_telegram["Indonesian"]["out_msg"] = "";
+	$fieldLabelsoutbox_telegram["Indonesian"]["type"] = "Type";
+	$fieldToolTipsoutbox_telegram["Indonesian"]["type"] = "";
+	$placeHoldersoutbox_telegram["Indonesian"]["type"] = "";
+	$fieldLabelsoutbox_telegram["Indonesian"]["flag"] = "Flag";
+	$fieldToolTipsoutbox_telegram["Indonesian"]["flag"] = "";
+	$placeHoldersoutbox_telegram["Indonesian"]["flag"] = "";
+	$fieldLabelsoutbox_telegram["Indonesian"]["tgl"] = "Tgl";
+	$fieldToolTipsoutbox_telegram["Indonesian"]["tgl"] = "";
+	$placeHoldersoutbox_telegram["Indonesian"]["tgl"] = "";
+	if (count($fieldToolTipsoutbox_telegram["Indonesian"]))
+		$tdataoutbox_telegram[".isUseToolTips"] = true;
+}
 
 
 	$tdataoutbox_telegram[".NCSearch"] = true;

@@ -85,9 +85,6 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
-										{BEGIN col_grid_9}
-					"%",
-					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -190,7 +187,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Page %current% of %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
@@ -236,7 +233,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field10}","text":"{$jslabel group_member_order_detail group_member_order_detail_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field4}","text":"{$jslabel group_member_order_detail group_member_order_detail_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -262,7 +259,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field11}","text":"{$jslabel group_member_order_detail group_member_order_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field10}","text":"{$jslabel group_member_order_detail group_member_order_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -288,7 +285,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field12}","text":"{$jslabel group_member_order_detail group_member_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field11}","text":"{$jslabel group_member_order_detail group_member_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -314,7 +311,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field13}","text":"{$jslabel group_member_order_detail member_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field12}","text":"{$jslabel group_member_order_detail member_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -340,11 +337,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field14}","text":"{$jslabel group_member_order_detail group_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field13}","text":"{$jslabel group_member_order_detail group_product_id }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$group_id_align}',
+          "alignment": '{$group_product_id_align}',
   },
 
 {END cellblock_grid_headcell_field4}
@@ -366,11 +363,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field15}","text":"{$jslabel group_member_order_detail group_product_id }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field14}","text":"{$jslabel group_member_order_detail nominal }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$group_product_id_align}',
+          "alignment": '{$nominal_align}',
   },
 
 {END cellblock_grid_headcell_field5}
@@ -392,11 +389,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field16}","text":"{$jslabel group_member_order_detail nominal }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field15}","text":"{$jslabel group_member_order_detail quantity }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$nominal_align}',
+          "alignment": '{$quantity_align}',
   },
 
 {END cellblock_grid_headcell_field6}
@@ -418,11 +415,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field17}","text":"{$jslabel group_member_order_detail quantity }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field16}","text":"{$jslabel group_member_order_detail total }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-          "alignment": '{$quantity_align}',
+          "alignment": '{$total_align}',
   },
 
 {END cellblock_grid_headcell_field7}
@@ -444,40 +441,14 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field18}","text":"{$jslabel group_member_order_detail total }","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-          "alignment": '{$total_align}',
-  },
-
-{END cellblock_grid_headcell_field8}
-																			{BEGIN cellblock_grid_headcell_field9}
-{
-	cellId: 'headcell_field9',
-	col:0,
-	row:0,
-			style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
-			{"hidden":"{$item_hide_simple_grid_field19}","text":"{$jslabel group_member_order_detail progress }","bold":true},
+			{"hidden":"{$item_hide_simple_grid_field17}","text":"{$jslabel group_member_order_detail progress }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
           "alignment": '{$progress_align}',
   },
 
-{END cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field8}
 											],
 				{END row_grid_0}
 								
@@ -608,32 +579,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field4}","text":{$group_id_pdfvalue}},
-				
-		  ],
-  "border": [ true, true, true, true ],
-          "alignment": '{$group_id_align}',
-  },
-
-{END cellblock_grid_cell_field4}
-																			{BEGIN cellblock_grid_cell_field5}
-{
-	cellId: 'cell_field5',
-	col:0,
-	row:0,
-			style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				
 			{"hidden":"{$item_hide_simple_grid_field5}","text":{$group_product_id_pdfvalue}},
 				
 		  ],
@@ -641,10 +586,10 @@ pdfDocument = {
           "alignment": '{$group_product_id_align}',
   },
 
-{END cellblock_grid_cell_field5}
-																			{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field4}
+																			{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -667,10 +612,10 @@ pdfDocument = {
           "alignment": '{$nominal_align}',
   },
 
-{END cellblock_grid_cell_field6}
-																			{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field5}
+																			{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -693,10 +638,10 @@ pdfDocument = {
           "alignment": '{$quantity_align}',
   },
 
-{END cellblock_grid_cell_field7}
-																			{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field6}
+																			{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -719,10 +664,10 @@ pdfDocument = {
           "alignment": '{$total_align}',
   },
 
-{END cellblock_grid_cell_field8}
-																			{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field7}
+																			{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -745,7 +690,7 @@ pdfDocument = {
           "alignment": '{$progress_align}',
   },
 
-{END cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field8}
 											],
 				{END row_grid_1}
 						{END grid_record}
@@ -970,30 +915,6 @@ pdfDocument = {
   },
 
 {END cellblock_grid_footcell_field8}
-																			{BEGIN cellblock_grid_footcell_field9}
-{
-	cellId: 'footcell_field9',
-	col:0,
-	row:0,
-			style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-          "alignment": 'left',
-  },
-
-{END cellblock_grid_footcell_field9}
 											],
 				{END row_grid_2}
 							

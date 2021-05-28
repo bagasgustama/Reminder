@@ -58,6 +58,45 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsgroup_product["English"]))
 		$tdatagroup_product[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsgroup_product["Indonesian"] = array();
+	$fieldToolTipsgroup_product["Indonesian"] = array();
+	$placeHoldersgroup_product["Indonesian"] = array();
+	$pageTitlesgroup_product["Indonesian"] = array();
+	$fieldLabelsgroup_product["Indonesian"]["group_product_id"] = "Group Product Id";
+	$fieldToolTipsgroup_product["Indonesian"]["group_product_id"] = "";
+	$placeHoldersgroup_product["Indonesian"]["group_product_id"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsgroup_product["Indonesian"]["group_id"] = "";
+	$placeHoldersgroup_product["Indonesian"]["group_id"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["product_type"] = "Product Type";
+	$fieldToolTipsgroup_product["Indonesian"]["product_type"] = "";
+	$placeHoldersgroup_product["Indonesian"]["product_type"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["product_name"] = "Product Name";
+	$fieldToolTipsgroup_product["Indonesian"]["product_name"] = "";
+	$placeHoldersgroup_product["Indonesian"]["product_name"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["stock_type"] = "Stock Type";
+	$fieldToolTipsgroup_product["Indonesian"]["stock_type"] = "";
+	$placeHoldersgroup_product["Indonesian"]["stock_type"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["stock"] = "Stock";
+	$fieldToolTipsgroup_product["Indonesian"]["stock"] = "";
+	$placeHoldersgroup_product["Indonesian"]["stock"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["order_type"] = "Order Type";
+	$fieldToolTipsgroup_product["Indonesian"]["order_type"] = "";
+	$placeHoldersgroup_product["Indonesian"]["order_type"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["price"] = "Price";
+	$fieldToolTipsgroup_product["Indonesian"]["price"] = "";
+	$placeHoldersgroup_product["Indonesian"]["price"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["curency"] = "Curency";
+	$fieldToolTipsgroup_product["Indonesian"]["curency"] = "";
+	$placeHoldersgroup_product["Indonesian"]["curency"] = "";
+	$fieldLabelsgroup_product["Indonesian"]["image"] = "Image";
+	$fieldToolTipsgroup_product["Indonesian"]["image"] = "";
+	$placeHoldersgroup_product["Indonesian"]["image"] = "";
+	if (count($fieldToolTipsgroup_product["Indonesian"]))
+		$tdatagroup_product[".isUseToolTips"] = true;
+}
 
 
 	$tdatagroup_product[".NCSearch"] = true;
@@ -229,6 +268,17 @@ $tdatagroup_product[".sqlFrom"] = "FROM group_product";
 $tdatagroup_product[".sqlWhereExpr"] = "";
 $tdatagroup_product[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "group_id = ':session.group_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatagroup_product[".arrGridTabs"] = $arrGridTabs;
 
 
 

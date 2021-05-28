@@ -31,7 +31,34 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelscountry["English"]["country_name"] = "Country Name";
 	$fieldToolTipscountry["English"]["country_name"] = "";
 	$placeHolderscountry["English"]["country_name"] = "";
+	$fieldLabelscountry["English"]["sortname"] = "Sortname";
+	$fieldToolTipscountry["English"]["sortname"] = "";
+	$placeHolderscountry["English"]["sortname"] = "";
+	$fieldLabelscountry["English"]["phonecode"] = "Phonecode";
+	$fieldToolTipscountry["English"]["phonecode"] = "";
+	$placeHolderscountry["English"]["phonecode"] = "";
 	if (count($fieldToolTipscountry["English"]))
+		$tdatacountry[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelscountry["Indonesian"] = array();
+	$fieldToolTipscountry["Indonesian"] = array();
+	$placeHolderscountry["Indonesian"] = array();
+	$pageTitlescountry["Indonesian"] = array();
+	$fieldLabelscountry["Indonesian"]["country_id"] = "Country Id";
+	$fieldToolTipscountry["Indonesian"]["country_id"] = "";
+	$placeHolderscountry["Indonesian"]["country_id"] = "";
+	$fieldLabelscountry["Indonesian"]["country_name"] = "Country Name";
+	$fieldToolTipscountry["Indonesian"]["country_name"] = "";
+	$placeHolderscountry["Indonesian"]["country_name"] = "";
+	$fieldLabelscountry["Indonesian"]["sortname"] = "Sortname";
+	$fieldToolTipscountry["Indonesian"]["sortname"] = "";
+	$placeHolderscountry["Indonesian"]["sortname"] = "";
+	$fieldLabelscountry["Indonesian"]["phonecode"] = "Phonecode";
+	$fieldToolTipscountry["Indonesian"]["phonecode"] = "";
+	$placeHolderscountry["Indonesian"]["phonecode"] = "";
+	if (count($fieldToolTipscountry["Indonesian"]))
 		$tdatacountry[".isUseToolTips"] = true;
 }
 
@@ -157,6 +184,8 @@ $tdatacountry[".requiredSearchFields"] = array();
 $tdatacountry[".googleLikeFields"] = array();
 $tdatacountry[".googleLikeFields"][] = "country_id";
 $tdatacountry[".googleLikeFields"][] = "country_name";
+$tdatacountry[".googleLikeFields"][] = "sortname";
+$tdatacountry[".googleLikeFields"][] = "phonecode";
 
 
 
@@ -192,7 +221,7 @@ $tdatacountry[".strOrderBy"] = $tstrOrderBy;
 $tdatacountry[".orderindexes"] = array();
 
 
-$tdatacountry[".sqlHead"] = "SELECT country_id,  	country_name";
+$tdatacountry[".sqlHead"] = "SELECT country_id,  	country_name,  	sortname,  	phonecode";
 $tdatacountry[".sqlFrom"] = "FROM country";
 $tdatacountry[".sqlWhereExpr"] = "";
 $tdatacountry[".sqlTail"] = "";
@@ -517,6 +546,280 @@ $tdatacountry[".hideMobileList"] = array();
 
 	$tdatacountry["country_name"] = $fdata;
 		$tdatacountry[".searchableFields"][] = "country_name";
+//	sortname
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 3;
+	$fdata["strName"] = "sortname";
+	$fdata["GoodName"] = "sortname";
+	$fdata["ownerTable"] = "country";
+	$fdata["Label"] = GetFieldLabel("country","sortname");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "sortname";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "sortname";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=150";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacountry["sortname"] = $fdata;
+		$tdatacountry[".searchableFields"][] = "sortname";
+//	phonecode
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "phonecode";
+	$fdata["GoodName"] = "phonecode";
+	$fdata["ownerTable"] = "country";
+	$fdata["Label"] = GetFieldLabel("country","phonecode");
+	$fdata["FieldType"] = 3;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "phonecode";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "phonecode";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacountry["phonecode"] = $fdata;
+		$tdatacountry[".searchableFields"][] = "phonecode";
 
 
 $tables_data["country"]=&$tdatacountry;
@@ -614,7 +917,7 @@ function createSqlQuery_country()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "country_id,  	country_name";
+$proto0["m_strFieldList"] = "country_id,  	country_name,  	sortname,  	phonecode";
 $proto0["m_strFrom"] = "FROM country";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -682,38 +985,68 @@ $proto8["m_alias"] = "";
 $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto10=array();
-$proto10["m_link"] = "SQLL_MAIN";
-			$proto11=array();
-$proto11["m_strName"] = "country";
-$proto11["m_srcTableName"] = "country";
-$proto11["m_columns"] = array();
-$proto11["m_columns"][] = "country_id";
-$proto11["m_columns"][] = "country_name";
-$obj = new SQLTable($proto11);
+						$proto10=array();
+			$obj = new SQLField(array(
+	"m_strName" => "sortname",
+	"m_strTable" => "country",
+	"m_srcTableName" => "country"
+));
 
-$proto10["m_table"] = $obj;
-$proto10["m_sql"] = "country";
-$proto10["m_alias"] = "";
+$proto10["m_sql"] = "sortname";
 $proto10["m_srcTableName"] = "country";
-$proto12=array();
-$proto12["m_sql"] = "";
-$proto12["m_uniontype"] = "SQLL_UNKNOWN";
+$proto10["m_expr"]=$obj;
+$proto10["m_alias"] = "";
+$obj = new SQLFieldListItem($proto10);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto12=array();
+			$obj = new SQLField(array(
+	"m_strName" => "phonecode",
+	"m_strTable" => "country",
+	"m_srcTableName" => "country"
+));
+
+$proto12["m_sql"] = "phonecode";
+$proto12["m_srcTableName"] = "country";
+$proto12["m_expr"]=$obj;
+$proto12["m_alias"] = "";
+$obj = new SQLFieldListItem($proto12);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto14=array();
+$proto14["m_link"] = "SQLL_MAIN";
+			$proto15=array();
+$proto15["m_strName"] = "country";
+$proto15["m_srcTableName"] = "country";
+$proto15["m_columns"] = array();
+$proto15["m_columns"][] = "country_id";
+$proto15["m_columns"][] = "country_name";
+$proto15["m_columns"][] = "sortname";
+$proto15["m_columns"][] = "phonecode";
+$obj = new SQLTable($proto15);
+
+$proto14["m_table"] = $obj;
+$proto14["m_sql"] = "country";
+$proto14["m_alias"] = "";
+$proto14["m_srcTableName"] = "country";
+$proto16=array();
+$proto16["m_sql"] = "";
+$proto16["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto12["m_column"]=$obj;
-$proto12["m_contained"] = array();
-$proto12["m_strCase"] = "";
-$proto12["m_havingmode"] = false;
-$proto12["m_inBrackets"] = false;
-$proto12["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto12);
+$proto16["m_column"]=$obj;
+$proto16["m_contained"] = array();
+$proto16["m_strCase"] = "";
+$proto16["m_havingmode"] = false;
+$proto16["m_inBrackets"] = false;
+$proto16["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto16);
 
-$proto10["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto10);
+$proto14["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto14);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -729,7 +1062,7 @@ $queryData_country = createSqlQuery_country();
 	
 		;
 
-		
+				
 
 $tdatacountry[".sqlquery"] = $queryData_country;
 

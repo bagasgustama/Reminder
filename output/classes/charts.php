@@ -548,6 +548,18 @@ class Chart
 			return true;
 		if("personal" == $this->chrt_array['tables'][0])
 			return true;
+		if("group_member_checkin" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
+		if("group" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_product" == $this->chrt_array['tables'][0])
+			return true;
+		if("group_member_order" == $this->chrt_array['tables'][0])
+			return true;
+		if("personal" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	
@@ -637,12 +649,12 @@ class Chart
 			return "";
 			
 		if( !$this->searchClauseObj )
-			return "No data yet.";
+			return mlang_message("NO_DATA_YET");
 
 		if( $this->searchClauseObj->isSearchFunctionalityActivated() )
-			return "No results found.";
+			return mlang_message("NO_RECORDS");
 		
-		return "No data yet.";
+		return mlang_message("NO_DATA_YET");
 	}
 	
 	/**

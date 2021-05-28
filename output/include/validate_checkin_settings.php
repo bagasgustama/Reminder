@@ -58,6 +58,45 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsvalidate_checkin["English"]))
 		$tdatavalidate_checkin[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsvalidate_checkin["Indonesian"] = array();
+	$fieldToolTipsvalidate_checkin["Indonesian"] = array();
+	$placeHoldersvalidate_checkin["Indonesian"] = array();
+	$pageTitlesvalidate_checkin["Indonesian"] = array();
+	$fieldLabelsvalidate_checkin["Indonesian"]["group_member_checkin_id"] = "Group Member Checkin Id";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["group_member_checkin_id"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["group_member_checkin_id"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["group_member_id"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["member_id"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["member_id"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["group_id"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["group_id"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["checkin_date"] = "Checkin Date";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["checkin_date"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["checkin_date"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["checkout_date"] = "Checkout Date";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["checkout_date"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["checkout_date"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["id_room"] = "Id Room";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["id_room"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["id_room"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["valid"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["valid"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["review_member"] = "Review Member";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["review_member"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["review_member"] = "";
+	$fieldLabelsvalidate_checkin["Indonesian"]["rating_member"] = "Rating Member";
+	$fieldToolTipsvalidate_checkin["Indonesian"]["rating_member"] = "";
+	$placeHoldersvalidate_checkin["Indonesian"]["rating_member"] = "";
+	if (count($fieldToolTipsvalidate_checkin["Indonesian"]))
+		$tdatavalidate_checkin[".isUseToolTips"] = true;
+}
 
 
 	$tdatavalidate_checkin[".NCSearch"] = true;
@@ -1375,7 +1414,7 @@ $tdatavalidate_checkin[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1400,19 +1439,17 @@ $tdatavalidate_checkin[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
-	
+		$edata["autoUpdatable"] = true;
+
 	//	End validation
 
 	

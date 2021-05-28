@@ -75,7 +75,7 @@ $data["member_id"] = $_SESSION["member_id"];
 $data["group_id"] = $group_id;
 $data["nominal"] = $nominal;
 $data["total"] = $total_detail;
-$data["progress"] = "0";
+$data["progress"] = "order";
 $keyvalues["group_member_order_detail_id"] = $values["group_member_order_detail_id"];
 DB::Update("group_member_order_detail", $data, $keyvalues );
 

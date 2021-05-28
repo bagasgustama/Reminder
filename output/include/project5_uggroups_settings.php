@@ -34,6 +34,21 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsproject5_uggroups["English"]))
 		$tdataproject5_uggroups[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsproject5_uggroups["Indonesian"] = array();
+	$fieldToolTipsproject5_uggroups["Indonesian"] = array();
+	$placeHoldersproject5_uggroups["Indonesian"] = array();
+	$pageTitlesproject5_uggroups["Indonesian"] = array();
+	$fieldLabelsproject5_uggroups["Indonesian"]["GroupID"] = "Group ID";
+	$fieldToolTipsproject5_uggroups["Indonesian"]["GroupID"] = "";
+	$placeHoldersproject5_uggroups["Indonesian"]["GroupID"] = "";
+	$fieldLabelsproject5_uggroups["Indonesian"]["Label"] = "Label";
+	$fieldToolTipsproject5_uggroups["Indonesian"]["Label"] = "";
+	$placeHoldersproject5_uggroups["Indonesian"]["Label"] = "";
+	if (count($fieldToolTipsproject5_uggroups["Indonesian"]))
+		$tdataproject5_uggroups[".isUseToolTips"] = true;
+}
 
 
 	$tdataproject5_uggroups[".NCSearch"] = true;

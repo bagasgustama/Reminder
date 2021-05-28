@@ -55,7 +55,64 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsreview_order["English"]["rating_member"] = "Rating Member";
 	$fieldToolTipsreview_order["English"]["rating_member"] = "";
 	$placeHoldersreview_order["English"]["rating_member"] = "";
+	$fieldLabelsreview_order["English"]["payment_status"] = "Payment Status";
+	$fieldToolTipsreview_order["English"]["payment_status"] = "";
+	$placeHoldersreview_order["English"]["payment_status"] = "";
+	$fieldLabelsreview_order["English"]["money_received"] = "Money Received";
+	$fieldToolTipsreview_order["English"]["money_received"] = "";
+	$placeHoldersreview_order["English"]["money_received"] = "";
+	$fieldLabelsreview_order["English"]["change_money"] = "Change Money";
+	$fieldToolTipsreview_order["English"]["change_money"] = "";
+	$placeHoldersreview_order["English"]["change_money"] = "";
 	if (count($fieldToolTipsreview_order["English"]))
+		$tdatareview_order[".isUseToolTips"] = true;
+}
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsreview_order["Indonesian"] = array();
+	$fieldToolTipsreview_order["Indonesian"] = array();
+	$placeHoldersreview_order["Indonesian"] = array();
+	$pageTitlesreview_order["Indonesian"] = array();
+	$fieldLabelsreview_order["Indonesian"]["group_member_order"] = "Group Member Order";
+	$fieldToolTipsreview_order["Indonesian"]["group_member_order"] = "";
+	$placeHoldersreview_order["Indonesian"]["group_member_order"] = "";
+	$fieldLabelsreview_order["Indonesian"]["group_member_id"] = "Group Member Id";
+	$fieldToolTipsreview_order["Indonesian"]["group_member_id"] = "";
+	$placeHoldersreview_order["Indonesian"]["group_member_id"] = "";
+	$fieldLabelsreview_order["Indonesian"]["member_id"] = "Member Id";
+	$fieldToolTipsreview_order["Indonesian"]["member_id"] = "";
+	$placeHoldersreview_order["Indonesian"]["member_id"] = "";
+	$fieldLabelsreview_order["Indonesian"]["group_id"] = "Group Id";
+	$fieldToolTipsreview_order["Indonesian"]["group_id"] = "";
+	$placeHoldersreview_order["Indonesian"]["group_id"] = "";
+	$fieldLabelsreview_order["Indonesian"]["order_date"] = "Order Date";
+	$fieldToolTipsreview_order["Indonesian"]["order_date"] = "";
+	$placeHoldersreview_order["Indonesian"]["order_date"] = "";
+	$fieldLabelsreview_order["Indonesian"]["valid"] = "Valid";
+	$fieldToolTipsreview_order["Indonesian"]["valid"] = "";
+	$placeHoldersreview_order["Indonesian"]["valid"] = "";
+	$fieldLabelsreview_order["Indonesian"]["total"] = "Total";
+	$fieldToolTipsreview_order["Indonesian"]["total"] = "";
+	$placeHoldersreview_order["Indonesian"]["total"] = "";
+	$fieldLabelsreview_order["Indonesian"]["currency"] = "Currency";
+	$fieldToolTipsreview_order["Indonesian"]["currency"] = "";
+	$placeHoldersreview_order["Indonesian"]["currency"] = "";
+	$fieldLabelsreview_order["Indonesian"]["review_member"] = "Review Member";
+	$fieldToolTipsreview_order["Indonesian"]["review_member"] = "";
+	$placeHoldersreview_order["Indonesian"]["review_member"] = "";
+	$fieldLabelsreview_order["Indonesian"]["rating_member"] = "Rating Member";
+	$fieldToolTipsreview_order["Indonesian"]["rating_member"] = "";
+	$placeHoldersreview_order["Indonesian"]["rating_member"] = "";
+	$fieldLabelsreview_order["Indonesian"]["payment_status"] = "Payment Status";
+	$fieldToolTipsreview_order["Indonesian"]["payment_status"] = "";
+	$placeHoldersreview_order["Indonesian"]["payment_status"] = "";
+	$fieldLabelsreview_order["Indonesian"]["money_received"] = "Money Received";
+	$fieldToolTipsreview_order["Indonesian"]["money_received"] = "";
+	$placeHoldersreview_order["Indonesian"]["money_received"] = "";
+	$fieldLabelsreview_order["Indonesian"]["change_money"] = "Change Money";
+	$fieldToolTipsreview_order["Indonesian"]["change_money"] = "";
+	$placeHoldersreview_order["Indonesian"]["change_money"] = "";
+	if (count($fieldToolTipsreview_order["Indonesian"]))
 		$tdatareview_order[".isUseToolTips"] = true;
 }
 
@@ -189,6 +246,9 @@ $tdatareview_order[".googleLikeFields"][] = "total";
 $tdatareview_order[".googleLikeFields"][] = "currency";
 $tdatareview_order[".googleLikeFields"][] = "review_member";
 $tdatareview_order[".googleLikeFields"][] = "rating_member";
+$tdatareview_order[".googleLikeFields"][] = "payment_status";
+$tdatareview_order[".googleLikeFields"][] = "money_received";
+$tdatareview_order[".googleLikeFields"][] = "change_money";
 
 
 
@@ -224,7 +284,7 @@ $tdatareview_order[".strOrderBy"] = $tstrOrderBy;
 $tdatareview_order[".orderindexes"] = array();
 
 
-$tdatareview_order[".sqlHead"] = "SELECT group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member";
+$tdatareview_order[".sqlHead"] = "SELECT group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member,  	payment_status,  	money_received,  	change_money";
 $tdatareview_order[".sqlFrom"] = "FROM group_member_order";
 $tdatareview_order[".sqlWhereExpr"] = "";
 $tdatareview_order[".sqlTail"] = "";
@@ -1734,6 +1794,432 @@ $tdatareview_order[".hideMobileList"] = array();
 
 	$tdatareview_order["rating_member"] = $fdata;
 		$tdatareview_order[".searchableFields"][] = "rating_member";
+//	payment_status
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "payment_status";
+	$fdata["GoodName"] = "payment_status";
+	$fdata["ownerTable"] = "group_member_order";
+	$fdata["Label"] = GetFieldLabel("review_order","payment_status");
+	$fdata["FieldType"] = 129;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "payment_status";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "payment_status";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "paid";
+	$edata["LookupValues"][] = "not_paid";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatareview_order["payment_status"] = $fdata;
+		$tdatareview_order[".searchableFields"][] = "payment_status";
+//	money_received
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 12;
+	$fdata["strName"] = "money_received";
+	$fdata["GoodName"] = "money_received";
+	$fdata["ownerTable"] = "group_member_order";
+	$fdata["Label"] = GetFieldLabel("review_order","money_received");
+	$fdata["FieldType"] = 5;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "money_received";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "money_received";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 0;
+
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatareview_order["money_received"] = $fdata;
+		$tdatareview_order[".searchableFields"][] = "money_received";
+//	change_money
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 13;
+	$fdata["strName"] = "change_money";
+	$fdata["GoodName"] = "change_money";
+	$fdata["ownerTable"] = "group_member_order";
+	$fdata["Label"] = GetFieldLabel("review_order","change_money");
+	$fdata["FieldType"] = 5;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "change_money";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "change_money";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 0;
+
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatareview_order["change_money"] = $fdata;
+		$tdatareview_order[".searchableFields"][] = "change_money";
 
 
 $tables_data["review_order"]=&$tdatareview_order;
@@ -1849,7 +2335,7 @@ function createSqlQuery_review_order()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member";
+$proto0["m_strFieldList"] = "group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member,  	payment_status,  	money_received,  	change_money";
 $proto0["m_strFrom"] = "FROM group_member_order";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2029,46 +2515,91 @@ $proto24["m_alias"] = "";
 $obj = new SQLFieldListItem($proto24);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto26=array();
-$proto26["m_link"] = "SQLL_MAIN";
-			$proto27=array();
-$proto27["m_strName"] = "group_member_order";
-$proto27["m_srcTableName"] = "review_order";
-$proto27["m_columns"] = array();
-$proto27["m_columns"][] = "group_member_order";
-$proto27["m_columns"][] = "group_member_id";
-$proto27["m_columns"][] = "member_id";
-$proto27["m_columns"][] = "group_id";
-$proto27["m_columns"][] = "order_date";
-$proto27["m_columns"][] = "valid";
-$proto27["m_columns"][] = "total";
-$proto27["m_columns"][] = "currency";
-$proto27["m_columns"][] = "review_member";
-$proto27["m_columns"][] = "rating_member";
-$obj = new SQLTable($proto27);
+						$proto26=array();
+			$obj = new SQLField(array(
+	"m_strName" => "payment_status",
+	"m_strTable" => "group_member_order",
+	"m_srcTableName" => "review_order"
+));
 
-$proto26["m_table"] = $obj;
-$proto26["m_sql"] = "group_member_order";
-$proto26["m_alias"] = "";
+$proto26["m_sql"] = "payment_status";
 $proto26["m_srcTableName"] = "review_order";
-$proto28=array();
-$proto28["m_sql"] = "";
-$proto28["m_uniontype"] = "SQLL_UNKNOWN";
+$proto26["m_expr"]=$obj;
+$proto26["m_alias"] = "";
+$obj = new SQLFieldListItem($proto26);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto28=array();
+			$obj = new SQLField(array(
+	"m_strName" => "money_received",
+	"m_strTable" => "group_member_order",
+	"m_srcTableName" => "review_order"
+));
+
+$proto28["m_sql"] = "money_received";
+$proto28["m_srcTableName"] = "review_order";
+$proto28["m_expr"]=$obj;
+$proto28["m_alias"] = "";
+$obj = new SQLFieldListItem($proto28);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto30=array();
+			$obj = new SQLField(array(
+	"m_strName" => "change_money",
+	"m_strTable" => "group_member_order",
+	"m_srcTableName" => "review_order"
+));
+
+$proto30["m_sql"] = "change_money";
+$proto30["m_srcTableName"] = "review_order";
+$proto30["m_expr"]=$obj;
+$proto30["m_alias"] = "";
+$obj = new SQLFieldListItem($proto30);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto32=array();
+$proto32["m_link"] = "SQLL_MAIN";
+			$proto33=array();
+$proto33["m_strName"] = "group_member_order";
+$proto33["m_srcTableName"] = "review_order";
+$proto33["m_columns"] = array();
+$proto33["m_columns"][] = "group_member_order";
+$proto33["m_columns"][] = "group_member_id";
+$proto33["m_columns"][] = "member_id";
+$proto33["m_columns"][] = "group_id";
+$proto33["m_columns"][] = "order_date";
+$proto33["m_columns"][] = "valid";
+$proto33["m_columns"][] = "total";
+$proto33["m_columns"][] = "currency";
+$proto33["m_columns"][] = "review_member";
+$proto33["m_columns"][] = "rating_member";
+$proto33["m_columns"][] = "payment_status";
+$proto33["m_columns"][] = "money_received";
+$proto33["m_columns"][] = "change_money";
+$obj = new SQLTable($proto33);
+
+$proto32["m_table"] = $obj;
+$proto32["m_sql"] = "group_member_order";
+$proto32["m_alias"] = "";
+$proto32["m_srcTableName"] = "review_order";
+$proto34=array();
+$proto34["m_sql"] = "";
+$proto34["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto28["m_column"]=$obj;
-$proto28["m_contained"] = array();
-$proto28["m_strCase"] = "";
-$proto28["m_havingmode"] = false;
-$proto28["m_inBrackets"] = false;
-$proto28["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto28);
+$proto34["m_column"]=$obj;
+$proto34["m_contained"] = array();
+$proto34["m_strCase"] = "";
+$proto34["m_havingmode"] = false;
+$proto34["m_inBrackets"] = false;
+$proto34["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto34);
 
-$proto26["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto26);
+$proto32["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto32);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2084,7 +2615,7 @@ $queryData_review_order = createSqlQuery_review_order();
 	
 		;
 
-										
+													
 
 $tdatareview_order[".sqlquery"] = $queryData_review_order;
 

@@ -34,6 +34,21 @@ if(mlang_getcurrentlang()=="English")
 	if (count($fieldToolTipsbusiness_type["English"]))
 		$tdatabusiness_type[".isUseToolTips"] = true;
 }
+if(mlang_getcurrentlang()=="Indonesian")
+{
+	$fieldLabelsbusiness_type["Indonesian"] = array();
+	$fieldToolTipsbusiness_type["Indonesian"] = array();
+	$placeHoldersbusiness_type["Indonesian"] = array();
+	$pageTitlesbusiness_type["Indonesian"] = array();
+	$fieldLabelsbusiness_type["Indonesian"]["business_type_id"] = "Business Type Id";
+	$fieldToolTipsbusiness_type["Indonesian"]["business_type_id"] = "";
+	$placeHoldersbusiness_type["Indonesian"]["business_type_id"] = "";
+	$fieldLabelsbusiness_type["Indonesian"]["business_type"] = "Business Type";
+	$fieldToolTipsbusiness_type["Indonesian"]["business_type"] = "";
+	$placeHoldersbusiness_type["Indonesian"]["business_type"] = "";
+	if (count($fieldToolTipsbusiness_type["Indonesian"]))
+		$tdatabusiness_type[".isUseToolTips"] = true;
+}
 
 
 	$tdatabusiness_type[".NCSearch"] = true;
