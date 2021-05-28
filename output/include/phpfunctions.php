@@ -916,6 +916,11 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 function fileCustomExpression($file, $data, $field, $ptype, $table )
 {
 	$value = "";
+				if($table=="group_product" && $field=="image")
+	{
+		;
+		return $value;
+	}
 	return $value;
 }
 
@@ -940,6 +945,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="group_product" && $field=="group_id")
+	{
+		return $_SESSION["group_id"];
+	}
 				if($table=="group_member_order_detail" && $field=="quantity")
 	{
 		return 1;

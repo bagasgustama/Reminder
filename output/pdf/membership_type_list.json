@@ -395,13 +395,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
           "alignment": 'left',
   },

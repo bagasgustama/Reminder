@@ -117,7 +117,14 @@
 'add_save' => array( 'type' => 'add_save' ),
 'integrated_edit_field' => array( 'field' => 'member_id',
 'type' => 'integrated_edit_field',
-'orientation' => 0 ),
+'orientation' => 0,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  color: red;
+  visibility: hidden;
+}
+' ),
 'integrated_edit_field1' => array( 'field' => 'agenda_type_id',
 'type' => 'integrated_edit_field',
 'orientation' => 0 ) ),

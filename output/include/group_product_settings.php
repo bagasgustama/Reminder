@@ -268,17 +268,6 @@ $tdatagroup_product[".sqlFrom"] = "FROM group_product";
 $tdatagroup_product[".sqlWhereExpr"] = "";
 $tdatagroup_product[".sqlTail"] = "";
 
-//fill array of tabs for list page
-$arrGridTabs = array();
-$arrGridTabs[] = array(
-	'tabId' => "",
-	'name' => "All data",
-	'nameType' => 'Text',
-	'where' => "group_id = ':session.group_id'",
-	'showRowCount' => 0,
-	'hideEmpty' => 0,
-);
-$tdatagroup_product[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -597,7 +586,7 @@ $tdatagroup_product[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1577,7 +1566,7 @@ $tdatagroup_product[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1587,6 +1576,22 @@ $tdatagroup_product[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "IDR";
+	$edata["LookupValues"][] = "USD";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1602,11 +1607,8 @@ $tdatagroup_product[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=5";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1632,7 +1634,7 @@ $tdatagroup_product[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1687,12 +1689,14 @@ $tdatagroup_product[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Document Download");
 
 	
 	
 	
-	
+				$vdata["ShowThumbnail"] = true;
+					$vdata["ShowIcon"] = true;
+		
 	
 	
 	
@@ -1702,8 +1706,7 @@ $tdatagroup_product[".hideMobileList"] = array();
 	
 		
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1714,7 +1717,7 @@ $tdatagroup_product[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Document upload");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1739,11 +1742,8 @@ $tdatagroup_product[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=200";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1754,7 +1754,10 @@ $tdatagroup_product[".hideMobileList"] = array();
 	
 	//	End validation
 
-	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
 			
 	
 	

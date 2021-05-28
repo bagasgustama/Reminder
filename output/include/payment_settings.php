@@ -25,16 +25,16 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipspayment["English"] = array();
 	$placeHolderspayment["English"] = array();
 	$pageTitlespayment["English"] = array();
-	$fieldLabelspayment["English"]["group_member_order"] = "Group Member Order";
+	$fieldLabelspayment["English"]["group_member_order"] = "Order Id";
 	$fieldToolTipspayment["English"]["group_member_order"] = "";
 	$placeHolderspayment["English"]["group_member_order"] = "";
 	$fieldLabelspayment["English"]["group_member_id"] = "Group Member Id";
 	$fieldToolTipspayment["English"]["group_member_id"] = "";
 	$placeHolderspayment["English"]["group_member_id"] = "";
-	$fieldLabelspayment["English"]["member_id"] = "Member Id";
+	$fieldLabelspayment["English"]["member_id"] = "Member Name";
 	$fieldToolTipspayment["English"]["member_id"] = "";
 	$placeHolderspayment["English"]["member_id"] = "";
-	$fieldLabelspayment["English"]["group_id"] = "Group Id";
+	$fieldLabelspayment["English"]["group_id"] = "Group Name";
 	$fieldToolTipspayment["English"]["group_id"] = "";
 	$placeHolderspayment["English"]["group_id"] = "";
 	$fieldLabelspayment["English"]["order_date"] = "Order Date";
@@ -73,16 +73,16 @@ if(mlang_getcurrentlang()=="Indonesian")
 	$fieldToolTipspayment["Indonesian"] = array();
 	$placeHolderspayment["Indonesian"] = array();
 	$pageTitlespayment["Indonesian"] = array();
-	$fieldLabelspayment["Indonesian"]["group_member_order"] = "Group Member Order";
+	$fieldLabelspayment["Indonesian"]["group_member_order"] = "Order Id";
 	$fieldToolTipspayment["Indonesian"]["group_member_order"] = "";
 	$placeHolderspayment["Indonesian"]["group_member_order"] = "";
 	$fieldLabelspayment["Indonesian"]["group_member_id"] = "Group Member Id";
 	$fieldToolTipspayment["Indonesian"]["group_member_id"] = "";
 	$placeHolderspayment["Indonesian"]["group_member_id"] = "";
-	$fieldLabelspayment["Indonesian"]["member_id"] = "Member Id";
+	$fieldLabelspayment["Indonesian"]["member_id"] = "Member Name";
 	$fieldToolTipspayment["Indonesian"]["member_id"] = "";
 	$placeHolderspayment["Indonesian"]["member_id"] = "";
-	$fieldLabelspayment["Indonesian"]["group_id"] = "Group Id";
+	$fieldLabelspayment["Indonesian"]["group_id"] = "Group Name";
 	$fieldToolTipspayment["Indonesian"]["group_id"] = "";
 	$placeHolderspayment["Indonesian"]["group_id"] = "";
 	$fieldLabelspayment["Indonesian"]["order_date"] = "Order Date";
@@ -284,7 +284,7 @@ $tdatapayment[".strOrderBy"] = $tstrOrderBy;
 $tdatapayment[".orderindexes"] = array();
 
 
-$tdatapayment[".sqlHead"] = "SELECT group_member_order,  group_member_id,  member_id,  group_id,  order_date,  valid,  total,  currency,  review_member,  rating_member,  payment_status,  money_received,  change_money";
+$tdatapayment[".sqlHead"] = "SELECT group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member,  	payment_status,  	money_received,  	change_money";
 $tdatapayment[".sqlFrom"] = "FROM group_member_order";
 $tdatapayment[".sqlWhereExpr"] = "";
 $tdatapayment[".sqlTail"] = "";
@@ -2333,7 +2333,7 @@ function createSqlQuery_payment()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "group_member_order,  group_member_id,  member_id,  group_id,  order_date,  valid,  total,  currency,  review_member,  rating_member,  payment_status,  money_received,  change_money";
+$proto0["m_strFieldList"] = "group_member_order,  	group_member_id,  	member_id,  	group_id,  	order_date,  	valid,  	total,  	currency,  	review_member,  	rating_member,  	payment_status,  	money_received,  	change_money";
 $proto0["m_strFrom"] = "FROM group_member_order";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
