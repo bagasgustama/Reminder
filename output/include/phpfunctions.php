@@ -945,6 +945,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="lookup_token" && $field=="id_group")
+	{
+		return $_SESSION["group_id"];
+	}
 				if($table=="group_product" && $field=="group_id")
 	{
 		return $_SESSION["group_id"];

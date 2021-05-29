@@ -32,6 +32,8 @@ include_once(getabspath("include/group_events.php"));
 $tableEvents["group"] = new eventclass_group;
 include_once(getabspath("include/personal_agenda_events.php"));
 $tableEvents["personal_agenda"] = new eventclass_personal_agenda;
+include_once(getabspath("include/lookup_token_events.php"));
+$tableEvents["lookup_token"] = new eventclass_lookup_token;
 include_once(getabspath("include/group_member_order_detail_events.php"));
 $tableEvents["group_member_order_detail"] = new eventclass_group_member_order_detail;
 include_once(getabspath("include/group_member_order_events.php"));

@@ -28,10 +28,10 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsgroup_member["English"]["group_member_id"] = "Group Member Id";
 	$fieldToolTipsgroup_member["English"]["group_member_id"] = "";
 	$placeHoldersgroup_member["English"]["group_member_id"] = "";
-	$fieldLabelsgroup_member["English"]["member_id"] = "Member Id";
+	$fieldLabelsgroup_member["English"]["member_id"] = "Member Name";
 	$fieldToolTipsgroup_member["English"]["member_id"] = "";
 	$placeHoldersgroup_member["English"]["member_id"] = "";
-	$fieldLabelsgroup_member["English"]["group_id"] = "Group Id";
+	$fieldLabelsgroup_member["English"]["group_id"] = "Group Name";
 	$fieldToolTipsgroup_member["English"]["group_id"] = "";
 	$placeHoldersgroup_member["English"]["group_id"] = "";
 	$fieldLabelsgroup_member["English"]["user_type"] = "User Type";
@@ -64,10 +64,10 @@ if(mlang_getcurrentlang()=="Indonesian")
 	$fieldLabelsgroup_member["Indonesian"]["group_member_id"] = "Group Member Id";
 	$fieldToolTipsgroup_member["Indonesian"]["group_member_id"] = "";
 	$placeHoldersgroup_member["Indonesian"]["group_member_id"] = "";
-	$fieldLabelsgroup_member["Indonesian"]["member_id"] = "Member Id";
+	$fieldLabelsgroup_member["Indonesian"]["member_id"] = "Member Name";
 	$fieldToolTipsgroup_member["Indonesian"]["member_id"] = "";
 	$placeHoldersgroup_member["Indonesian"]["member_id"] = "";
-	$fieldLabelsgroup_member["Indonesian"]["group_id"] = "Group Id";
+	$fieldLabelsgroup_member["Indonesian"]["group_id"] = "Group Name";
 	$fieldToolTipsgroup_member["Indonesian"]["group_id"] = "";
 	$placeHoldersgroup_member["Indonesian"]["group_id"] = "";
 	$fieldLabelsgroup_member["Indonesian"]["user_type"] = "User Type";
@@ -198,7 +198,7 @@ $tdatagroup_member[".ajaxCodeSnippetAdded"] = false;
 
 $tdatagroup_member[".buttonsAdded"] = false;
 
-$tdatagroup_member[".addPageEvents"] = false;
+$tdatagroup_member[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatagroup_member[".isUseTimeForSearch"] = false;
@@ -265,11 +265,19 @@ $tdatagroup_member[".sqlTail"] = "";
 $arrGridTabs = array();
 $arrGridTabs[] = array(
 	'tabId' => "",
-	'name' => "All data",
+	'name' => "User",
 	'nameType' => 'Text',
-	'where' => "member_id = ':session.member_id'",
+	'where' => "member_id = ':session.member_id' and user_type = 3",
 	'showRowCount' => 0,
-	'hideEmpty' => 0,
+	'hideEmpty' => 1,
+);
+$arrGridTabs[] = array(
+	'tabId' => "1",
+	'name' => "Admin",
+	'nameType' => 'Text',
+	'where' => "group_id = ':session.group_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 1,
 );
 $tdatagroup_member[".arrGridTabs"] = $arrGridTabs;
 

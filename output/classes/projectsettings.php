@@ -3272,12 +3272,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "group_member_checkin" ] = "group_member_checkin";
 	$projectEntities[ "group_agenda_type" ] = array( "url" => "group_agenda_type", "type" => 0 );
 	$projectEntitiesReverse[ "group_agenda_type" ] = "group_agenda_type";
-	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
-	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
-	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
-	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
-	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
-	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 	$projectEntities[ "project5_uggroups" ] = array( "url" => "project5_uggroups", "type" => 0 );
 	$projectEntitiesReverse[ "project5_uggroups" ] = "project5_uggroups";
 	$projectEntities[ "project5_ugmembers" ] = array( "url" => "project5_ugmembers", "type" => 0 );
@@ -3332,6 +3326,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "payment" ] = "payment";
 	$projectEntities[ "personal11" ] = array( "url" => "personal11", "type" => 1 );
 	$projectEntitiesReverse[ "personal11" ] = "personal11";
+	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
+	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
+	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
+	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
+	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
+	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 }
 
 function findTable( $table ) {

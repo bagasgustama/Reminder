@@ -347,9 +347,6 @@ class ConnectionManager
 		$connectionsIds["group_agenda_repeat_date"] = "notif_basic1_at_localhost";
 		$connectionsIds["group_member_checkin"] = "notif_basic1_at_localhost";
 		$connectionsIds["group_agenda_type"] = "notif_basic1_at_localhost";
-		$connectionsIds["admin_rights"] = "notif_basic1_at_localhost";
-		$connectionsIds["admin_members"] = "notif_basic1_at_localhost";
-		$connectionsIds["admin_users"] = "notif_basic1_at_localhost";
 		$connectionsIds["project5_uggroups"] = "notif_basic1_at_localhost";
 		$connectionsIds["project5_ugmembers"] = "notif_basic1_at_localhost";
 		$connectionsIds["project5_ugrights"] = "notif_basic1_at_localhost";
@@ -377,6 +374,9 @@ class ConnectionManager
 		$connectionsIds["group_product1"] = "notif_basic1_at_localhost";
 		$connectionsIds["payment"] = "notif_basic1_at_localhost";
 		$connectionsIds["personal11"] = "notif_basic1_at_localhost";
+		$connectionsIds["admin_rights"] = "notif_basic1_at_localhost";
+		$connectionsIds["admin_members"] = "notif_basic1_at_localhost";
+		$connectionsIds["admin_users"] = "notif_basic1_at_localhost";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 	

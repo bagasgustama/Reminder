@@ -25,10 +25,10 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsgroup_product["English"] = array();
 	$placeHoldersgroup_product["English"] = array();
 	$pageTitlesgroup_product["English"] = array();
-	$fieldLabelsgroup_product["English"]["group_product_id"] = "Group Product Id";
+	$fieldLabelsgroup_product["English"]["group_product_id"] = "Product Id";
 	$fieldToolTipsgroup_product["English"]["group_product_id"] = "";
 	$placeHoldersgroup_product["English"]["group_product_id"] = "";
-	$fieldLabelsgroup_product["English"]["group_id"] = "Group Id";
+	$fieldLabelsgroup_product["English"]["group_id"] = "Group Name";
 	$fieldToolTipsgroup_product["English"]["group_id"] = "";
 	$placeHoldersgroup_product["English"]["group_id"] = "";
 	$fieldLabelsgroup_product["English"]["product_type"] = "Product Type";
@@ -64,10 +64,10 @@ if(mlang_getcurrentlang()=="Indonesian")
 	$fieldToolTipsgroup_product["Indonesian"] = array();
 	$placeHoldersgroup_product["Indonesian"] = array();
 	$pageTitlesgroup_product["Indonesian"] = array();
-	$fieldLabelsgroup_product["Indonesian"]["group_product_id"] = "Group Product Id";
+	$fieldLabelsgroup_product["Indonesian"]["group_product_id"] = "Product Id";
 	$fieldToolTipsgroup_product["Indonesian"]["group_product_id"] = "";
 	$placeHoldersgroup_product["Indonesian"]["group_product_id"] = "";
-	$fieldLabelsgroup_product["Indonesian"]["group_id"] = "Group Id";
+	$fieldLabelsgroup_product["Indonesian"]["group_id"] = "Group Name";
 	$fieldToolTipsgroup_product["Indonesian"]["group_id"] = "";
 	$placeHoldersgroup_product["Indonesian"]["group_id"] = "";
 	$fieldLabelsgroup_product["Indonesian"]["product_type"] = "Product Type";

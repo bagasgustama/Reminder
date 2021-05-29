@@ -157,12 +157,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel group_member member_id }","bold":true},{"text":{$member_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel group_member group_id }","bold":true},{"text":{$group_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel group_member token_group }","bold":true},{"text":{$token_group_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

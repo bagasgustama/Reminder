@@ -174,7 +174,7 @@ $tdataadmin_rights[".addPageEvents"] = false;
 $tdataadmin_rights[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_rights[".badgeColor"] = "EDCA00";
+$tdataadmin_rights[".badgeColor"] = "6493EA";
 
 
 $tdataadmin_rights[".allSearchFields"] = array();

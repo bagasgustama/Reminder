@@ -500,12 +500,6 @@ class Chart
 			return true;
 		if("group_agenda_type" == $this->chrt_array['tables'][0])
 			return true;
-		if("project5_ugrights" == $this->chrt_array['tables'][0])
-			return true;
-		if("personal" == $this->chrt_array['tables'][0])
-			return true;
-		if("personal" == $this->chrt_array['tables'][0])
-			return true;
 		if("project5_uggroups" == $this->chrt_array['tables'][0])
 			return true;
 		if("project5_ugmembers" == $this->chrt_array['tables'][0])
@@ -557,6 +551,12 @@ class Chart
 		if("group_product" == $this->chrt_array['tables'][0])
 			return true;
 		if("group_member_order" == $this->chrt_array['tables'][0])
+			return true;
+		if("personal" == $this->chrt_array['tables'][0])
+			return true;
+		if("project5_ugrights" == $this->chrt_array['tables'][0])
+			return true;
+		if("personal" == $this->chrt_array['tables'][0])
 			return true;
 		if("personal" == $this->chrt_array['tables'][0])
 			return true;

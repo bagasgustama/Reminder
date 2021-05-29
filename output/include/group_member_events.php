@@ -14,6 +14,17 @@
 	// fill list of events
 		$this->events["AfterAdd"]=true;
 
+		$this->events["BeforeProcessAdd"]=true;
+
+		$this->events["ProcessValuesAdd"]=true;
+
+
+		$this->events["BeforeShowEdit"]=true;
+
+		$this->events["AfterEdit"]=true;
+
+		$this->events["BeforeShowList"]=true;
+
 
 	}
 
@@ -39,10 +50,26 @@ function AfterAdd(&$values, &$keys, $inline, &$pageObject)
 {
 
 		$data = array();
+$data["group_id"] = $values[group_id];
+$rs = DB::Select("group", $data );
+
+while( $record = $rs->fetchAssoc() )
+{	
+	if($record["token_type"] == "token"){
+		$valid = 0;
+	}else if($record["token_type"] == "lookup" || $record["token_type"] == "API"){
+		$valid = 0;
+	}else{
+		$valid = 1;
+	}
+}
+
+
+$data = array();
 $keyvalues = array();
 $data["user_type"] = 3;
 $data["membership_type"] = 3;
-$data["valid"] = 1;
+$data["valid"] = $valid;
 $keyvalues["group_member_id"] = $values["group_member_id"];
 DB::Update("group_member", $data , $keyvalues);
 
@@ -119,6 +146,510 @@ else
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+				// Add page: Before process
+function BeforeProcessAdd(&$pageObject)
+{
+
+		
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function BeforeProcessAdd
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Process record values
+function ProcessValuesAdd(&$values, &$pageObject)
+{
+
+		//$data = array();
+//$data["group_id"] = $values[group_id];
+//$rs = DB::Select("group", $data );
+
+//while( $record = $rs->fetchAssoc() )
+//{	
+	//if($record["token_type"] == "token"){
+		//$pageObject->hideItem("integrated_edit_field4");
+		//$pageObject->hideItem("integrated_edit_field5");
+		//$pageObject->showItem("integrated_edit_field3");
+	//}else if($record["token_type"] == "lookup" || $record["token_type"] == "API"){
+		//$pageObject->hideItem("integrated_edit_field3");
+		//$pageObject->showItem("integrated_edit_field4");
+		//$pageObject->showItem("integrated_edit_field");
+
+	//}
+//}
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function ProcessValuesAdd
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowEdit(&$xt, &$templatefile, $values, &$pageObject)
+{
+
+		$data = array();
+$data["group_id"] = $values[group_id];
+$rs = DB::Select("group", $data );
+
+while( $record = $rs->fetchAssoc() )
+{	
+	if($record["token_type"] == "token"){
+		$pageObject->hideItem("integrated_edit_field4");
+		$pageObject->hideItem("integrated_edit_field5");
+		$pageObject->showItem("integrated_edit_field3");
+	}else if($record["token_type"] == "lookup" || $record["token_type"] == "API"){
+		$pageObject->hideItem("integrated_edit_field3");
+		$pageObject->showItem("integrated_edit_field4");
+		$pageObject->showItem("integrated_edit_field5");
+	}
+}
+
+if($values['valid'] == 1){
+		$pageObject->hideItem("integrated_edit_field3");
+		$pageObject->hideItem("integrated_edit_field4");
+		$pageObject->hideItem("integrated_edit_field5");
+}
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function BeforeShowEdit
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record updated
+function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, &$pageObject)
+{
+
+		$data = array();
+$data["group_id"] = $oldvalues[group_id];
+$rs = DB::Select("group", $data );
+while( $record = $rs->fetchAssoc() )
+{	
+	if($record["token_type"] == "token"){
+		if($record["token_group"] == $values['token_group']){
+			$data = array();
+			$keyvalues = array();
+			$data["valid"] = 1;
+			$keyvalues["group_member_id"] = $oldvalues['group_member_id'];
+			DB::Update("group_member", $data , $keyvalues);
+		}
+	}else if($record["token_type"] == "lookup" || $record["token_type"] == "API"){
+		$data = array();
+		$data["group_identifier"] = $values['identifier_group'];
+		$data["token"] = $values['token_personal'];
+		$res = DB::Select("lookup_token", $data );
+		while( $record = $res->fetchAssoc() )
+		{	
+			$data = array();
+			$keyvalues = array();
+			$data["valid"] = 1;
+			$keyvalues["group_member_id"] = $oldvalues['group_member_id'];
+			DB::Update("group_member", $data , $keyvalues);
+		}
+	}
+}
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function AfterEdit
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowList(&$xt, &$templatefile, &$pageObject)
+{
+
+		if(!empty($_SESSION["group_id"])){
+	$pageObject->hideItem("grid_edit");
+}
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function BeforeShowList
+
 		
 		
 		

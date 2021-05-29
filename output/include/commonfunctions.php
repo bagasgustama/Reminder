@@ -248,12 +248,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("group_agenda_type" == $shortTName )
 		return true;
-	if ("admin_rights" == $shortTName )
-		return true;
-	if ("admin_members" == $shortTName )
-		return true;
-	if ("admin_users" == $shortTName )
-		return true;
 	if ("project5_uggroups" == $shortTName )
 		return true;
 	if ("project5_ugmembers" == $shortTName )
@@ -307,6 +301,12 @@ function checkTableName($shortTName )
 	if ("payment" == $shortTName )
 		return true;
 	if ("personal11" == $shortTName )
+		return true;
+	if ("admin_rights" == $shortTName )
+		return true;
+	if ("admin_members" == $shortTName )
+		return true;
+	if ("admin_users" == $shortTName )
 		return true;
 	return false;
 }
@@ -639,33 +639,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_rights");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_rights";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_members");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_members";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_users");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_users";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("project5_uggroups");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -907,6 +880,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="personal11";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_rights");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_rights";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_members");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_members";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_users");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_users";
+	}
 	return $arr;
 }
 
@@ -947,9 +947,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="group_agenda_repeat_date";
 	$arr[]="group_member_checkin";
 	$arr[]="group_agenda_type";
-	$arr[]="admin_rights";
-	$arr[]="admin_members";
-	$arr[]="admin_users";
 	$arr[]="project5_uggroups";
 	$arr[]="project5_ugmembers";
 	$arr[]="project5_ugrights";
@@ -977,6 +974,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="group_product1";
 	$arr[]="payment";
 	$arr[]="personal11";
+	$arr[]="admin_rights";
+	$arr[]="admin_members";
+	$arr[]="admin_users";
 	return $arr;
 }
 
@@ -1971,33 +1971,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "AEDSPI".$extraPerm;
 	}
-	if( $table=="admin_rights" )
-	{
-		if( $sUserGroup=="andre@andre.com" )
-		{
-			return "".$extraPerm;
-		}
-//	default permissions
-		return "".$extraPerm;
-	}
-	if( $table=="admin_members" )
-	{
-		if( $sUserGroup=="andre@andre.com" )
-		{
-			return "AEDSPI".$extraPerm;
-		}
-//	default permissions
-		return "AEDSPI".$extraPerm;
-	}
-	if( $table=="admin_users" )
-	{
-		if( $sUserGroup=="andre@andre.com" )
-		{
-			return "AEDSPI".$extraPerm;
-		}
-//	default permissions
-		return "AEDSPI".$extraPerm;
-	}
 	if( $table=="project5_uggroups" )
 	{
 		if( $sUserGroup=="andre@andre.com" )
@@ -2005,7 +1978,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="project5_ugmembers" )
 	{
@@ -2014,7 +1987,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="project5_ugrights" )
 	{
@@ -2023,7 +1996,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="validate_checkin" )
 	{
@@ -2032,7 +2005,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="validate_order" )
 	{
@@ -2041,7 +2014,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="review_order" )
 	{
@@ -2050,7 +2023,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="review_checkin" )
 	{
@@ -2059,7 +2032,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="update_order_progess" )
 	{
@@ -2068,7 +2041,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group1" )
 	{
@@ -2077,7 +2050,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group2" )
 	{
@@ -2086,7 +2059,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group21" )
 	{
@@ -2095,7 +2068,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group211" )
 	{
@@ -2104,7 +2077,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group212" )
 	{
@@ -2113,7 +2086,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group2121" )
 	{
@@ -2122,7 +2095,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group_member1" )
 	{
@@ -2131,7 +2104,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group_member11" )
 	{
@@ -2140,7 +2113,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group3" )
 	{
@@ -2149,7 +2122,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group_agenda1" )
 	{
@@ -2158,7 +2131,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group_agenda_type1" )
 	{
@@ -2167,7 +2140,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group_agenda_type11" )
 	{
@@ -2176,7 +2149,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="personal1" )
 	{
@@ -2185,7 +2158,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="member checkin" )
 	{
@@ -2194,7 +2167,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group4" )
 	{
@@ -2203,7 +2176,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group11" )
 	{
@@ -2212,7 +2185,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="group_product1" )
 	{
@@ -2221,7 +2194,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="payment" )
 	{
@@ -2230,7 +2203,7 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="personal11" )
 	{
@@ -2239,7 +2212,34 @@ function GetUserPermissionsStatic( $table )
 			return "ADESPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="admin_rights" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "".$extraPerm;
+	}
+	if( $table=="admin_members" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="admin_users" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "AEDSPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

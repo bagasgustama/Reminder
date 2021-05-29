@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelslookup_token["English"]["id_lookup"] = "Id Lookup";
 	$fieldToolTipslookup_token["English"]["id_lookup"] = "";
 	$placeHolderslookup_token["English"]["id_lookup"] = "";
-	$fieldLabelslookup_token["English"]["id_group"] = "Id Group";
+	$fieldLabelslookup_token["English"]["id_group"] = "Group Name";
 	$fieldToolTipslookup_token["English"]["id_group"] = "";
 	$placeHolderslookup_token["English"]["id_group"] = "";
 	$fieldLabelslookup_token["English"]["group_identifier"] = "Group Identifier";
@@ -49,7 +49,7 @@ if(mlang_getcurrentlang()=="Indonesian")
 	$fieldLabelslookup_token["Indonesian"]["id_lookup"] = "Id Lookup";
 	$fieldToolTipslookup_token["Indonesian"]["id_lookup"] = "";
 	$placeHolderslookup_token["Indonesian"]["id_lookup"] = "";
-	$fieldLabelslookup_token["Indonesian"]["id_group"] = "Id Group";
+	$fieldLabelslookup_token["Indonesian"]["id_group"] = "Group Name";
 	$fieldToolTipslookup_token["Indonesian"]["id_group"] = "";
 	$placeHolderslookup_token["Indonesian"]["id_group"] = "";
 	$fieldLabelslookup_token["Indonesian"]["group_identifier"] = "Group Identifier";
@@ -226,6 +226,17 @@ $tdatalookup_token[".sqlFrom"] = "FROM lookup_token";
 $tdatalookup_token[".sqlWhereExpr"] = "";
 $tdatalookup_token[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "id_group = ':session.group_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatalookup_token[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -544,7 +555,7 @@ $tdatalookup_token[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1049,7 +1060,8 @@ $tdatalookup_token[".sqlquery"] = $queryData_lookup_token;
 
 
 
-$tableEvents["lookup_token"] = new eventsBase;
-$tdatalookup_token[".hasEvents"] = false;
+include_once(getabspath("include/lookup_token_events.php"));
+$tableEvents["lookup_token"] = new eventclass_lookup_token;
+$tdatalookup_token[".hasEvents"] = true;
 
 ?>

@@ -151,13 +151,6 @@ array( 'section' => '',
 'integrated_edit_field' => array( 'field' => 'member_id',
 'type' => 'integrated_edit_field',
 'orientation' => 0,
-'customCSS' => '/* Put  your custom CSS code here */
-
-:host {
-  color: red;
-  visibility: hidden;
-}
-',
 'joined' => true,
 'separated' => false ) ),
 'dbProps' => array(  ),

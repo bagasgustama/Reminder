@@ -186,7 +186,7 @@ $tdataadmin_members[".addPageEvents"] = false;
 $tdataadmin_members[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_members[".badgeColor"] = "2F4F4F";
+$tdataadmin_members[".badgeColor"] = "8FBC8B";
 
 
 $tdataadmin_members[".allSearchFields"] = array();

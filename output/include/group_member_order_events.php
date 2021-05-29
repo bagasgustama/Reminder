@@ -260,7 +260,7 @@ else
 function BeforeShowAdd(&$xt, &$templatefile, &$pageObject)
 {
 
-		
+		$pageObject->hideItem("integrated_edit_field");
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;		

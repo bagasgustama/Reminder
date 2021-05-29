@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsgroup_operation_off["English"]["operation_id"] = "Operation Id";
 	$fieldToolTipsgroup_operation_off["English"]["operation_id"] = "";
 	$placeHoldersgroup_operation_off["English"]["operation_id"] = "";
-	$fieldLabelsgroup_operation_off["English"]["group_id"] = "Group Id";
+	$fieldLabelsgroup_operation_off["English"]["group_id"] = "Group Name";
 	$fieldToolTipsgroup_operation_off["English"]["group_id"] = "";
 	$placeHoldersgroup_operation_off["English"]["group_id"] = "";
 	$fieldLabelsgroup_operation_off["English"]["day_off"] = "Day Off";
@@ -49,7 +49,7 @@ if(mlang_getcurrentlang()=="Indonesian")
 	$fieldLabelsgroup_operation_off["Indonesian"]["operation_id"] = "Operation Id";
 	$fieldToolTipsgroup_operation_off["Indonesian"]["operation_id"] = "";
 	$placeHoldersgroup_operation_off["Indonesian"]["operation_id"] = "";
-	$fieldLabelsgroup_operation_off["Indonesian"]["group_id"] = "Group Id";
+	$fieldLabelsgroup_operation_off["Indonesian"]["group_id"] = "Group Name";
 	$fieldToolTipsgroup_operation_off["Indonesian"]["group_id"] = "";
 	$placeHoldersgroup_operation_off["Indonesian"]["group_id"] = "";
 	$fieldLabelsgroup_operation_off["Indonesian"]["day_off"] = "Day Off";
