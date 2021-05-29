@@ -916,11 +916,6 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 function fileCustomExpression($file, $data, $field, $ptype, $table )
 {
 	$value = "";
-				if($table=="group_product" && $field=="image")
-	{
-		;
-		return $value;
-	}
 	return $value;
 }
 

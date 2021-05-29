@@ -232,7 +232,7 @@ $arrGridTabs[] = array(
 	'tabId' => "",
 	'name' => "All data",
 	'nameType' => 'Text',
-	'where' => "",
+	'where' => "group_id = ':session.group_id'",
 	'showRowCount' => 0,
 	'hideEmpty' => 0,
 );

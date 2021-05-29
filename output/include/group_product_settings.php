@@ -268,6 +268,17 @@ $tdatagroup_product[".sqlFrom"] = "FROM group_product";
 $tdatagroup_product[".sqlWhereExpr"] = "";
 $tdatagroup_product[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "group_id = ':session.group_id'",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatagroup_product[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -1689,14 +1700,29 @@ $tdatagroup_product[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Document Download");
+	$vdata = array("ViewFormat" => "File-based Image");
 
 	
 	
-	
 				$vdata["ShowThumbnail"] = true;
-					$vdata["ShowIcon"] = true;
-		
+	$vdata["ThumbWidth"] = 200;
+	$vdata["ThumbHeight"] = 150;
+	$vdata["ImageWidth"] = 200;
+	$vdata["ImageHeight"] = 150;
+
+			$vdata["multipleImgMode"] = 1;
+	$vdata["maxImages"] = 0;
+
+			$vdata["showGallery"] = true;
+	$vdata["galleryMode"] = 2;
+	$vdata["captionMode"] = 2;
+	$vdata["captionField"] = "";
+
+	$vdata["imageBorder"] = 1;
+	$vdata["imageFullWidth"] = 1;
+
+
+	
 	
 	
 	

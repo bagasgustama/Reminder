@@ -584,7 +584,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field19}","text":"{$jslabel group_product image }","bold":true},
+			{"hidden":"{$item_hide_grid_field_label}","text":"{$jslabel group_product image }","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -934,7 +934,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field9}","text":{$image_pdfvalue}},
+			{"hidden":"{$item_hide_grid_field}","text":{$image_pdfvalue}},
 				
 		  ],
   "border": [ true, true, true, true ],
