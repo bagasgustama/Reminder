@@ -1006,6 +1006,24 @@ $mask .= "M";
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("personal11", " " . GetTableCaption("personal11"));
+$table = "custom_group_member";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("custom_group_member", " " . GetTableCaption("custom_group_member"));
+$table = "custom_personal";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("custom_personal", " " . GetTableCaption("custom_personal"));
 
 require_once('include/xtempl.php');
 require_once('classes/listpage.php');

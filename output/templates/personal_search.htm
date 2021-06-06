@@ -234,6 +234,31 @@
 </div>
 
 {END province_id_fieldblock}
+											
+{BEGIN apikey_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_apikey}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="apikey" 
+	
+	data-signal-error-for="apikey{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="apikey" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_apikey}">
+		{$label personal apikey }	</label>
+	<div class="r-search-option">
+		{$searchtype_apikey}
+	</div>
+	<div class="r-search-field">
+		{$apikey_editcontrol}	</div>
+	<div class="r-search-field">
+		{$apikey_editcontrol1}
+	</div>
+	
+</div>
+
+{END apikey_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

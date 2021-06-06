@@ -122,6 +122,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_import_field5}","text":{$province_id_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_import_field6}","text":{$apikey_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',

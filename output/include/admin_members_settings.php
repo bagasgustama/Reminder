@@ -43,6 +43,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsadmin_members["English"]["province_id"] = "Province Id";
 	$fieldToolTipsadmin_members["English"]["province_id"] = "";
 	$placeHoldersadmin_members["English"]["province_id"] = "";
+	$fieldLabelsadmin_members["English"]["apikey"] = "Apikey";
+	$fieldToolTipsadmin_members["English"]["apikey"] = "";
+	$placeHoldersadmin_members["English"]["apikey"] = "";
 	if (count($fieldToolTipsadmin_members["English"]))
 		$tdataadmin_members[".isUseToolTips"] = true;
 }
@@ -70,6 +73,9 @@ if(mlang_getcurrentlang()=="Indonesian")
 	$fieldLabelsadmin_members["Indonesian"]["province_id"] = "Province Id";
 	$fieldToolTipsadmin_members["Indonesian"]["province_id"] = "";
 	$placeHoldersadmin_members["Indonesian"]["province_id"] = "";
+	$fieldLabelsadmin_members["Indonesian"]["apikey"] = "Apikey";
+	$fieldToolTipsadmin_members["Indonesian"]["apikey"] = "";
+	$placeHoldersadmin_members["Indonesian"]["apikey"] = "";
 	if (count($fieldToolTipsadmin_members["Indonesian"]))
 		$tdataadmin_members[".isUseToolTips"] = true;
 }
@@ -200,6 +206,7 @@ $tdataadmin_members[".googleLikeFields"][] = "mail";
 $tdataadmin_members[".googleLikeFields"][] = "password";
 $tdataadmin_members[".googleLikeFields"][] = "country_id";
 $tdataadmin_members[".googleLikeFields"][] = "province_id";
+$tdataadmin_members[".googleLikeFields"][] = "apikey";
 
 
 
@@ -235,7 +242,7 @@ $tdataadmin_members[".strOrderBy"] = $tstrOrderBy;
 $tdataadmin_members[".orderindexes"] = array();
 
 
-$tdataadmin_members[".sqlHead"] = "SELECT member_id,  	name,  	mail,  	password,  	country_id,  	province_id";
+$tdataadmin_members[".sqlHead"] = "SELECT member_id,  	name,  	mail,  	password,  	country_id,  	province_id,  	apikey";
 $tdataadmin_members[".sqlFrom"] = "FROM personal";
 $tdataadmin_members[".sqlWhereExpr"] = "";
 $tdataadmin_members[".sqlTail"] = "";
@@ -1108,6 +1115,143 @@ $tdataadmin_members[".hideMobileList"] = array();
 
 	$tdataadmin_members["province_id"] = $fdata;
 		$tdataadmin_members[".searchableFields"][] = "province_id";
+//	apikey
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "apikey";
+	$fdata["GoodName"] = "apikey";
+	$fdata["ownerTable"] = "personal";
+	$fdata["Label"] = GetFieldLabel("admin_members","apikey");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "apikey";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "apikey";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=100";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadmin_members["apikey"] = $fdata;
+		$tdataadmin_members[".searchableFields"][] = "apikey";
 
 
 $tables_data["admin_members"]=&$tdataadmin_members;
@@ -1145,7 +1289,7 @@ function createSqlQuery_admin_members()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "member_id,  	name,  	mail,  	password,  	country_id,  	province_id";
+$proto0["m_strFieldList"] = "member_id,  	name,  	mail,  	password,  	country_id,  	province_id,  	apikey";
 $proto0["m_strFrom"] = "FROM personal";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1269,42 +1413,57 @@ $proto16["m_alias"] = "";
 $obj = new SQLFieldListItem($proto16);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto18=array();
-$proto18["m_link"] = "SQLL_MAIN";
-			$proto19=array();
-$proto19["m_strName"] = "personal";
-$proto19["m_srcTableName"] = "admin_members";
-$proto19["m_columns"] = array();
-$proto19["m_columns"][] = "member_id";
-$proto19["m_columns"][] = "name";
-$proto19["m_columns"][] = "mail";
-$proto19["m_columns"][] = "password";
-$proto19["m_columns"][] = "country_id";
-$proto19["m_columns"][] = "province_id";
-$obj = new SQLTable($proto19);
+						$proto18=array();
+			$obj = new SQLField(array(
+	"m_strName" => "apikey",
+	"m_strTable" => "personal",
+	"m_srcTableName" => "admin_members"
+));
 
-$proto18["m_table"] = $obj;
-$proto18["m_sql"] = "personal";
-$proto18["m_alias"] = "";
+$proto18["m_sql"] = "apikey";
 $proto18["m_srcTableName"] = "admin_members";
-$proto20=array();
-$proto20["m_sql"] = "";
-$proto20["m_uniontype"] = "SQLL_UNKNOWN";
+$proto18["m_expr"]=$obj;
+$proto18["m_alias"] = "";
+$obj = new SQLFieldListItem($proto18);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto20=array();
+$proto20["m_link"] = "SQLL_MAIN";
+			$proto21=array();
+$proto21["m_strName"] = "personal";
+$proto21["m_srcTableName"] = "admin_members";
+$proto21["m_columns"] = array();
+$proto21["m_columns"][] = "member_id";
+$proto21["m_columns"][] = "name";
+$proto21["m_columns"][] = "mail";
+$proto21["m_columns"][] = "password";
+$proto21["m_columns"][] = "country_id";
+$proto21["m_columns"][] = "province_id";
+$proto21["m_columns"][] = "apikey";
+$obj = new SQLTable($proto21);
+
+$proto20["m_table"] = $obj;
+$proto20["m_sql"] = "personal";
+$proto20["m_alias"] = "";
+$proto20["m_srcTableName"] = "admin_members";
+$proto22=array();
+$proto22["m_sql"] = "";
+$proto22["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto20["m_column"]=$obj;
-$proto20["m_contained"] = array();
-$proto20["m_strCase"] = "";
-$proto20["m_havingmode"] = false;
-$proto20["m_inBrackets"] = false;
-$proto20["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto20);
+$proto22["m_column"]=$obj;
+$proto22["m_contained"] = array();
+$proto22["m_strCase"] = "";
+$proto22["m_havingmode"] = false;
+$proto22["m_inBrackets"] = false;
+$proto22["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto22);
 
-$proto18["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto18);
+$proto20["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto20);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1320,7 +1479,7 @@ $queryData_admin_members = createSqlQuery_admin_members();
 	
 		;
 
-						
+							
 
 $tdataadmin_members[".sqlquery"] = $queryData_admin_members;
 

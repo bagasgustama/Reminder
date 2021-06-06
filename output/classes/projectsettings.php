@@ -3332,6 +3332,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
 	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
 	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
+	$projectEntities[ "custom_group_member" ] = array( "url" => "custom_group_member", "type" => 6 );
+	$projectEntitiesReverse[ "custom_group_member" ] = "custom_group_member";
+	$projectEntities[ "custom_personal" ] = array( "url" => "custom_personal", "type" => 6 );
+	$projectEntitiesReverse[ "custom_personal" ] = "custom_personal";
 }
 
 function findTable( $table ) {

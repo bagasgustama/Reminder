@@ -727,7 +727,7 @@ $tdatalookup_token[".hideMobileList"] = array();
 	$fdata["GoodName"] = "token";
 	$fdata["ownerTable"] = "lookup_token";
 	$fdata["Label"] = GetFieldLabel("lookup_token","token");
-	$fdata["FieldType"] = 13;
+	$fdata["FieldType"] = 200;
 
 	
 	
@@ -802,7 +802,7 @@ $tdatalookup_token[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=32";
+			$edata["EditParams"].= " maxlength=30";
 
 		$edata["controlWidth"] = 200;
 

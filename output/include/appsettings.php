@@ -651,7 +651,7 @@ $arrCustomPages = array();
 
 																					$cUserNameFieldType	= 200;
 												$cPasswordFieldType	= 200;
-																					
+																														
 $gPermissionsRefreshTime = 0;
 $gPermissionsRead = false;
 
@@ -661,9 +661,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "388_1622191701";
+$projectBuildKey = "403_1622912086";
 $wizardBuildKey = "34702";
-$projectBuildNumber = "388";
+$projectBuildNumber = "403";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -745,6 +745,8 @@ $tableCaptions["English"]["personal11"] = "Personal11";
 $tableCaptions["English"]["admin_rights"] = "Admin Rights";
 $tableCaptions["English"]["admin_members"] = "Admin Members";
 $tableCaptions["English"]["admin_users"] = "Add/Edit users";
+$tableCaptions["English"]["custom_group_member"] = "Custom Group Member";
+$tableCaptions["English"]["custom_personal"] = "Custom Personal";
 $tableCaptions["Indonesian"] = array();
 $tableCaptions["Indonesian"][""] = "";
 $tableCaptions["Indonesian"]["business_type"] = "Business Type";
@@ -808,6 +810,8 @@ $tableCaptions["Indonesian"]["personal11"] = "Personal11";
 $tableCaptions["Indonesian"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Indonesian"]["admin_members"] = "Admin Members";
 $tableCaptions["Indonesian"]["admin_users"] = "Add/Edit users";
+$tableCaptions["Indonesian"]["custom_group_member"] = "Custom Group Member";
+$tableCaptions["Indonesian"]["custom_personal"] = "Custom Personal";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -862,6 +866,8 @@ if(mlang_getcurrentlang()=="Indonesian")
 $globalSettings["showDetailedError"] = true;
 
 
+$globalSettings["restCreate"] = true;
+$globalSettings["restAuth"] = REST_BASIC;
 
 // SearchClause::getSearchObject
 $_cachedSeachClauses = array();

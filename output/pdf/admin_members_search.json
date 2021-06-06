@@ -134,6 +134,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_search_field5}","text":{$province_id_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_integrated_search_field6}","text":{$apikey_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
           "alignment": 'left',

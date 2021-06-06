@@ -172,5 +172,11 @@
 [data-page=".global_menu"][data-itemid="welcome_item57"] > .bs-welcome-header {
   background-color: #008B8B;
 }
+[data-page=".global_menu"][data-itemid="welcome_item58"] > .bs-welcome-header {
+  background-color: #008B8B;
+}
+[data-page=".global_menu"][data-itemid="welcome_item59"] > .bs-welcome-header {
+  background-color: #DC143C;
+}
 
 

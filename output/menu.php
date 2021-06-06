@@ -66,6 +66,10 @@ include_once(getabspath("include/group4_events.php"));
 $tableEvents["group4"] = new eventclass_group4;
 include_once(getabspath("include/payment_events.php"));
 $tableEvents["payment"] = new eventclass_payment;
+include_once(getabspath("include/custom_group_member_events.php"));
+$tableEvents["custom_group_member"] = new eventclass_custom_group_member;
+include_once(getabspath("include/custom_personal_events.php"));
+$tableEvents["custom_personal"] = new eventclass_custom_personal;
 
 $xt = new Xtempl();
 

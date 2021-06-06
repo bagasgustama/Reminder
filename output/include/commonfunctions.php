@@ -308,6 +308,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("admin_users" == $shortTName )
 		return true;
+	if ("custom_group_member" == $shortTName )
+		return true;
+	if ("custom_personal" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -907,6 +911,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="admin_users";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("custom_group_member");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="custom_group_member";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("custom_personal");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="custom_personal";
+	}
 	return $arr;
 }
 
@@ -977,6 +999,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="admin_rights";
 	$arr[]="admin_members";
 	$arr[]="admin_users";
+	$arr[]="custom_group_member";
+	$arr[]="custom_personal";
 	return $arr;
 }
 
@@ -2240,6 +2264,24 @@ function GetUserPermissionsStatic( $table )
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="custom_group_member" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="custom_personal" )
+	{
+		if( $sUserGroup=="andre@andre.com" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

@@ -113,6 +113,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_country_id}</span>
 						</div>
 		{END searchCtrlBlock_country_id}
+																{BEGIN searchCtrlBlock_apikey}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_apikey}" {$filterRow_attrs_apikey}>
+			<label>{$label personal apikey }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_apikey}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_apikey}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_apikey}</span>
+						</div>
+		{END searchCtrlBlock_apikey}
 																{BEGIN searchCtrlBlock_province_id}
 
 
@@ -684,6 +697,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="province_id"]:before {
 		content: "{$label personal province_id}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="apikey"]:before {
+		content: "{$label personal apikey}";
+	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
@@ -773,7 +789,7 @@
 	 
 		{BEGIN member_id_fieldheadercolumn}
 	{BEGIN member_id_fieldheader}
-	<SPAN {$member_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
+	<SPAN {$member_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="member_id">
 	{$label personal member_id }	{$arrow_icon_member_id}
 	</SPAN>
 	{END member_id_fieldheader}
@@ -800,7 +816,7 @@
 	 
 		{BEGIN name_fieldheadercolumn}
 	{BEGIN name_fieldheader}
-	<SPAN {$name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name">
+	<SPAN {$name_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="name">
 	{$label personal name }	{$arrow_icon_name}
 	</SPAN>
 	{END name_fieldheader}
@@ -827,7 +843,7 @@
 	 
 		{BEGIN mail_fieldheadercolumn}
 	{BEGIN mail_fieldheader}
-	<SPAN {$mail_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mail">
+	<SPAN {$mail_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mail">
 	{$label personal mail }	{$arrow_icon_mail}
 	</SPAN>
 	{END mail_fieldheader}
@@ -854,7 +870,7 @@
 	 
 		{BEGIN password_fieldheadercolumn}
 	{BEGIN password_fieldheader}
-	<SPAN {$password_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password">
+	<SPAN {$password_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password">
 	{$label personal password }	{$arrow_icon_password}
 	</SPAN>
 	{END password_fieldheader}
@@ -881,7 +897,7 @@
 	 
 		{BEGIN country_id_fieldheadercolumn}
 	{BEGIN country_id_fieldheader}
-	<SPAN {$country_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country_id">
+	<SPAN {$country_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="country_id">
 	{$label personal country_id }	{$arrow_icon_country_id}
 	</SPAN>
 	{END country_id_fieldheader}
@@ -908,7 +924,7 @@
 	 
 		{BEGIN province_id_fieldheadercolumn}
 	{BEGIN province_id_fieldheader}
-	<SPAN {$province_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="province_id">
+	<SPAN {$province_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="province_id">
 	{$label personal province_id }	{$arrow_icon_province_id}
 	</SPAN>
 	{END province_id_fieldheader}
@@ -917,6 +933,33 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
+				 
+					{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$apikey_class}
+			"
+
+			data-field="apikey"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN apikey_fieldheadercolumn}
+	{BEGIN apikey_fieldheader}
+	<SPAN {$apikey_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="apikey">
+	{$label personal apikey }	{$arrow_icon_apikey}
+	</SPAN>
+	{END apikey_fieldheader}
+{END apikey_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
 							</tr>
 					 
 					 
@@ -1209,6 +1252,29 @@
 {END province_id_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
+				 
+					{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$apikey_class}
+			"
+
+			data-field="apikey"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN apikey_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="apikey" data-default-width >
+{$apikey_value}
+</span>
+{END apikey_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
 							</tr>
 					 
 						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
@@ -1447,6 +1513,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
+				 
+					{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="personal_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
 							</tr>
 					
 					</tfoot>

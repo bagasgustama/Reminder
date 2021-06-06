@@ -73,6 +73,8 @@ $nonAdminTablesArr[] = "group11";
 $nonAdminTablesArr[] = "group_product1";
 $nonAdminTablesArr[] = "payment";
 $nonAdminTablesArr[] = "personal11";
+$nonAdminTablesArr[] = "custom_group_member";
+$nonAdminTablesArr[] = "custom_personal";
 
 $ug_connection = $cman->getForUserGroups();
 

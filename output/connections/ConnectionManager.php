@@ -276,11 +276,11 @@ class ConnectionManager
 		$data = array();
 		$data["dbType"] = 0;
 		$data["connId"] = "notif_basic1_at_localhost";
-		$data["connName"] = "notif_basic1 at localhost";
+		$data["connName"] = "db_notif_basic at localhost";
 		$data["connStringType"] = "mysql";
-		$data["connectionString"] = "mysql;localhost;root;;3306;notif_basic1;;1"; //currently unused
+		$data["connectionString"] = "mysql;localhost;root;;3306;db_notif_basic;;1"; //currently unused
 
-		$this->_connectionsIdByName["notif_basic1 at localhost"] = "notif_basic1_at_localhost";
+		$this->_connectionsIdByName["db_notif_basic at localhost"] = "notif_basic1_at_localhost";
 		
 		$data["connInfo"] = array();
 		$data["ODBCUID"] = "root";
@@ -295,10 +295,10 @@ class ConnectionManager
 		$data["connInfo"][1] = "root";
 		$data["connInfo"][2] = "";
 		$data["connInfo"][3] = "3306";
-		$data["connInfo"][4] = "notif_basic1";
+		$data["connInfo"][4] = "db_notif_basic";
 		$data["connInfo"][5] = ""; //currently unused
 		$data["connInfo"][6] = "1"; //currently unused
-		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=root;Pwd=;Port=3306;Database=notif_basic1;OPTION=3";
+		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=root;Pwd=;Port=3306;Database=db_notif_basic;OPTION=3";
 		// encription set
 		$data["EncryptInfo"] = array();
 		$data["EncryptInfo"]["mode"] = 0;
@@ -377,6 +377,8 @@ class ConnectionManager
 		$connectionsIds["admin_rights"] = "notif_basic1_at_localhost";
 		$connectionsIds["admin_members"] = "notif_basic1_at_localhost";
 		$connectionsIds["admin_users"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_group_member"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_personal"] = "notif_basic1_at_localhost";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 	

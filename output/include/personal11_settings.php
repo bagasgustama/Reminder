@@ -1670,6 +1670,7 @@ $proto23["m_columns"][] = "mail";
 $proto23["m_columns"][] = "password";
 $proto23["m_columns"][] = "country_id";
 $proto23["m_columns"][] = "province_id";
+$proto23["m_columns"][] = "apikey";
 $obj = new SQLTable($proto23);
 
 $proto22["m_table"] = $obj;

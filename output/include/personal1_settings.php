@@ -1510,6 +1510,7 @@ $proto21["m_columns"][] = "mail";
 $proto21["m_columns"][] = "password";
 $proto21["m_columns"][] = "country_id";
 $proto21["m_columns"][] = "province_id";
+$proto21["m_columns"][] = "apikey";
 $obj = new SQLTable($proto21);
 
 $proto20["m_table"] = $obj;

@@ -224,6 +224,29 @@
 
 
 {END province_id_fieldblock}
+											
+{BEGIN apikey_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_apikey}  r-vertical-field" 
+	data-fieldname="apikey" 
+	data-signal-error-for="apikey{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="apikey" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_apikey}">
+		{BEGIN apikey_label}{$label personal apikey }{END apikey_label}
+	</label>
+	<div class="r-edit-field">
+		{$apikey_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="apikey">
+		<div class="text-muted" >
+		{$tooltip personal apikey }		</div>
+	</div>
+</div>
+
+
+{END apikey_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
