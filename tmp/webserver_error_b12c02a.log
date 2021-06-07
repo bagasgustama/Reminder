@@ -8,3 +8,7 @@ AH00558: httpd.exe: Could not reliably determine the server's fully qualified do
 AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
 [Mon Jun 07 15:24:58.284526 2021] [core:warn] [pid 20484:tid 592] AH00117: Ignoring deprecated use of DefaultType in line 21 of D:/KULIAH/Semester 4/Integrasi dan Migrasi Sistem/G1/Reminder Paling Baru/Reminder/tmp/webserver.conf.
 AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Mon Jun 07 15:24:58.360324 2021] [mpm_winnt:notice] [pid 20484:tid 592] AH00354: Child: Starting 64 worker threads.
+[Tue Jun 08 00:21:56.774483 2021] [mpm_winnt:notice] [pid 12836:tid 592] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Jun 08 00:21:58.795579 2021] [mpm_winnt:notice] [pid 20484:tid 592] AH00364: Child: All worker threads have exited.
+[Tue Jun 08 00:21:58.857413 2021] [mpm_winnt:notice] [pid 12836:tid 592] AH00430: Parent: Child process 20484 exited successfully.
