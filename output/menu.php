@@ -70,6 +70,18 @@ include_once(getabspath("include/custom_group_member_events.php"));
 $tableEvents["custom_group_member"] = new eventclass_custom_group_member;
 include_once(getabspath("include/custom_personal_events.php"));
 $tableEvents["custom_personal"] = new eventclass_custom_personal;
+include_once(getabspath("include/custom_group_agenda_events.php"));
+$tableEvents["custom_group_agenda"] = new eventclass_custom_group_agenda;
+include_once(getabspath("include/custom_group_product_events.php"));
+$tableEvents["custom_group_product"] = new eventclass_custom_group_product;
+include_once(getabspath("include/custom_group_order_events.php"));
+$tableEvents["custom_group_order"] = new eventclass_custom_group_order;
+include_once(getabspath("include/custom_group_checkin_events.php"));
+$tableEvents["custom_group_checkin"] = new eventclass_custom_group_checkin;
+include_once(getabspath("include/custom_group_events.php"));
+$tableEvents["custom_group"] = new eventclass_custom_group;
+include_once(getabspath("include/custom_personal_agenda_events.php"));
+$tableEvents["custom_personal_agenda"] = new eventclass_custom_personal_agenda;
 
 $xt = new Xtempl();
 

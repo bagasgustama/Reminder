@@ -173,10 +173,22 @@
   background-color: #008B8B;
 }
 [data-page=".global_menu"][data-itemid="welcome_item58"] > .bs-welcome-header {
-  background-color: #008B8B;
+  background-color: #4169E1;
 }
 [data-page=".global_menu"][data-itemid="welcome_item59"] > .bs-welcome-header {
-  background-color: #DC143C;
+  background-color: #778899;
+}
+[data-page=".global_menu"][data-itemid="welcome_item60"] > .bs-welcome-header {
+  background-color: #9ACD32;
+}
+[data-page=".global_menu"][data-itemid="welcome_item61"] > .bs-welcome-header {
+  background-color: #7B68EE;
+}
+[data-page=".global_menu"][data-itemid="welcome_item62"] > .bs-welcome-header {
+  background-color: #6493EA;
+}
+[data-page=".global_menu"][data-itemid="welcome_item63"] > .bs-welcome-header {
+  background-color: #9ACD32;
 }
 
 

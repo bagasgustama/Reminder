@@ -3336,6 +3336,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "custom_group_member" ] = "custom_group_member";
 	$projectEntities[ "custom_personal" ] = array( "url" => "custom_personal", "type" => 6 );
 	$projectEntitiesReverse[ "custom_personal" ] = "custom_personal";
+	$projectEntities[ "custom_group_agenda" ] = array( "url" => "custom_group_agenda", "type" => 6 );
+	$projectEntitiesReverse[ "custom_group_agenda" ] = "custom_group_agenda";
+	$projectEntities[ "custom_group_product" ] = array( "url" => "custom_group_product", "type" => 6 );
+	$projectEntitiesReverse[ "custom_group_product" ] = "custom_group_product";
+	$projectEntities[ "custom_group_order" ] = array( "url" => "custom_group_order", "type" => 6 );
+	$projectEntitiesReverse[ "custom_group_order" ] = "custom_group_order";
+	$projectEntities[ "custom_group_checkin" ] = array( "url" => "custom_group_checkin", "type" => 6 );
+	$projectEntitiesReverse[ "custom_group_checkin" ] = "custom_group_checkin";
+	$projectEntities[ "custom_group" ] = array( "url" => "custom_group", "type" => 6 );
+	$projectEntitiesReverse[ "custom_group" ] = "custom_group";
+	$projectEntities[ "custom_personal_agenda" ] = array( "url" => "custom_personal_agenda", "type" => 6 );
+	$projectEntitiesReverse[ "custom_personal_agenda" ] = "custom_personal_agenda";
 }
 
 function findTable( $table ) {

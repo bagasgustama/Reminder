@@ -1,0 +1,10 @@
+[Mon Jun 07 15:24:55.233485 2021] [core:warn] [pid 12836:tid 592] AH00117: Ignoring deprecated use of DefaultType in line 21 of D:/KULIAH/Semester 4/Integrasi dan Migrasi Sistem/G1/Reminder Paling Baru/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Mon Jun 07 15:24:57.163292 2021] [mpm_winnt:notice] [pid 12836:tid 592] AH00455: Apache/2.4.10 (Win32) PHP/5.5.18 configured -- resuming normal operations
+[Mon Jun 07 15:24:57.163292 2021] [mpm_winnt:notice] [pid 12836:tid 592] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Mon Jun 07 15:24:57.163292 2021] [core:notice] [pid 12836:tid 592] AH00094: Command line: 'C:\\Program Files (x86)\\PHPRunner10.4\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files (x86)/PHPRunner10.4/EmbeddedServer -d C:\\Program Files (x86)\\PHPRunner10.4\\EmbeddedServer -f D:\\KULIAH\\Semester 4\\Integrasi dan Migrasi Sistem\\G1\\Reminder Paling Baru\\Reminder\\tmp\\webserver.conf'
+[Mon Jun 07 15:24:57.167280 2021] [mpm_winnt:notice] [pid 12836:tid 592] AH00418: Parent: Created child process 20484
+[Mon Jun 07 15:24:57.620150 2021] [core:warn] [pid 20484:tid 592] AH00117: Ignoring deprecated use of DefaultType in line 21 of D:/KULIAH/Semester 4/Integrasi dan Migrasi Sistem/G1/Reminder Paling Baru/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Mon Jun 07 15:24:58.284526 2021] [core:warn] [pid 20484:tid 592] AH00117: Ignoring deprecated use of DefaultType in line 21 of D:/KULIAH/Semester 4/Integrasi dan Migrasi Sistem/G1/Reminder Paling Baru/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message

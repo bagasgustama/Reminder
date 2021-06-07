@@ -311,10 +311,22 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","background":"#008B8B","hidden":"{$item_hide_welcome_item58}"},
+			{"text":"","background":"#4169E1","hidden":"{$item_hide_welcome_item58}"},
 				
 				
-			{"text":"","background":"#DC143C","hidden":"{$item_hide_welcome_item59}"},
+			{"text":"","background":"#778899","hidden":"{$item_hide_welcome_item59}"},
+				
+				
+			{"text":"","background":"#9ACD32","hidden":"{$item_hide_welcome_item60}"},
+				
+				
+			{"text":"","background":"#7B68EE","hidden":"{$item_hide_welcome_item61}"},
+				
+				
+			{"text":"","background":"#6493EA","hidden":"{$item_hide_welcome_item62}"},
+				
+				
+			{"text":"","background":"#9ACD32","hidden":"{$item_hide_welcome_item63}"},
 				
 		  ],
   "border": [ false, false, false, false ],

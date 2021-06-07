@@ -379,6 +379,12 @@ class ConnectionManager
 		$connectionsIds["admin_users"] = "notif_basic1_at_localhost";
 		$connectionsIds["custom_group_member"] = "notif_basic1_at_localhost";
 		$connectionsIds["custom_personal"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_group_agenda"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_group_product"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_group_order"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_group_checkin"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_group"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_personal_agenda"] = "notif_basic1_at_localhost";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 	

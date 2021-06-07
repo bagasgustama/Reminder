@@ -554,6 +554,30 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="custom_group_agenda")
+		{
+			return false;
+		}
+		if($table=="custom_group_product")
+		{
+			return false;
+		}
+		if($table=="custom_group_order")
+		{
+			return false;
+		}
+		if($table=="custom_group_checkin")
+		{
+			return false;
+		}
+		if($table=="custom_group")
+		{
+			return false;
+		}
+		if($table=="custom_personal_agenda")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1111,6 +1135,30 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="custom_personal")
+		{
+			return false;
+		}
+		if($table=="custom_group_agenda")
+		{
+			return false;
+		}
+		if($table=="custom_group_product")
+		{
+			return false;
+		}
+		if($table=="custom_group_order")
+		{
+			return false;
+		}
+		if($table=="custom_group_checkin")
+		{
+			return false;
+		}
+		if($table=="custom_group")
+		{
+			return false;
+		}
+		if($table=="custom_personal_agenda")
 		{
 			return false;
 		}
