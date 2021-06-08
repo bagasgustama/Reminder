@@ -3348,6 +3348,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "custom_group" ] = "custom_group";
 	$projectEntities[ "custom_personal_agenda" ] = array( "url" => "custom_personal_agenda", "type" => 6 );
 	$projectEntitiesReverse[ "custom_personal_agenda" ] = "custom_personal_agenda";
+	$projectEntities[ "custom_group_agenda_type" ] = array( "url" => "custom_group_agenda_type", "type" => 6 );
+	$projectEntitiesReverse[ "custom_group_agenda_type" ] = "custom_group_agenda_type";
+	$projectEntities[ "custom_group_member_agenda" ] = array( "url" => "custom_group_member_agenda", "type" => 6 );
+	$projectEntitiesReverse[ "custom_group_member_agenda" ] = "custom_group_member_agenda";
 }
 
 function findTable( $table ) {

@@ -100,9 +100,9 @@ $arr = array();
 while( $data = $result->fetchAssoc())
 {
     if($data['user_type']==3){
-        $status=1;
-    }else if($data['user_type']==2){
         $status=0;
+    }else if($data['user_type']==2){
+        $status=1;
     }else{
         $status=2;
     }

@@ -385,6 +385,8 @@ class ConnectionManager
 		$connectionsIds["custom_group_checkin"] = "notif_basic1_at_localhost";
 		$connectionsIds["custom_group"] = "notif_basic1_at_localhost";
 		$connectionsIds["custom_personal_agenda"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_group_agenda_type"] = "notif_basic1_at_localhost";
+		$connectionsIds["custom_group_member_agenda"] = "notif_basic1_at_localhost";
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
 	

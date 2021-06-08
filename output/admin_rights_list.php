@@ -1078,6 +1078,24 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("custom_personal_agenda", " " . GetTableCaption("custom_personal_agenda"));
+$table = "custom_group_agenda_type";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("custom_group_agenda_type", " " . GetTableCaption("custom_group_agenda_type"));
+$table = "custom_group_member_agenda";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("custom_group_member_agenda", " " . GetTableCaption("custom_group_member_agenda"));
 
 require_once('include/xtempl.php');
 require_once('classes/listpage.php');

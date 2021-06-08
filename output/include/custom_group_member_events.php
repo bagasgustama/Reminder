@@ -81,18 +81,49 @@
 function selectList($dataSource, $command)
 {
 
-		$sql = "SELECT * from group_member JOIN `group` USING(group_id) WHERE group_id=".$_GET["group_id"];
+		$sqla="SELECT group_member_id,group_id,group_member.member_id,group_member.user_type,group_member.token_group,token_personal,identifier_group,membership_type.membership_type,name,mail from group_member JOIN group_user_type ON group_user_type.id_user_type=group_member.user_type JOIN `group` USING(group_id) JOIN personal ON personal.member_id=group_member.member_id JOIN membership_type ON membership_type.membership_id=group_member.membership_type WHERE group_id=".$_GET["group_id"]." AND group_member.member_id=".$_GET['member_id'];
+$preparedSQLa = DB::PrepareSQL( $sqla );
+$resulta = DB::Query( $preparedSQLa );
+while( $dataa = $resulta->fetchAssoc())
+{
+    $role=$dataa['user_type'];
+}
+if($_GET['member_id']!=0){
+    $sql = "SELECT group_member_id,group_id,group_member.member_id,group_user_type.user_type,group_member.token_group,token_personal,identifier_group,membership_type.membership_type,name,mail from group_member JOIN group_user_type ON group_user_type.id_user_type=group_member.user_type JOIN `group` USING(group_id) JOIN personal ON personal.member_id=group_member.member_id JOIN membership_type ON membership_type.membership_id=group_member.membership_type WHERE group_id=".$_GET["group_id"];
+}
+
 $preparedSQL = DB::PrepareSQL( $sql );
 $result = DB::Query( $preparedSQL );
 if( !$result ) {
 	$dataSource->setError( DB::LastError() );
 	return false;
 }
-	// filter results, apply search, security & other filters
-$result = $dataSource->filterResult( $result, $command->filter );
-//	reorder results as requested
-$dataSource->reorderResult( $command, $result );
-return $result;
+$arr = array();
+while( $data = $result->fetchAssoc())
+{
+    if($role==3){
+        $status=0;
+    }else if($role==2){
+        $status=1;
+    }else{
+        $status=2;
+    }
+    $array = array(
+        "group_member_id"=>$data['group_member_id'],
+        "group_id" => $data['group_id'],
+        "member_id"=>$data['member_id'],
+        "user_type" => $data['user_type'],
+        "token_group"=>$data['token_group'],
+        "identifier_group"=>$data['identifier_group'],
+        "token_personal"=>$data['token_personal'],
+        "membership_type"=>$data['membership_type'],
+        "name"=>$data['name'],
+        "mail"=>$data['mail'],
+        "isManageable"=>$status,
+    );
+    array_push($arr,$array);
+}
+return new ArrayResult($arr);
 
 ;		
 } // function selectList

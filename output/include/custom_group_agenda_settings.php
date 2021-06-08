@@ -6,11 +6,11 @@ $tdatacustom_group_agenda[".OwnerID"] = "";
 $tdatacustom_group_agenda[".OriginalTable"] = "custom_group_agenda";
 
 
-$tdatacustom_group_agenda[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatacustom_group_agenda[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatacustom_group_agenda[".originalPagesByType"] = $tdatacustom_group_agenda[".pagesByType"];
-$tdatacustom_group_agenda[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatacustom_group_agenda[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatacustom_group_agenda[".originalPages"] = $tdatacustom_group_agenda[".pages"];
-$tdatacustom_group_agenda[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatacustom_group_agenda[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatacustom_group_agenda[".originalDefaultPages"] = $tdatacustom_group_agenda[".defaultPages"];
 
 //	field labels

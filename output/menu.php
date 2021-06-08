@@ -82,6 +82,10 @@ include_once(getabspath("include/custom_group_events.php"));
 $tableEvents["custom_group"] = new eventclass_custom_group;
 include_once(getabspath("include/custom_personal_agenda_events.php"));
 $tableEvents["custom_personal_agenda"] = new eventclass_custom_personal_agenda;
+include_once(getabspath("include/custom_group_agenda_type_events.php"));
+$tableEvents["custom_group_agenda_type"] = new eventclass_custom_group_agenda_type;
+include_once(getabspath("include/custom_group_member_agenda_events.php"));
+$tableEvents["custom_group_member_agenda"] = new eventclass_custom_group_member_agenda;
 
 $xt = new Xtempl();
 

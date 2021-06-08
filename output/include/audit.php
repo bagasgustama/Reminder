@@ -578,6 +578,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="custom_group_agenda_type")
+		{
+			return false;
+		}
+		if($table=="custom_group_member_agenda")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1159,6 +1167,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="custom_personal_agenda")
+		{
+			return false;
+		}
+		if($table=="custom_group_agenda_type")
+		{
+			return false;
+		}
+		if($table=="custom_group_member_agenda")
 		{
 			return false;
 		}

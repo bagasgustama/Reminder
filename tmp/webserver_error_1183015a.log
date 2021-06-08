@@ -1,0 +1,14 @@
+[Tue Jun 08 21:25:16.710123 2021] [core:warn] [pid 13488:tid 628] AH00117: Ignoring deprecated use of DefaultType in line 21 of D:/KULIAH/Semester 4/Integrasi dan Migrasi Sistem/G1/Reminder Paling Baru/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Tue Jun 08 21:25:17.423612 2021] [mpm_winnt:notice] [pid 13488:tid 628] AH00455: Apache/2.4.10 (Win32) PHP/5.5.18 configured -- resuming normal operations
+[Tue Jun 08 21:25:17.423612 2021] [mpm_winnt:notice] [pid 13488:tid 628] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Tue Jun 08 21:25:17.423612 2021] [core:notice] [pid 13488:tid 628] AH00094: Command line: 'C:\\Program Files (x86)\\PHPRunner10.4\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files (x86)/PHPRunner10.4/EmbeddedServer -d C:\\Program Files (x86)\\PHPRunner10.4\\EmbeddedServer -f D:\\KULIAH\\Semester 4\\Integrasi dan Migrasi Sistem\\G1\\Reminder Paling Baru\\Reminder\\tmp\\webserver.conf'
+[Tue Jun 08 21:25:17.428654 2021] [mpm_winnt:notice] [pid 13488:tid 628] AH00418: Parent: Created child process 23036
+[Tue Jun 08 21:25:19.288241 2021] [core:warn] [pid 23036:tid 672] AH00117: Ignoring deprecated use of DefaultType in line 21 of D:/KULIAH/Semester 4/Integrasi dan Migrasi Sistem/G1/Reminder Paling Baru/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Tue Jun 08 21:25:19.419890 2021] [core:warn] [pid 23036:tid 672] AH00117: Ignoring deprecated use of DefaultType in line 21 of D:/KULIAH/Semester 4/Integrasi dan Migrasi Sistem/G1/Reminder Paling Baru/Reminder/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Tue Jun 08 21:25:20.423874 2021] [mpm_winnt:notice] [pid 23036:tid 672] AH00354: Child: Starting 64 worker threads.
+[Wed Jun 09 04:43:40.908783 2021] [mpm_winnt:notice] [pid 13488:tid 628] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Jun 09 04:43:43.001729 2021] [mpm_winnt:notice] [pid 23036:tid 672] AH00364: Child: All worker threads have exited.
+[Wed Jun 09 04:43:43.115623 2021] [mpm_winnt:notice] [pid 13488:tid 628] AH00430: Parent: Child process 23036 exited successfully.

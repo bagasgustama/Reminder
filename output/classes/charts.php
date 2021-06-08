@@ -576,6 +576,10 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

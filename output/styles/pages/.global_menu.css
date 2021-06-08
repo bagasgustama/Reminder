@@ -190,5 +190,11 @@
 [data-page=".global_menu"][data-itemid="welcome_item63"] > .bs-welcome-header {
   background-color: #9ACD32;
 }
+[data-page=".global_menu"][data-itemid="welcome_item64"] > .bs-welcome-header {
+  background-color: #BC8F8F;
+}
+[data-page=".global_menu"][data-itemid="welcome_item65"] > .bs-welcome-header {
+  background-color: #2F4F4F;
+}
 
 
