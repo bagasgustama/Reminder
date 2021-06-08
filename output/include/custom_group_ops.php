@@ -13,5 +13,8 @@ VALUES
 						$topscustom_group["selectList"] = array(
 		"subtype" => "code"
 	);
+				$topscustom_group["selectOne"] = array(
+		"subtype" => "code"
+	);
 $tables_data["custom_group"][".operations"] = &$topscustom_group;
 ?>

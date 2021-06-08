@@ -6,11 +6,11 @@ $tdatacustom_group[".OwnerID"] = "";
 $tdatacustom_group[".OriginalTable"] = "custom_group";
 
 
-$tdatacustom_group[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatacustom_group[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatacustom_group[".originalPagesByType"] = $tdatacustom_group[".pagesByType"];
-$tdatacustom_group[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatacustom_group[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatacustom_group[".originalPages"] = $tdatacustom_group[".pages"];
-$tdatacustom_group[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatacustom_group[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatacustom_group[".originalDefaultPages"] = $tdatacustom_group[".defaultPages"];
 
 //	field labels
@@ -308,6 +308,7 @@ $tdatacustom_group[".arrGroupsPerPage"] = $arrGPP;
 $tdatacustom_group[".highlightSearchResults"] = true;
 
 $tableKeyscustom_group = array();
+$tableKeyscustom_group[] = "group_id";
 $tdatacustom_group[".Keys"] = $tableKeyscustom_group;
 
 
