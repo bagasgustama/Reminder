@@ -81,10 +81,33 @@
 function selectList($dataSource, $command)
 {
 
-		if(isset($_GET['member_id'])){
-     $sql = "SELECT * FROM group_member_order JOIN group_member_order_detail ON group_member_order.group_member_order=group_member_order_detail.group_member_order_id WHERE group_member_order.group_id=".$_GET['group_id']." AND group_member_order.member_id=".$_GET['member_id'];
+		// if(isset($_GET['status'])){
+//     if($_GET['status']==1){
+//         $status="paid";
+//     }else{
+//         $status="not_paid";
+//     }
+// }else{
+//     $status="no";
+// }
+
+if(isset($_GET['member_id'])){
+    if($_GET['status']==1){
+     $sql = "SELECT * FROM group_member_order JOIN group_member_order_detail ON group_member_order.group_member_order=group_member_order_detail.group_member_order_id WHERE group_member_order.group_id=".$_GET['group_id']." AND group_member_order.member_id=".$_GET['member_id']." AND payment_status='paid'";
+    }else if($_GET['status']==0){
+         $sql = "SELECT * FROM group_member_order JOIN group_member_order_detail ON group_member_order.group_member_order=group_member_order_detail.group_member_order_id WHERE group_member_order.group_id=".$_GET['group_id']." AND group_member_order.member_id=".$_GET['member_id']." AND payment_status='not_paid'";
+    }else{
+            $sql = "SELECT * FROM group_member_order JOIN group_member_order_detail ON group_member_order.group_member_order=group_member_order_detail.group_member_order_id WHERE group_member_order.group_id=".$_GET['group_id']." AND group_member_order.member_id=".$_GET['member_id'];
+    }
 }else{
-    $sql = "SELECT * FROM group_member_order JOIN group_member_order_detail ON group_member_order.group_member_order=group_member_order_detail.group_member_order_id WHERE group_member_order.group_id=".$_GET['group_id'];
+    if($_GET['status']==1){
+        $sql = "SELECT * FROM group_member_order JOIN group_member_order_detail ON group_member_order.group_member_order=group_member_order_detail.group_member_order_id WHERE group_member_order.group_id=".$_GET['group_id']." AND payment_status='paid'";
+    }else if($_GET['status']==0){
+        $sql = "SELECT * FROM group_member_order JOIN group_member_order_detail ON group_member_order.group_member_order=group_member_order_detail.group_member_order_id WHERE group_member_order.group_id=".$_GET['group_id']." AND payment_status='not_paid'";
+    }else{
+        $sql = "SELECT * FROM group_member_order JOIN group_member_order_detail ON group_member_order.group_member_order=group_member_order_detail.group_member_order_id WHERE group_member_order.group_id=".$_GET['group_id'];
+    }
+   
 }
 $preparedSQL = DB::PrepareSQL( $sql );
 $result = DB::Query( $preparedSQL );
@@ -92,10 +115,6 @@ if( !$result ) {
 	$dataSource->setError( DB::LastError() );
 	return false;
 }
-	// filter results, apply search, security & other filters
-$result = $dataSource->filterResult( $result, $command->filter );
-//	reorder results as requested
-$dataSource->reorderResult( $command, $result );
 return $result;
 
 ;		
